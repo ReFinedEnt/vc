@@ -6,10 +6,10 @@ const Basics: NextPage = (props) => {
   return (
     <div>
       <Head>
-        <title>Solana Scaffold</title>
+        <title>krk.finance | web3 hustlers !</title>
         <meta
           name="description"
-          content="Basic Functionality"
+          content="krk.finance | solana web3 basics"
         />
       </Head>
       <BasicsView />

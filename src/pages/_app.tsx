@@ -7,6 +7,9 @@ import { ContentContainer } from '../components/ContentContainer';
 import { Footer } from '../components/Footer';
 import Notifications from '../components/Notification'
 
+import { JupiterApiProvider } from "../contexts/JupiterApiProvider";
+
+
 require('@solana/wallet-adapter-react-ui/styles.css');
 require('../styles/globals.css');
 
@@ -14,7 +17,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
     return (
         <>
           <Head>
-            <title>Solana Scaffold Lite</title>
+            <title>krk.finance</title>
           </Head>
 
           <ContextProvider>
@@ -22,7 +25,9 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
               <Notifications />
               <AppBar/>
               <ContentContainer>
-                <Component {...pageProps} />
+                <JupiterApiProvider>
+                  <Component {...pageProps} />
+                </JupiterApiProvider>
               </ContentContainer>
               <Footer/>
             </div>

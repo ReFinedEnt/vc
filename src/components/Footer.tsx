@@ -41,11 +41,11 @@ export const Footer: FC = () => {
                         </p>
                         <a
                             rel="noreferrer"
-                            href="https://solana.com/"
+                            href="/"
                             target="_blank"
                             className="text-white text-base font-bold hover:text-primary-dark transition-all duration-200"
                         >
-                            Solana
+                            Sweat 💦
                         </a>
                     </div>
                 </div>

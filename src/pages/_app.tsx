@@ -18,6 +18,10 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
         <>
           <Head>
             <title>krk.finance</title>
+            <meta name="description" content={pageProps.description} />
+            <meta property="og:title" content={pageProps.title} />
+            <meta property="og:type" content="article" />
+            {/* <meta property="og:image" content={imageURL} /> */}
           </Head>
 
           <ContextProvider>

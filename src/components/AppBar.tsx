@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Link from "next/link";
+import Image from 'next/image';
 
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { useAutoConnect } from '../contexts/AutoConnectProvider';
@@ -12,7 +13,7 @@ export const AppBar: FC = props => {
 
       {/* NavBar / Header */}
       <div className="navbar flex flex-row md:mb-2 shadow-lg bg-neutral text-neutral-content">
-        <div className="navbar-start">
+        <div className="navbar-start flex">
           <label htmlFor="my-drawer" className="btn btn-square btn-ghost">
 
             <svg className="inline-block w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" >
@@ -21,9 +22,18 @@ export const AppBar: FC = props => {
           </label>
         
           <div className="hidden sm:inline w-22 h-22 md:p-2">
-          <Link href="/">
-              <a className="btn btn-ghost btn-sm rounded-btn active">krk.finance</a>
-          </Link>
+            <div className="flex content-center">
+              <Link href="/">
+                <button className="btn btn-square btn-ghost">
+                  <Image src={"https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/krk_logo.png"} height={"42px"} width={"42px"} />
+                </button>
+              </Link>
+
+
+              <Link href="/">
+                <a className="btn btn-ghost btn-sm rounded-btn active">krk.finance</a>
+              </Link>
+            </div>
           </div>
         </div>
 

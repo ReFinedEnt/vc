@@ -36,16 +36,16 @@ export const HomeView: FC = ({ }) => {
         <h4 className="md:w-full text-center text-slate-300 my-2">
           <p>Cybernetic Squad of Machines &amp; People doing IT Wizardzy 🪄</p>
         </h4>
-        <div className="max-w-md mx-auto mockup-code bg-primary p-6 my-2">
+        {/* <div className="max-w-md mx-auto mockup-code bg-primary p-6 my-2">
           <pre data-prefix="$">
             <code className="">  </code>
           </pre>
         </div>        
           <div className="text-center">
           <RequestAirdrop />
-          {/* {wallet.publicKey && <p>Public Key: {wallet.publicKey.toBase58()}</p>} */}
+          {wallet.publicKey && <p>Public Key: {wallet.publicKey.toBase58()}</p>}
           {wallet && <p>SOL Balance: {(balance || 0).toLocaleString()}</p>}
-        </div>
+        </div> */}
       </div>
     </div>
   );

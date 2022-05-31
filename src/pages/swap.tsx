@@ -13,7 +13,7 @@ const Swap: NextPage = (props) => {
           content="krk.finance zero-fee swap"
         />
       </Head>
-      <div className="hero bg-base-300">
+      <div className="hero bg-base-0">
         <div className="hero-content text-center">
           <div className="max-w-md">
           <JupiterForm />

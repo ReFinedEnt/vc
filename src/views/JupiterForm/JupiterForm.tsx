@@ -95,9 +95,8 @@ const JupiterForm: FunctionComponent<IJupiterFormProps> = (props) => {
 
   return (
     <div className="max-w-full md:max-w-lg toast">
-      <h1 className="mb-5 text-xl font-bold title">
-                            krk.finance | Zero-Fee Swap !
-      </h1>
+      <h1 className="text-2xl font-bold title">zero-fee swap</h1>
+      <p className="mb-5 text-sm font-bold">powered by Jup.ag</p>
       <div className="panel-container">
       <div className="panel">
         <label htmlFor="amount" className="block text-sm font-medium">
@@ -131,7 +130,7 @@ const JupiterForm: FunctionComponent<IJupiterFormProps> = (props) => {
         <select
           id="inputMint"
           name="inputMint"
-          className="mt-1 bg-neutral block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+          className="mt-1 bg-neutral block w-full pl-3 pr-10 py-2 text-base text-center border-gray-300 focus:outline-none sm:text-sm rounded-md"
           value={formValue.inputMint?.toBase58()}
           onChange={(e) => {
             const pbKey = new PublicKey(e.currentTarget.value);
@@ -155,29 +154,6 @@ const JupiterForm: FunctionComponent<IJupiterFormProps> = (props) => {
         
       </div>
       </div>
-
-      
-      <div className="panel-container">
-      <div className="panel">
-      {routes?.[0] &&
-        (() => {
-          const route = routes[0];
-          if (route) {
-            return (
-              <div>
-                <div className="block text-sm font-medium text-center">
-                  output:{" "}
-                  <div className="shadow-sm bg-neutral p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
-                  {(route.outAmount || 0) /
-                    10 ** (outputTokenInfo?.decimals || 1)}{" "}
-                  {outputTokenInfo?.symbol}
-                  </div>
-                </div>                
-              </div>
-            );
-          }
-        })()}
-      </div>
       <div className="panel">
       <div className="mb-2">
         <label htmlFor="outputMint" className="block text-sm font-medium text-center">
@@ -186,7 +162,7 @@ const JupiterForm: FunctionComponent<IJupiterFormProps> = (props) => {
         <select
           id="outputMint"
           name="outputMint"
-          className="mt-1 bg-neutral block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+          className="mt-1 bg-neutral block w-full pl-3 pr-10 py-2 text-base text-center sm:text-sm rounded-md"
           value={formValue.outputMint?.toBase58()}
           onChange={(e) => {
             const pbKey = new PublicKey(e.currentTarget.value);
@@ -207,6 +183,28 @@ const JupiterForm: FunctionComponent<IJupiterFormProps> = (props) => {
           })}
         </select>
       </div>
+      </div>
+      
+      <div className="panel-container">
+      <div className="panel">
+      {routes?.[0] &&
+        (() => {
+          const route = routes[0];
+          if (route) {
+            return (
+              <div>
+                <div className="block text-sm font-medium text-center">
+                  output:{" "}
+                  <div className="shadow-sm bg-neutral p-2 block w-full sm:text-sm border-gray-300 rounded-md">
+                  {(route.outAmount || 0) /
+                    10 ** (outputTokenInfo?.decimals || 1)}{" "}
+                  {outputTokenInfo?.symbol}
+                  </div>
+                </div>                
+              </div>
+            );
+          }
+        })()}
       </div>
       </div>
 
@@ -231,7 +229,7 @@ const JupiterForm: FunctionComponent<IJupiterFormProps> = (props) => {
         </button>
       </div>
 
-      <div>routes: {routes?.length}</div>
+      <div className="w-100 h-100 block text-left pl-2">routes: {routes?.length}
 
       {routes?.[0] &&
         (() => {
@@ -247,7 +245,7 @@ const JupiterForm: FunctionComponent<IJupiterFormProps> = (props) => {
             );
           }
         })()}
-
+      </div>
       <div className="flex justify-center mt-4">
         <button
           type="button"
@@ -305,7 +303,6 @@ const JupiterForm: FunctionComponent<IJupiterFormProps> = (props) => {
           {isSubmitting ? "Swapping.." : "Swap"}
         </button>
       </div>
-      <p className="mt-1 text-sm font-bold">Powered by Jup.ag</p>
     </div>
   );
 };

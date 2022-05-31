@@ -18,6 +18,13 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
         <>
           <Head>
             <title>krk.finance</title>
+            <meta property="og:title" content="krk.finance | cybernetic squad of machines and people doing IT wizardry 🪄" />
+            <meta property="og:site_name" content="krk.finance" />
+            <meta property="og:url" content="https://krk.finance/" />
+            <meta property="og:description" content="cybernetic squad of machines and people doing IT wizardry 🪄" />
+            <meta property="og:type" content="website" />
+            <meta property="og:image" content="https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/krk_logo.png" />
+
           </Head>
 
           <ContextProvider>

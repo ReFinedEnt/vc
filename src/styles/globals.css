@@ -24,3 +24,6 @@ a {
   background-color: #707070;
 }
 
+h1 {
+  font-size: clamp(3.8rem, 8vw, 6rem);
+}

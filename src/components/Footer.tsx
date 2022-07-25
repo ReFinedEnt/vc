@@ -61,7 +61,7 @@ export const Footer: FC = () => {
               target="_blank"
               className="text-white text-base font-bold hover:text-primary-dark transition-all duration-200"
             >
-              Solana Labs 💦
+              Solana Labs 🥸
             </a>
           </div>
         </div>

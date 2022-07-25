@@ -8,16 +8,11 @@ const Swap: NextPage = (props) => {
     <div>
       <Head>
         <title>krk.finance | swap</title>
-        <meta
-          name="description"
-          content="krk.finance zero-fee swap"
-        />
+        <meta name="description" content="krk.finance zero-fee swap" />
       </Head>
       <div className="hero bg-base-0">
         <div className="hero-content text-center">
-          <div className="max-w-md">
           <JupiterForm />
-          </div>
         </div>
       </div>
     </div>

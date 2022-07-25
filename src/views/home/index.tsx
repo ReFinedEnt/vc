@@ -36,7 +36,7 @@ export const HomeView: FC = ({}) => {
           </span>
         </h1>
         <h4 className="md:w-full text-center text-slate-300 my-2">
-          <p>Cybernetic Squad of Machines &amp; People doing IT Wizardzy 🪄</p>
+          <p>Web3 IT Wizardzy NFT DAO 🪄</p>
           <p>
             A curated suite of copy/pasted tools on{" "}
             <span className="font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">

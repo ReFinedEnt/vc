@@ -15,7 +15,10 @@ a {
   text-decoration: none;
 }
 
-* {
+*,
+*::before,
+*::after {
+  margin: 0;
   box-sizing: border-box;
 }
 

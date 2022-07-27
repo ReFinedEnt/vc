@@ -37,11 +37,3 @@ h1 {
 h2 {
   font-size: clamp(2.2rem, 4vw, 3.3rem);
 }
-
-div#glitch {
-  animation: glitch 1s linear infinite;
-}
-
-a#farm-link {
-  disabled: true;
-}

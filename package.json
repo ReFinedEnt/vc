@@ -12,7 +12,6 @@
   "dependencies": {
     "@heroicons/react": "^1.0.5",
     "@jup-ag/api": "^0.0.3",
-    "@react-three/fiber": "^8.2.2",
     "@solana/spl-token-registry": "^0.2.4050",
     "@solana/wallet-adapter-base": "^0.9.3",
     "@solana/wallet-adapter-react": "^0.15.3",
@@ -29,7 +28,6 @@
     "next-transpile-modules": "^9.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "three": "^0.142.0",
     "zustand": "^3.6.9"
   },
   "devDependencies": {

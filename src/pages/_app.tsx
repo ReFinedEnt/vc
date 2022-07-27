@@ -19,13 +19,13 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
         <title>krk.finance</title>
         <meta
           property="og:title"
-          content="krk.finance | cybernetic squad of machines and people doing IT wizardry 🪄"
+          content="krk.finance | 404 IT Wizardzy NFT DAO on Solana 🪄"
         />
         <meta property="og:site_name" content="krk.finance" />
         <meta property="og:url" content="https://krk.finance/" />
         <meta
           property="og:description"
-          content="cybernetic squad of machines and people doing IT wizardry 🪄"
+          content="404 IT Wizardzy NFT DAO on Solana 🪄"
         />
         <meta property="og:type" content="website" />
         <meta

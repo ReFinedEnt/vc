@@ -4,8 +4,8 @@ export const Footer: FC = () => {
   return (
     <div className="">
       <footer className="mx-auto  flex flex-row p-2 text-center items-center footer bg-neutral text-neutral-content">
-        <div className="pl-2">$KRK</div>
-        <div className="max-w-md mx-auto sm:pl-12 grid-flow-col gap-4 text-center">
+        <div className="ml-2">$KRK &copy; 2022</div>
+        <div className="max-w-md mx-auto sm:pl-12 grid-flow-col gap-4 text-center flex align-center justify-center">
           <a>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,10 @@ export const Footer: FC = () => {
               target="_blank"
               className="text-white text-base font-bold hover:text-primary-dark transition-all duration-200"
             >
-              Solana Labs 🥸
+              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
+                Solana Labs
+              </span>{" "}
+              🥸
             </a>
           </div>
         </div>

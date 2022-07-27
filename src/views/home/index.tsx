@@ -11,6 +11,7 @@ import pkg from "../../../package.json";
 
 // Store
 import useUserSOLBalanceStore from "../../stores/useUserSOLBalanceStore";
+import { RoadMap } from "views/roadmap";
 
 export const HomeView: FC = ({}) => {
   const wallet = useWallet();
@@ -27,33 +28,17 @@ export const HomeView: FC = ({}) => {
   }, [wallet.publicKey, connection, getUserSOLBalance]);
 
   return (
-    <div className="md:hero mx-auto p-4">
+    <div className="md:hero mx-auto">
       <div className="md:hero-content flex flex-col">
-        <h1 className="text-center text-5xl md:pl-12 font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
-          krk.finance{" "}
-          <span className="text-sm font-normal align-top text-slate-700">
-            v{pkg.version}
-          </span>
-        </h1>
-        <h4 className="md:w-full text-center text-slate-300 my-2">
-          <p>Web3 IT Wizardzy NFT DAO 🪄</p>
-          <p>
-            A curated suite of copy/pasted tools on{" "}
-            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
-              Solana
-            </span>
-          </p>
-        </h4>
         {/* <div className="max-w-md mx-auto mockup-code bg-primary p-6 my-2">
           <pre data-prefix="$">
             <code className="">  </code>
           </pre>
-        </div>        
-          <div className="text-center">
-          <RequestAirdrop />
+        </div>         */}
+        <RoadMap />
+        {/* <RequestAirdrop />
           {wallet.publicKey && <p>Public Key: {wallet.publicKey.toBase58()}</p>}
-          {wallet && <p>SOL Balance: {(balance || 0).toLocaleString()}</p>}
-        </div> */}
+          {wallet && <p>SOL Balance: {(balance || 0).toLocaleString()}</p>} */}
       </div>
     </div>
   );

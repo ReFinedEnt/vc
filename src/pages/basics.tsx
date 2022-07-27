@@ -6,11 +6,8 @@ const Basics: NextPage = (props) => {
   return (
     <div>
       <Head>
-        <title>krk.finance | web3 hustle !</title>
-        <meta
-          name="description"
-          content="krk.finance | solana web3 basics"
-        />
+        <title>krk.finance | IT Wizardzy NFT DAO 🪄 !</title>
+        <meta name="description" content="krk.finance | solana web3 basics" />
       </Head>
       <BasicsView />
     </div>

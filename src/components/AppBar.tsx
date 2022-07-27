@@ -32,7 +32,7 @@ export const AppBar: FC = (props) => {
 
           <div className="hidden sm:inline w-22 h-22 md:p-2">
             <div className="flex content-center">
-              <Link href="/">
+              {/* <Link href="/">
                 <button className="">
                   <Image
                     src={
@@ -42,21 +42,17 @@ export const AppBar: FC = (props) => {
                     width={"42px"}
                   />
                 </button>
-              </Link>
-
-              <Link href="/" className="ml-2">
-                <a>krk.finance</a>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
 
         {/* Nav Links */}
         <div className="hidden md:inline md:navbar-center">
-          <div className="flex items-stretch">
-            <Link href="/">
+          <div className="flex items-stretch ">
+            {/* <Link href="/">
               <a className="btn btn-sm rounded-btn active">Home</a>
-            </Link>
+            </Link> */}
             <Link href="/swap">
               <a className="btn btn-sm rounded-btn">Swap</a>
             </Link>
@@ -64,14 +60,19 @@ export const AppBar: FC = (props) => {
               <a className="btn btn-sm rounded-btn">DEX</a>
             </Link>
             <Link href="https://link.krk.finance/squad">
-              <a className="btn btn-sm rounded-btn">SQUAD</a>
+              <a className="btn btn-sm rounded-btn">DAO</a>
+            </Link>
+            <Link href="#">
+              <a className="btn btn-sm rounded-btn" disabled="disabled">
+                Farms
+              </a>
             </Link>
           </div>
         </div>
 
         {/* Wallet & Settings */}
         <div className="navbar-end">
-          <div className="dropdown">
+          {/* <div className="dropdown">
             <div tabIndex={0} className="btn btn-square text-right">
               <svg
                 className="w-6 h-6"
@@ -112,8 +113,9 @@ export const AppBar: FC = (props) => {
                 </div>
               </li>
             </ul>
-          </div>
-          <WalletMultiButton className="btn  mr-4" />
+          </div> */}
+          <div className="badge badge-sm badge-success">pre-alpha</div>
+          <WalletMultiButton className="btn mx-2" />
         </div>
       </div>
       {props.children}

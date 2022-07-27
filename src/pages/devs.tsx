@@ -7,14 +7,13 @@ const Devs: NextPage = (props) => {
   return (
     <div>
       <Head>
-        <title>krk.finance | 101 devs</title>
+        <title>krk.finance | 404 devs</title>
         <meta name="description" content="krk.finance 101 devs" />
       </Head>
       <div className="hero bg-base-0">
         <div className="hero-content text-center">
-          {/* <JupiterForm /> */}
           <h1 className="tracking-wide font-bold leading-[100%] text-left flex-grow">
-            101 DEVS
+            404 DEVS
           </h1>
         </div>
       </div>

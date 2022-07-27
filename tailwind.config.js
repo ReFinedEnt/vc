@@ -32,7 +32,7 @@ module.exports = {
           "primary-content":
             "#ffffff" /* Foreground content color to use on primary color */,
 
-          secondary: "#f6d860" /* Secondary color */,
+          secondary: "#9945FF" /* Secondary color */,
           "secondary-focus": "#f3cc30" /* Secondary color - focused */,
           "secondary-content":
             "#ffffff" /* Foreground content color to use on secondary color */,
@@ -55,7 +55,7 @@ module.exports = {
             "#f9fafb" /* Foreground content color to use on base color */,
 
           info: "#2094f3" /* Info */,
-          success: "#009485" /* Success */,
+          success: "#14F195" /* Success */,
           warning: "#ff9900" /* Warning */,
           error: "#ff5724" /* Error */,
         },

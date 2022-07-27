@@ -41,3 +41,7 @@ h2 {
 div#glitch {
   animation: glitch 1s linear infinite;
 }
+
+a#farm-link {
+  disabled: true;
+}

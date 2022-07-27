@@ -54,18 +54,18 @@ export const AppBar: FC = (props) => {
               <a className="btn btn-sm rounded-btn active">Home</a>
             </Link> */}
             <Link href="/swap">
-              <a className="btn btn-sm rounded-btn">Swap</a>
+              <button className="btn btn-sm rounded-btn">Swap</button>
             </Link>
             <Link href="https://dex.krk.finance">
-              <a className="btn btn-sm rounded-btn">DEX</a>
+              <button className="btn btn-sm rounded-btn">DEX</button>
             </Link>
             <Link href="https://link.krk.finance/squad">
-              <a className="btn btn-sm rounded-btn">DAO</a>
+              <button className="btn btn-sm rounded-btn">DAO</button>
             </Link>
             <Link href="#">
-              <a className="btn btn-sm rounded-btn" disabled="disabled">
+              <button className="btn btn-sm rounded-btn" disabled={true}>
                 Farms
-              </a>
+              </button>
             </Link>
           </div>
         </div>

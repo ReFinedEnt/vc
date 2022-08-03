@@ -3,9 +3,9 @@ import { FC } from "react";
 export const Footer: FC = () => {
   return (
     <div className="">
-      <footer className="mx-auto  flex flex-row p-2 text-center items-center footer bg-neutral text-neutral-content">
-        <div className="ml-2">$KRK &copy; 2022</div>
-        <div className="max-w-md mx-auto sm:pl-12 grid-flow-col gap-4 text-center flex align-center justify-center">
+      <footer className="mx-auto  flex flex-row p-2 text-center justify-center items-center footer bg-neutral text-neutral-content">
+        <div className="w-100">$KRK &copy; 2022</div>
+        <div className="max-w-md mx-auto text-center flex align-center justify-center items-center mx-auto pr-10">
           <a>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -29,15 +29,27 @@ export const Footer: FC = () => {
             </svg>
           </a>
           {/* <a>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current">
-                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-                        </svg>
-                    </a> */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              className="fill-current"
+            >
+              <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+            </svg>
+          </a> */}
           {/* <a>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current">
-                            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-                        </svg>
-                    </a> */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              className="fill-current"
+            >
+              <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+            </svg>
+          </a> */}
           <a href="https://link.krk.finance/discord" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -50,21 +62,21 @@ export const Footer: FC = () => {
             </svg>
           </a>
         </div>
-        <div className="grid-flow-col gap-4 text-center pr-2">
+
+        <div className="text-center w-100px">
           <div>
             <p className="text-white text-base font-light cursor-default ">
-              Forked from
+              built on
             </p>
             <a
               rel="noreferrer"
-              href="https://github.com/solana-labs/dapp-scaffold"
+              href="https://solana.com"
               target="_blank"
               className="text-white text-base font-bold hover:text-primary-dark transition-all duration-200"
             >
               <span className="font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
-                Solana Labs
-              </span>{" "}
-              🥸
+                Solana
+              </span>
             </a>
           </div>
         </div>

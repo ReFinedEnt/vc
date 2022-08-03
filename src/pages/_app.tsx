@@ -1,6 +1,9 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { FC } from "react";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
 import { ContextProvider } from "../contexts/ContextProvider";
 import { AppBar } from "../components/AppBar";
 import { ContentContainer } from "../components/ContentContainer";
@@ -10,7 +13,7 @@ import Notifications from "../components/Notification";
 import { JupiterApiProvider } from "../contexts/JupiterApiProvider";
 
 require("@solana/wallet-adapter-react-ui/styles.css");
-require("../styles/globals.css");
+require("../styles/globals.scss");
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -35,7 +38,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
       </Head>
 
       <ContextProvider>
-        <div className="flex flex-col h-screen">
+        <div className="flex flex-col h-screen from-[#4b6cb7] to-[#182848] bg-gradient-to-r ">
           <Notifications />
           <AppBar />
           <ContentContainer>

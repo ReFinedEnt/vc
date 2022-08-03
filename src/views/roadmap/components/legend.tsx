@@ -3,12 +3,12 @@ import { FC, useEffect, useState } from "react";
 import Link from "next/link";
 
 // Wallet
-import { useWallet, useConnection } from "@solana/wallet-adapter-react";
+// import { useWallet, useConnection } from "@solana/wallet-adapter-react";
 
 // Store
 // import useUserSOLBalanceStore from "../../stores/useUserSOLBalanceStore";
 
-export const SideQuests: FC = ({}) => {
+export const Legend: FC = ({}) => {
   //   const wallet = useWallet();
   //   const { connection } = useConnection();
 
@@ -23,34 +23,22 @@ export const SideQuests: FC = ({}) => {
   //   }, [wallet.publicKey, connection, getUserSOLBalance]);
 
   return (
-    <div className="card w-42 bg-base-100 shadow-m ">
+    <div className="card w-42 bg-base-100 shadow-m">
       <div className="card-body">
         <h2 className="card-title text-center text-base font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
-          Side Quests
+          Legend
         </h2>
 
         <div className="w-full">
           <ul className="steps steps-vertical">
-            <li data-content="🎁" className="step">
-              WL + Airdrops
+            <li data-content="" className="step step-warning">
+              WIP
             </li>
-            <li data-content="🤖" className="step step-warning">
-              Discord Bot
+            <li data-content="" className="step step-success">
+              Shipped!
             </li>
-            <li data-content="🧁" className="step">
-              Cupcakes
-            </li>
-            <li data-content="🏗️" className="step">
-              RPC Node
-            </li>
-            <li data-content="🧢" className="step">
-              Merch
-            </li>
-            <li data-content="🌱" className="step">
-              Hacker House
-            </li>
-            <li data-content="🧘" className="step">
-              Wellbeing
+            <li data-content="" className="step step-secondary">
+              Next
             </li>
           </ul>
         </div>

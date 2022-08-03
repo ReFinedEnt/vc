@@ -14,7 +14,7 @@ export const AppBar: FC = (props) => {
       {/* NavBar / Header */}
       <div className="navbar flex flex-row md:mb-2 shadow-lg bg-neutral text-neutral-content">
         <div className="navbar-start flex">
-          <label htmlFor="my-drawer" className="btn btn-square btn-ghost">
+          <label htmlFor="my-drawer" className="btn btn-square btn-ghost ml-10">
             <svg
               className="inline-block w-6 h-6 stroke-current"
               xmlns="http://www.w3.org/2000/svg"
@@ -32,17 +32,17 @@ export const AppBar: FC = (props) => {
 
           <div className="hidden sm:inline w-22 h-22 md:p-2">
             <div className="flex content-center">
-              {/* <Link href="/">
-                <button className="">
+              <Link href="/">
+                <button className="btn btn-square btn-ghost ml-2 mx-1">
                   <Image
                     src={
-                      "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/krk_logo.png"
+                      "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/coin_logo.png"
                     }
-                    height={"42px"}
-                    width={"42px"}
+                    height={"40px"}
+                    width={"40px"}
                   />
                 </button>
-              </Link> */}
+              </Link>
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@ export const AppBar: FC = (props) => {
             </Link>
             <Link href="#">
               <button className="btn btn-sm rounded-btn" disabled={true}>
-                Farms
+                Farm
               </button>
             </Link>
           </div>

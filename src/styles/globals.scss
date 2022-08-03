@@ -10,6 +10,7 @@ body {
   margin: 0;
   font-family: "Source Code Pro", monospace;
   font-weight: 300;
+  /* text-shadow: 0.1px 0.1px 0.1px #fff; */
 }
 
 a {
@@ -37,3 +38,12 @@ h1 {
 h2 {
   font-size: clamp(2.2rem, 4vw, 3.3rem);
 }
+
+// .toast::before {
+//   content: "Whitepaper";
+
+//   // -webkit-text-fill-color: transparent;
+//   // -webkit-text-stroke: 2px #000;
+//   position: relative;
+//   left: 170px;
+// }

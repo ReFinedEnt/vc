@@ -9,6 +9,7 @@ import { useWallet, useConnection } from "@solana/wallet-adapter-react";
 import { RequestAirdrop } from "../../components/RequestAirdrop";
 import pkg from "../../../package.json";
 import { SideQuests } from "./components/sidequests";
+import { Legend } from "./components/legend";
 
 // Store
 import useUserSOLBalanceStore from "../../stores/useUserSOLBalanceStore";
@@ -28,34 +29,45 @@ export const RoadMap: FC = ({}) => {
   }, [wallet.publicKey, connection, getUserSOLBalance]);
 
   return (
-    <div className="flex justify-center items-center flex-col">
-      <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
+    <div className="flex justify-center items-center flex-col w-screen">
+      <h2 className="text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195] solana">
         Roadmap
       </h2>
       <div className="w-screen flex justify-center align-center">
-        <div className="absolute right-10">
+        <div className="absolute left-10 sm:hidden md:hidden lg:block">
           <SideQuests />
         </div>
-        <ul className="steps steps-vertical ">
+        <div className="absolute right-10">
+          <Legend />
+        </div>
+        <ul className="steps steps-vertical">
           <li
-            data-content="💡"
-            className="step step-secondary"
+            data-content="📑"
+            className="step step-warning"
             id="step-whitepaper"
           >
             Whitepaper
           </li>
-          <li data-content="✓" className="step step-secondary" id="step-swap">
-            Swap
-          </li>
-          <li data-content="✓" className="step step-secondary" id="step-DEX">
-            DEX
-          </li>
-          <li data-content="★" className="step step-success" id="step-mint">
-            NFT DAO
-          </li>
-          <li data-content="" className="step" id="step-token">
+          <li data-content="🪙" className="step step-success" id="step-token">
             $KRK Token
           </li>
+          <li data-content="🔁" className="step step-warning" id="step-swap">
+            Swap
+          </li>
+          <li data-content="🌐" className="step step-warning" id="step-DEX">
+            DEX
+          </li>
+          <li data-content="🌐" className="step step-warning" id="step-DEX">
+            AMM
+          </li>
+          <li
+            data-content="★"
+            className="step step-secondary"
+            id="step-secondary"
+          >
+            NFT DAO
+          </li>
+
           <li data-content="" className="step" id="step-staking">
             NFT Staking
           </li>
@@ -69,7 +81,7 @@ export const RoadMap: FC = ({}) => {
             Lambo
           </li>
           <li data-content="🏆" className="step" id="step-lambo">
-            Network State
+            <Link href="https://thenetworkstate.com/">Network State</Link>
           </li>
         </ul>
       </div>

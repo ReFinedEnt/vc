@@ -57,9 +57,9 @@ export const RoadMap: FC = ({}) => {
           <li data-content="🌐" className="step step-warning" id="step-DEX">
             DEX
           </li>
-          <li data-content="🌐" className="step step-warning" id="step-DEX">
+          {/* <li data-content="🌐" className="step step-warning" id="step-DEX">
             AMM
-          </li>
+          </li> */}
           <li
             data-content="★"
             className="step step-secondary"

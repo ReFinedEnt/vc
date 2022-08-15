@@ -49,7 +49,7 @@ export const RoadMap: FC = ({}) => {
             Whitepaper
           </li>
           <li data-content="🌐" className="step step-success" id="step-DEX">
-            DEX
+            DEX UI
           </li>
           <li data-content="🔁" className="step step-warning" id="step-swap">
             Swap

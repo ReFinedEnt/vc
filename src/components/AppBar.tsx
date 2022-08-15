@@ -1,9 +1,9 @@
-import { FC } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import { FC } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
-import { useAutoConnect } from "../contexts/AutoConnectProvider";
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
+import { useAutoConnect } from '../contexts/AutoConnectProvider';
 // import "";
 
 export const AppBar: FC = (props) => {
@@ -36,10 +36,10 @@ export const AppBar: FC = (props) => {
                 <button className="btn btn-square btn-ghost ml-2 mx-1">
                   <Image
                     src={
-                      "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/coin_logo.png"
+                      'https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/coin_logo.png'
                     }
-                    height={"40px"}
-                    width={"40px"}
+                    height={'40px'}
+                    width={'40px'}
                   />
                 </button>
               </Link>
@@ -62,11 +62,14 @@ export const AppBar: FC = (props) => {
             <Link href="https://link.krk.finance/squad">
               <button className="btn btn-sm rounded-btn">DAO</button>
             </Link>
-            <Link href="#">
+            <Link href="https://docs.krk.finance">
+              <button className="btn btn-sm rounded-btn">Docs</button>
+            </Link>
+            {/* <Link href="#">
               <button className="btn btn-sm rounded-btn" disabled={true}>
                 Farm
               </button>
-            </Link>
+            </Link> */}
           </div>
         </div>
 

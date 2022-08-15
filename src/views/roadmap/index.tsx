@@ -1,18 +1,18 @@
 // Next, React
-import { FC, useEffect, useState } from "react";
-import Link from "next/link";
+import { FC, useEffect, useState } from 'react';
+import Link from 'next/link';
 
 // Wallet
-import { useWallet, useConnection } from "@solana/wallet-adapter-react";
+import { useWallet, useConnection } from '@solana/wallet-adapter-react';
 
 // Components
-import { RequestAirdrop } from "../../components/RequestAirdrop";
-import pkg from "../../../package.json";
-import { SideQuests } from "./components/sidequests";
-import { Legend } from "./components/legend";
+import { RequestAirdrop } from '../../components/RequestAirdrop';
+import pkg from '../../../package.json';
+import { SideQuests } from './components/sidequests';
+import { Legend } from './components/legend';
 
 // Store
-import useUserSOLBalanceStore from "../../stores/useUserSOLBalanceStore";
+import useUserSOLBalanceStore from '../../stores/useUserSOLBalanceStore';
 
 export const RoadMap: FC = ({}) => {
   const wallet = useWallet();
@@ -43,40 +43,40 @@ export const RoadMap: FC = ({}) => {
         <ul className="steps steps-vertical">
           <li
             data-content="📑"
-            className="step step-warning"
+            className="step step-success"
             id="step-whitepaper"
           >
             Whitepaper
           </li>
-          <li data-content="🪙" className="step step-success" id="step-token">
-            $KRK Token
+          <li data-content="🌐" className="step step-success" id="step-DEX">
+            DEX
           </li>
           <li data-content="🔁" className="step step-warning" id="step-swap">
             Swap
           </li>
-          <li data-content="🌐" className="step step-warning" id="step-DEX">
-            DEX
-          </li>
-          {/* <li data-content="🌐" className="step step-warning" id="step-DEX">
-            AMM
-          </li> */}
+
           <li
             data-content="★"
             className="step step-secondary"
             id="step-secondary"
           >
-            NFT DAO
+            NFT Governance
           </li>
-
-          <li data-content="" className="step" id="step-staking">
-            NFT Staking
+          <li data-content="🎁" className="step" id="step-token">
+            $KRK Token
+          </li>
+          <li data-content="💱" className="step" id="step-token">
+            Serum Markets
           </li>
           <li data-content="" className="step" id="step-lend">
             Lending
           </li>
-          <li data-content="" className="step" id="step-perps">
-            Perps
-          </li>
+          {/* <li data-content="🌐" className="step step-warning" id="step-DEX">
+            AMM
+          </li> */}
+          {/* <li data-content="🏦" className="step" id="step-staking">
+            Governance
+          </li> */}
           <li data-content="★" className="step" id="step-lambo">
             Lambo
           </li>

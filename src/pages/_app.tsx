@@ -1,16 +1,16 @@
-import { AppProps } from "next/app";
-import Head from "next/head";
-import { FC } from "react";
-import { ContextProvider } from "../contexts/ContextProvider";
-import { AppBar } from "../components/AppBar";
-import { ContentContainer } from "../components/ContentContainer";
-import { Footer } from "../components/Footer";
-import Notifications from "../components/Notification";
+import { AppProps } from 'next/app';
+import Head from 'next/head';
+import { FC } from 'react';
+import { ContextProvider } from '../contexts/ContextProvider';
+import { AppBar } from '../components/AppBar';
+import { ContentContainer } from '../components/ContentContainer';
+import { Footer } from '../components/Footer';
+import Notifications from '../components/Notification';
 
-import { JupiterApiProvider } from "../contexts/JupiterApiProvider";
+import { JupiterApiProvider } from '../contexts/JupiterApiProvider';
 
-require("@solana/wallet-adapter-react-ui/styles.css");
-require("../styles/globals.scss");
+require('@solana/wallet-adapter-react-ui/styles.css');
+require('../styles/globals.scss');
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -19,13 +19,13 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
         <title>krk.finance</title>
         <meta
           property="og:title"
-          content="krk.finance | 404 IT Wizardzy NFT DAO on Solana 🪄"
+          content="krk.finance | IT Wizardzy NFT DAO on Solana 🪄"
         />
         <meta property="og:site_name" content="krk.finance" />
         <meta property="og:url" content="https://krk.finance/" />
         <meta
           property="og:description"
-          content="404 IT Wizardzy NFT DAO on Solana 🪄"
+          content="IT Wizardzy NFT DAO on Solana 🪄"
         />
         <meta property="og:type" content="website" />
         <meta
@@ -45,10 +45,10 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
                   krk.finance
                 </h1>
                 <p className="text-sm ">
-                  IT Wizardzy NFT DAO on{" "}
+                  IT Wizardzy NFT DAO on{' '}
                   <span className="font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
                     Solana
-                  </span>{" "}
+                  </span>{' '}
                   🪄
                 </p>
               </h4>

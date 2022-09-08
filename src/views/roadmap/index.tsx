@@ -281,7 +281,9 @@ export const RoadMap: FC = ({}) => {
           <li data-content="🔁" className="step step-warning" id="step-swap">
             Swap
           </li>
-
+          <li data-content="🎮" className="step step-warning" id="step-swap">
+            Blockchain PvP Game
+          </li>
           <li
             data-content="★"
             className="step step-secondary"

@@ -86,7 +86,7 @@ const Portfolio: FC = (props) => {
       status: 'abandonned',
       description:
         'Simple analytics tool to match minimal wage in $DESO diamonds worldwide',
-      note: '',
+      note: 'going to zero (not FA)',
       blockchain: 'Deso',
       stack: ['Javascript', 'Coingecko REST API', 'React'],
       imageUrl: 'aaa',

@@ -44,10 +44,10 @@ const ProjectItem: FC<Props> = ({ project }) => {
       /> */}
       <div className="card-body">
         <div className="container grow">
-          <h2 className="mb-2 text-xl text-center text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
+          <h2 className="mb-4 text-xl text-center text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
             {title}
           </h2>
-          <div>
+          <div className="text-sm">
             status :{' '}
             <span
               className={`badge ${
@@ -58,14 +58,14 @@ const ProjectItem: FC<Props> = ({ project }) => {
             </span>
           </div>
           <div className="py-2 text-sm">{description}</div>
-          <div>note : {note}</div>
-          <div>
+          <div className="mb-2 text-sm">note : {note}</div>
+          <div className="mb-2 text-sm">
             chain :{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
               {blockchain}
             </span>
           </div>
-          <ul>
+          <ul className="mb-2 text-sm">
             stack :
             {stack.map((element) => {
               return (

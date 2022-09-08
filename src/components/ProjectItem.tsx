@@ -1,7 +1,5 @@
 import { FC } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { icon } from '@fortawesome/fontawesome-svg-core/import.macro';
 // import projectInterface from '../constants/projectInterface';
 
 interface Project {

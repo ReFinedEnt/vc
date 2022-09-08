@@ -1,6 +1,11 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { FC } from 'react';
+// Font Awesome
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+config.autoAddCss = false;
+// Components
 import { ContextProvider } from '../contexts/ContextProvider';
 import { AppBar } from '../components/AppBar';
 import { ContentContainer } from '../components/ContentContainer';

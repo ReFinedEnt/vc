@@ -1,11 +1,11 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 export const Footer: FC = () => {
   return (
     <div className="">
       <footer className="mx-auto  flex flex-row p-2 text-center justify-center items-center footer bg-neutral text-neutral-content">
-        <div className="w-100">$KRK &copy; 2022</div>
-        <div className="max-w-md mx-auto text-center flex align-center justify-center items-center mx-auto pr-10">
+        <div className="ml-5">&copy; 2022</div>
+        <div className="max-w-md text-center flex align-center justify-center items-center mx-auto pr-10">
           <a>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -66,16 +66,16 @@ export const Footer: FC = () => {
         <div className="text-center w-100px">
           <div>
             <p className="text-white text-base font-light cursor-default ">
-              built on
+              builing
             </p>
             <a
               rel="noreferrer"
-              href="https://solana.com"
+              // href="https://solana.com"
               target="_blank"
               className="text-white text-base font-bold hover:text-primary-dark transition-all duration-200"
             >
               <span className="font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
-                Solana
+                Web3
               </span>
             </a>
           </div>

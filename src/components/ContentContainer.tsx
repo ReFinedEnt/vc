@@ -1,5 +1,5 @@
-import { FC } from "react";
-import Link from "next/link";
+import { FC } from 'react';
+import Link from 'next/link';
 export const ContentContainer: FC = (props) => {
   return (
     <div className="flex-1 drawer h-100">
@@ -28,7 +28,7 @@ export const ContentContainer: FC = (props) => {
             </Link>
           </li>
 
-          <li>
+          {/* <li>
             <Link href="/farms">
               <a>Farms</a>
             </Link>
@@ -42,7 +42,7 @@ export const ContentContainer: FC = (props) => {
             <Link href="/broke">
               <a>Broke ?</a>
             </Link>
-          </li>
+          </li> */}
           <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
             Governance
           </h1>
@@ -58,10 +58,10 @@ export const ContentContainer: FC = (props) => {
           </li>
           <li>
             <Link href="/whitepaper">
-              <a>Walter Whitepaper</a>
+              <a>Whitepaper</a>
             </Link>
           </li>
-          <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
+          {/* <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
             Archive
           </h1>
           <li>
@@ -73,7 +73,7 @@ export const ContentContainer: FC = (props) => {
             <Link href="/basics">
               <a>Basics</a>
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

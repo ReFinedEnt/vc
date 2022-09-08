@@ -34,13 +34,14 @@ export const AppBar: FC = (props) => {
             <div className="flex content-center">
               <Link href="/">
                 <button className="btn btn-square btn-ghost ml-2 mx-1">
-                  <Image
+                  {/* <Image
                     src={
                       'https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/coin_logo.png'
                     }
                     height={'40px'}
                     width={'40px'}
-                  />
+                  /> */}
+                  &gt;_
                 </button>
               </Link>
             </div>
@@ -117,8 +118,8 @@ export const AppBar: FC = (props) => {
               </li>
             </ul>
           </div> */}
-          <div className="badge badge-sm badge-success">pre-alpha</div>
-          <WalletMultiButton className="btn mx-2" />
+          {/* <div className="badge badge-sm badge-success">pre-alpha</div>
+          <WalletMultiButton className="btn mx-2" /> */}
         </div>
       </div>
       {props.children}

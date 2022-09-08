@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&family=Source+Code+Pro:wght@300;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&family=Source+Code+Pro:wght@300;400&display=swap');
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Source Code Pro', monospace;
   font-weight: 300;
   /* text-shadow: 0.1px 0.1px 0.1px #fff; */
 }
@@ -30,15 +30,71 @@ a {
   background-color: #707070;
 }
 
-h1 {
+h1,
+h2 {
   /* font-size: clamp(3.8rem, 8vw, 6rem); */
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 h2 {
   font-size: clamp(2.2rem, 4vw, 3.3rem);
 }
 
+li::before {
+  // list-style-type: square;
+  content: '· ';
+}
+
+.episode {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  position: relative;
+}
+
+.episode__number {
+  font-size: 10vw;
+  font-weight: 600;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  height: calc(10vw + 20px);
+  transition: all 0.2s ease-in;
+}
+
+.episode__content {
+  border-top: 2px solid #fff;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 10px;
+  padding: 15px 0;
+}
+
+.episode__content .title {
+  font-weight: 600;
+}
+
+.episode__content .story {
+  line-height: 26px;
+}
+
+@media (max-width: 600px) {
+  .episode__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .episode__content .story {
+    font-size: 15px;
+  }
+}
+
+// .workshop {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   grid-template-rows: 1fr 1fr 1fr;
+// }
 // .toast::before {
 //   content: "Whitepaper";
 

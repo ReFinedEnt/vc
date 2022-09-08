@@ -40,18 +40,19 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
           <AppBar />
           <ContentContainer>
             <JupiterApiProvider>
-              <h4 className="md:w-full mt-3 text-center text-slate-300 flex justify-center items-center align-center flex-col">
+              <div className="md:w-full mt-3 text-center text-slate-300 flex justify-center items-center align-center flex-col">
                 <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195] w-100">
                   krk.finance
                 </h1>
                 <p className="text-sm ">
-                  IT Wizardzy NFT DAO on{' '}
+                  chain-agnostic IT wizards{' '}
+                  {/* on{' '}
                   <span className="font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
                     Solana
-                  </span>{' '}
+                  </span>{' '} */}
                   🪄
                 </p>
-              </h4>
+              </div>
               <Component {...pageProps} />
             </JupiterApiProvider>
           </ContentContainer>

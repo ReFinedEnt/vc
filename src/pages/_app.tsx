@@ -19,18 +19,18 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
         <title>krk.finance</title>
         <meta
           property="og:title"
-          content="krk.finance | IT Wizardzy NFT DAO on Solana 🪄"
+          content="krk.finance | chain agnostic IT wizards 🪄"
         />
         <meta property="og:site_name" content="krk.finance" />
         <meta property="og:url" content="https://krk.finance/" />
         <meta
           property="og:description"
-          content="IT Wizardzy NFT DAO on Solana 🪄"
+          content="krk.finance | chain agnostic IT wizards 🪄"
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/krk_logo.png"
+          content="https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/krk_embed.png"
         />
       </Head>
 

@@ -30,7 +30,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/krk_embed.png"
+          content="https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/krk_embed_2.png"
         />
       </Head>
 

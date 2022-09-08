@@ -23,8 +23,8 @@ const Portfolio: FC = (props) => {
       blockchain: 'Solana',
       stack: ['Rust', 'sugarCLI', 'realms.today'],
       imageUrl: 'aaa',
-      github: '',
-      link: '',
+      github: '#',
+      link: '#',
     },
     {
       id: 3,
@@ -34,8 +34,8 @@ const Portfolio: FC = (props) => {
       blockchain: 'Cronos',
       stack: ['C#', 'Unity', 'Solidity', 'Hardhat'],
       imageUrl: 'aaa',
-      github: '',
-      link: '',
+      github: '#',
+      link: '#',
     },
     {
       id: 4,
@@ -46,7 +46,7 @@ const Portfolio: FC = (props) => {
       stack: ['Typescript', 'Slappey', 'NestJS', 'PostgreSQL', 'React'],
       imageUrl: 'aaa',
       github: '',
-      link: '',
+      link: '#',
     },
     {
       id: 5,
@@ -57,7 +57,7 @@ const Portfolio: FC = (props) => {
       stack: ['Typescript', 'Slappey', 'NestJS', 'PostgreSQL', 'React'],
       imageUrl: 'aaa',
       github: 'https://github.com/EsyWin/discord-google-calendar',
-      link: '',
+      link: '#',
     },
     {
       id: 6,

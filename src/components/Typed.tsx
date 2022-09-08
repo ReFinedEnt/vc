@@ -12,10 +12,10 @@ export default function TypedTitle() {
         'we participate hackathons',
         'we 🖤 crypto',
       ],
-      startDelay: 100,
+      startDelay: 500,
       typeSpeed: 50,
-      backSpeed: 10,
-      backDelay: 100,
+      backSpeed: 50,
+      backDelay: 500,
       loop: false,
     });
 

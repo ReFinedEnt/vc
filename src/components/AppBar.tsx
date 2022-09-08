@@ -12,7 +12,7 @@ export const AppBar: FC = (props) => {
   return (
     <div>
       {/* NavBar / Header */}
-      <div className="navbar flex flex-row md:pb-2 shadow-lg bg-neutral text-neutral-content">
+      <div className="navbar flex flex-row md:pb-2 shadow-lg bg-neutral text-neutral-content z-50">
         <div className="navbar-start flex">
           <label htmlFor="my-drawer" className="btn btn-square btn-ghost ml-10">
             <svg

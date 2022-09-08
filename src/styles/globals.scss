@@ -25,6 +25,23 @@ a {
   box-sizing: border-box;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2d313c;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5b5f67;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5b5f67;
+}
+
 /* example: override wallet button style */
 .wallet-adapter-button:not([disabled]):hover {
   background-color: #707070;

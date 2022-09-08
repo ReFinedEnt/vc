@@ -56,11 +56,11 @@ export const ContentContainer: FC = (props) => {
               <a>Roadmap</a>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/whitepaper">
               <a>Whitepaper</a>
             </Link>
-          </li>
+          </li> */}
           {/* <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
             Archive
           </h1>

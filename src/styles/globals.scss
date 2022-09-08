@@ -40,7 +40,7 @@ h2 {
   font-size: clamp(2.2rem, 4vw, 3.3rem);
 }
 
-li::before {
+li.workshop::before {
   // list-style-type: square;
   content: '· ';
 }

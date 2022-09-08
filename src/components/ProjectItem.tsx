@@ -1,5 +1,5 @@
 import { FC } from 'react';
-
+import { v4 as uuidv4 } from 'uuid';
 // import projectInterface from '../constants/projectInterface';
 
 interface Project {
@@ -55,7 +55,11 @@ const ProjectItem: FC<Props> = ({ project }) => {
           <ul>
             stack :
             {stack.map((element) => {
-              return <li className="pl-3">{element}</li>;
+              return (
+                <li className="pl-3 workshop" key={`${uuidv4()}`}>
+                  {element}
+                </li>
+              );
             })}
           </ul>
         </div>

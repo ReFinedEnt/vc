@@ -17,7 +17,7 @@
     "@solana/wallet-adapter-react": "^0.15.3",
     "@solana/wallet-adapter-react-ui": "^0.9.5",
     "@solana/wallet-adapter-wallets": "0.16.1",
-    "@solana/web3.js": "^1.31.0",
+    "@solana/web3.js": "^1.63.1",
     "@tailwindcss/typography": "^0.5.2",
     "animate.css": "^4.1.1",
     "daisyui": "2.15.2",
@@ -34,7 +34,7 @@
     "zustand": "^3.6.9"
   },
   "devDependencies": {
-    "@types/node": "17.0.10",
+    "@types/node": "18.7.22",
     "@types/react": "17.0.38",
     "autoprefixer": "^10.4.12",
     "eslint": "8.7.0",

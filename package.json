@@ -20,7 +20,7 @@
     "@solana/web3.js": "^1.63.1",
     "@tailwindcss/typography": "^0.5.2",
     "animate.css": "^4.1.1",
-    "daisyui": "2.15.2",
+    "daisyui": "2.31.0",
     "dotenv": "^16.0.1",
     "immer": "^9.0.15",
     "next": "12.1.6",

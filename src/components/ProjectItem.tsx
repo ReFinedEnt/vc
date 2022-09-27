@@ -32,10 +32,10 @@ const ProjectItem: FC<Props> = ({ project }) => {
     stack,
     imageUrl,
     github,
-    link,
+    link
   } = project;
   return (
-    <div className="card w-96 bg-base-100 shadow-xl mx-auto">
+    <div className="card w-96 bg-black text-white shadow-xl mx-auto border-2 border-white">
       {/* <div
         className="background-image"
         style={{
@@ -61,7 +61,7 @@ const ProjectItem: FC<Props> = ({ project }) => {
           <div className="mb-2 text-sm">note : {note}</div>
           <div className="mb-2 text-sm">
             chain :{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
+            <span className="text-transparent text-bold bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
               {blockchain}
             </span>
           </div>

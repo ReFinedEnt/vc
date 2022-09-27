@@ -10,13 +10,13 @@ export default function TypedTitle() {
         'welcome to krk.finance',
         'we build stuff',
         'we participate hackathons',
-        'we 🖤 crypto',
+        'we 🖤 crypto'
       ],
       startDelay: 500,
       typeSpeed: 50,
       backSpeed: 50,
       backDelay: 500,
-      loop: false,
+      loop: false
     });
 
     // Destroying
@@ -25,7 +25,7 @@ export default function TypedTitle() {
     };
   }, []);
   return (
-    <div className="max-w-md mx-auto mockup-code bg-primary p-6 my-2">
+    <div className="max-w-md mx-auto mockup-code bg-black p-6 my-2 w-[420px] border-2 border-white">
       <pre data-prefix=">_">
         <code className="">
           {' '}

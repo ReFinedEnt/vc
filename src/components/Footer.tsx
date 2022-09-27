@@ -2,9 +2,9 @@ import { FC } from 'react';
 
 export const Footer: FC = () => {
   return (
-    <div className="">
-      <footer className="mx-auto  flex flex-row p-2 text-center justify-center items-center footer bg-neutral text-neutral-content">
-        <div className="ml-5">&copy; 2022</div>
+    <div className="border-t-2 border-white">
+      <footer className="mx-auto  flex flex-row p-2 text-center justify-center items-center footer bg-black text-white">
+        <div className="ml-5 text-white">$KRK &copy; 2022</div>
         <div className="max-w-md text-center flex align-center justify-center items-center mx-auto pr-10">
           <a>
             <svg
@@ -66,8 +66,9 @@ export const Footer: FC = () => {
         <div className="text-center w-100px">
           <div>
             <p className="text-white text-base font-light cursor-default ">
-              builing
+              built
             </p>
+            on{' '}
             <a
               rel="noreferrer"
               // href="https://solana.com"

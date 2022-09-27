@@ -36,7 +36,8 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
       </Head>
 
       <ContextProvider>
-        <div className="flex flex-col h-screen from-[#4b6cb7] to-[#182848] bg-gradient-to-r ">
+        {/* <div className="flex flex-col h-screen from-[#4b6cb7] to-[#182848] bg-gradient-to-r "> */}
+        <div className="flex flex-col h-screen bg-black">
           <Notifications />
           <AppBar />
           <ContentContainer>
@@ -45,7 +46,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
                 <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195] w-100">
                   krk.finance
                 </h1>
-                <p className="text-sm ">
+                <p className="text-sm text-white">
                   chain-agnostic IT wizards{' '}
                   {/* on{' '}
                   <span className="font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">

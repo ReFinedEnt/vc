@@ -12,59 +12,67 @@ export const AppBar: FC = (props) => {
   return (
     <div>
       {/* NavBar / Header */}
-      <div className="navbar flex flex-row md:pb-2 shadow-lg bg-neutral text-neutral-content z-50">
+      <div className="navbar flex flex-row md:pb-2 shadow-lg bg-black text-neutral-content z-50 border-b-2 border-white">
         <div className="navbar-start flex">
           <label htmlFor="my-drawer" className="btn btn-square btn-ghost ml-10">
-            <svg
-              className="inline-block w-6 h-6 stroke-current"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </label>
-
-          <div className="hidden sm:inline w-22 h-22 md:p-2">
             <div className="flex content-center">
-              <Link href="/">
-                <button className="btn btn-square btn-ghost ml-2 mx-1">
-                  {/* <Image
+              {/* <Image
                     src={
                       'https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/coin_logo.png'
                     }
                     height={'40px'}
                     width={'40px'}
                   /> */}
+              &gt;_
+            </div>
+          </label>
+
+          {/* <div className="hidden sm:inline w-22 h-22 md:p-2">
+            <div className="flex content-center">
+              <Link href="/">
+                <button className="btn btn-square btn-ghost ml-2 mx-1">
+                  <Image
+                    src={
+                      'https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/coin_logo.png'
+                    }
+                    height={'40px'}
+                    width={'40px'}
+                  />
                   &gt;_
                 </button>
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Nav Links */}
         <div className="hidden md:inline md:navbar-center">
           <div className="flex items-stretch ">
-            {/* <Link href="/">
-              <a className="btn btn-sm rounded-btn active">Home</a>
-            </Link> */}
+            <Link href="/">
+              <button className="btn btn-sm btn-ghost rounded-btn">
+                {/* <Image
+                    src={
+                      'https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/coin_logo.png'
+                    }
+                    height={'40px'}
+                    width={'40px'}
+                  /> */}
+                home
+              </button>
+            </Link>
             <Link href="/swap">
-              <button className="btn btn-sm rounded-btn">Swap</button>
+              <button className="btn btn-sm btn-ghost rounded-btn">Swap</button>
             </Link>
-            <Link href="https://dex.krk.finance">
-              <button className="btn btn-sm rounded-btn">DEX</button>
+            <Link href="https://dex.krk.finance" target={'_blank'}>
+              <button className="btn btn-sm btn-ghost rounded-btn">DEX</button>
             </Link>
-            <Link href="https://link.krk.finance/squad">
-              <button className="btn btn-sm rounded-btn">DAO</button>
+            <Link href="https://link.krk.finance/squad" target={'_blank'}>
+              <button className="btn btn-sm btn-ghost rounded-btn">
+                SQUAD
+              </button>
             </Link>
-            <Link href="https://docs.krk.finance">
-              <button className="btn btn-sm rounded-btn">Docs</button>
+            <Link href="https://docs.krk.finance" target={'_blank'}>
+              <button className="btn btn-sm btn-ghost rounded-btn">Docs</button>
             </Link>
             {/* <Link href="#">
               <button className="btn btn-sm rounded-btn" disabled={true}>

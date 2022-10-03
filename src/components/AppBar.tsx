@@ -15,7 +15,7 @@ export const AppBar: FC = (props) => {
       <div className="navbar flex flex-row md:pb-2 shadow-lg bg-black text-neutral-content z-50 border-b-2 border-white">
         <div className="navbar-start flex">
           <label htmlFor="my-drawer" className="btn btn-square btn-ghost ml-10">
-            <div className="flex content-center">
+            <div className="flex content-center title-glitch" data-content=">_">
               {/* <Image
                     src={
                       'https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/coin_logo.png'
@@ -49,7 +49,10 @@ export const AppBar: FC = (props) => {
         <div className="hidden md:inline md:navbar-center">
           <div className="flex items-stretch ">
             <Link href="/">
-              <button className="btn btn-sm btn-ghost rounded-btn">
+              <button
+                className="btn btn-sm btn-ghost rounded-btn text-glitch"
+                data-content="HOME"
+              >
                 {/* <Image
                     src={
                       'https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/coin_logo.png'
@@ -57,22 +60,40 @@ export const AppBar: FC = (props) => {
                     height={'40px'}
                     width={'40px'}
                   /> */}
-                home
+                HOME
               </button>
             </Link>
             <Link href="/swap">
-              <button className="btn btn-sm btn-ghost rounded-btn">Swap</button>
+              <button
+                className="btn btn-sm btn-ghost rounded-btn text-glitch"
+                data-content="SWAP"
+              >
+                SWAP
+              </button>
             </Link>
             <Link href="https://dex.krk.finance" target={'_blank'}>
-              <button className="btn btn-sm btn-ghost rounded-btn">DEX</button>
+              <button
+                className="btn btn-sm btn-ghost rounded-btn text-glitch"
+                data-content="DEX"
+              >
+                DEX
+              </button>
             </Link>
             <Link href="https://link.krk.finance/squad" target={'_blank'}>
-              <button className="btn btn-sm btn-ghost rounded-btn">
+              <button
+                className="btn btn-sm btn-ghost rounded-btn text-glitch"
+                data-content="SQUAD"
+              >
                 SQUAD
               </button>
             </Link>
             <Link href="https://docs.krk.finance" target={'_blank'}>
-              <button className="btn btn-sm btn-ghost rounded-btn">Docs</button>
+              <button
+                className="btn btn-sm btn-ghost rounded-btn text-glitch"
+                data-content="DOCS"
+              >
+                DOCS
+              </button>
             </Link>
             {/* <Link href="#">
               <button className="btn btn-sm rounded-btn" disabled={true}>

@@ -4,13 +4,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&family=Source+Code+Pro:wght@300;400&display=swap');
 
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'),
+    url('../fonts/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'JetBrains Mono';
   font-weight: 300;
+  font-size: 13px;
+  line-height: 1.2;
   /* text-shadow: 0.1px 0.1px 0.1px #fff; */
+  cursor: crosshair;
 }
 
 a {
@@ -120,3 +130,215 @@ li.workshop::before {
 //   position: relative;
 //   left: 170px;
 // }
+
+.title-glitch {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  z-index: 1;
+
+  &:before,
+  &:after {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  &:before {
+    color: #9945ff;
+    z-index: -1;
+  }
+
+  &:after {
+    color: #14f195;
+    z-index: -2;
+  }
+
+  &:hover {
+    &:before {
+      animation: glitchy 0.3s ease 0.3s infinite;
+    }
+
+    &:after {
+      animation: glitchy 0.3s ease infinite reverse;
+    }
+  }
+}
+
+.text-glitch {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  z-index: 1;
+
+  &:before,
+  &:after {
+    content: attr(data-content);
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &:before {
+    color: #9945ff;
+    z-index: -1;
+  }
+
+  &:after {
+    color: #14f195;
+    z-index: -2;
+  }
+
+  &:hover {
+    &:before {
+      animation: glitchy 0.3s ease 0.3s infinite;
+    }
+
+    &:after {
+      animation: glitchy 0.3s ease infinite reverse;
+    }
+  }
+}
+
+.roadmap-glitch {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  z-index: 1;
+
+  &:before,
+  &:after {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 22%;
+    bottom: 0;
+    // width: 100%;
+  }
+
+  &:before {
+    color: #9945ff;
+    z-index: -1;
+  }
+
+  &:after {
+    color: #14f195;
+    z-index: -2;
+  }
+
+  &:hover {
+    &:before {
+      animation: glitchy 0.3s ease 0.3s infinite;
+    }
+
+    &:after {
+      animation: glitchy 0.3s ease infinite reverse;
+    }
+  }
+}
+
+.drawer-glitch {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  z-index: 1;
+
+  &:before,
+  &:after {
+    content: attr(data-content);
+    position: absolute;
+    top: 28%;
+    left: 5.5%;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  &:before {
+    color: #9945ff;
+    z-index: -1;
+  }
+
+  &:after {
+    color: #14f195;
+    z-index: -2;
+  }
+
+  &:hover {
+    &:before {
+      animation: glitchy 0.3s ease 0.3s infinite;
+    }
+
+    &:after {
+      animation: glitchy 0.3s ease infinite reverse;
+    }
+  }
+}
+
+.mini-glitch {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  z-index: 1;
+
+  &:before,
+  &:after {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // width: 100%;
+  }
+
+  &:before {
+    color: #9945ff;
+    z-index: -1;
+  }
+
+  &:after {
+    color: #14f195;
+    z-index: -2;
+  }
+
+  &:hover {
+    &:before {
+      animation: glitchy 0.3s ease 0.3s infinite;
+    }
+
+    &:after {
+      animation: glitchy 0.3s ease infinite reverse;
+    }
+  }
+}
+
+@keyframes glitchy {
+  0% {
+    transform: translate(-2px, 2px);
+  }
+  25% {
+    transform: translate(-2px, -2px);
+  }
+  50% {
+    transform: translate(2px, 2px);
+  }
+  75% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(-2px, 2px);
+  }
+}

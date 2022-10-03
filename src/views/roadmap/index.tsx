@@ -14,7 +14,7 @@ import { Legend } from './components/legend';
 // Store
 import useUserSOLBalanceStore from '../../stores/useUserSOLBalanceStore';
 
-export const RoadMap: FC = ({}) => {
+export const RoadMap: FC = () => {
   const wallet = useWallet();
   const { connection } = useConnection();
 
@@ -257,7 +257,10 @@ export const RoadMap: FC = ({}) => {
 
   return (
     <div className="flex justify-center items-center flex-col w-screen">
-      <h2 className="text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195] solana">
+      <h2
+        data-content="Roadmap"
+        className="text-link text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195] solana"
+      >
         Roadmap
       </h2>
       <div className="w-screen flex justify-center align-center">
@@ -273,32 +276,146 @@ export const RoadMap: FC = ({}) => {
             className="step step-success"
             id="step-whitepaper"
           >
-            Whitepaper
+            <div>
+              <a
+                href="https://docs.krk.finance"
+                target={'_blank'}
+                rel="noreferrer"
+                className="roadmap-glitch"
+                data-content="Whitepaper"
+              >
+                Whitepaper{' '}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-4 h-4 inline p-0 m-0"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                  />
+                </svg>
+              </a>
+            </div>
           </li>
           <li data-content="🌐" className="step step-success" id="step-DEX">
-            DEX UI
+            <a
+              href="https://dex.krk.finance"
+              target={'_blank'}
+              rel="noreferrer"
+              className="roadmap-glitch"
+              data-content="Serum DEX"
+            >
+              Serum DEX{' '}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-4 h-4 inline p-0 m-0"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                />
+              </svg>
+            </a>
           </li>
-          <li data-content="🔁" className="step step-warning" id="step-swap">
-            Swap
+          <li data-content="🔁" className="step step-success" id="step-swap">
+            <a
+              href="https://krk.finance/swap"
+              target={'_blank'}
+              rel="noreferrer"
+              // className="mini-glitch"
+              // data-content="Swap"
+            >
+              Swap{' '}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-4 h-4 inline p-0 m-0"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                />
+              </svg>
+            </a>
           </li>
-          <li data-content="🎮" className="step step-warning" id="step-swap">
-            Blockchain PvP Game
+          <li data-content="🎮" className="step step-secondary" id="step-pvp">
+            {/* <a
+              href="#"
+              target={'_blank'}
+              rel="noreferrer"
+              // className="mini-glitch"
+              // data-content="NFT PvP Game"
+            > */}
+            NFT PvP Game{' '}
+            {/* <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-4 h-4 inline p-0 m-0"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                />
+              </svg> */}
+            {/* </a> */}
           </li>
-          <li
-            data-content="★"
-            className="step step-secondary"
-            id="step-secondary"
-          >
-            NFT Governance
+          <li data-content="★" className="step step-gov" id="step-gov">
+            {/* <a
+              href="https://krk.finance/swap"
+              target={'_blank'}
+              rel="noreferrer"
+              // className="mini-glitch"
+              // data-content="NFT DAO"
+            > */}
+            NFT DAO{' '}
+            {/* <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-4 h-4 inline p-0 m-0"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                />
+              </svg>
+            </a> */}
+          </li>
+          <li data-content="🥩" className="step" id="step-steak">
+            NFT Staking
           </li>
           <li data-content="🎁" className="step" id="step-token">
             $KRK Token
           </li>
-          <li data-content="💱" className="step" id="step-token">
+          <li data-content="📈" className="step" id="step-token">
             Serum Markets
           </li>
-          <li data-content="" className="step" id="step-lend">
-            Lending
+          <li data-content="💱" className="step" id="step-lend">
+            Lending Markets
+          </li>
+          <li data-content="🔥" className="step" id="step-burn">
+            Burn $KRK
           </li>
           {/* <li data-content="🌐" className="step step-warning" id="step-DEX">
             AMM
@@ -306,10 +423,7 @@ export const RoadMap: FC = ({}) => {
           {/* <li data-content="🏦" className="step" id="step-staking">
             Governance
           </li> */}
-          <li data-content="★" className="step" id="step-lambo">
-            Lambo
-          </li>
-          <li data-content="🏆" className="step" id="step-lambo">
+          <li data-content="🏆" className="step" id="step-network">
             <Link href="https://thenetworkstate.com/">Network State</Link>
           </li>
         </ul>

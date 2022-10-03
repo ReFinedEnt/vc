@@ -1,6 +1,6 @@
 // Next, React
-import { FC, useEffect, useState } from "react";
-import Link from "next/link";
+import { FC, useEffect, useState } from 'react';
+import Link from 'next/link';
 
 // Wallet
 // import { useWallet, useConnection } from "@solana/wallet-adapter-react";
@@ -25,7 +25,7 @@ export const Legend: FC = ({}) => {
   return (
     <div className="card w-42 bg-base-100 shadow-m">
       <div className="card-body">
-        <h2 className="card-title text-center text-base font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
+        <h2 className="card-title text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
           Legend
         </h2>
 

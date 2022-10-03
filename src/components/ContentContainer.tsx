@@ -19,12 +19,16 @@ export const ContentContainer: FC = (props) => {
 
           <li>
             <Link href="/swap">
-              <a>Swap</a>
+              <a className="drawer-glitch" data-content="Swap">
+                Swap
+              </a>
             </Link>
           </li>
           <li>
             <Link href="https://dex.krk.finance">
-              <a>DEX</a>
+              <a className="drawer-glitch" data-content="DEX">
+                DEX
+              </a>
             </Link>
           </li>
 
@@ -48,12 +52,16 @@ export const ContentContainer: FC = (props) => {
           </h1>
           <li>
             <Link href="/dao">
-              <a>DAO</a>
+              <a className="drawer-glitch" data-content="DAO">
+                DAO
+              </a>
             </Link>
           </li>
           <li>
             <Link href="/roadmap">
-              <a>Roadmap</a>
+              <a className="drawer-glitch" data-content="Roadmap">
+                Roadmap
+              </a>
             </Link>
           </li>
           {/* <li>

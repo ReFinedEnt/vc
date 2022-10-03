@@ -94,7 +94,7 @@ const JupiterForm: FunctionComponent<IJupiterFormProps> = (props) => {
   }
 
   return (
-    <div className="max-w-full md:max-w-lg toast">
+    <div className="max-w-full md:max-w-lg">
       <h1 className="text-2xl font-bold title">zero-fee swap</h1>
       <p className="mb-5 text-sm font-bold">powered by Jup.ag</p>
       <div className="panel-container">

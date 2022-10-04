@@ -20,13 +20,13 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
         <title>krk.finance</title>
         <meta
           property="og:title"
-          content="krk.finance | chain agnostic IT wizards 🪄"
+          content="krk.finance | chain-agnostic crowdsourced dev guild 👷"
         />
         <meta property="og:site_name" content="krk.finance" />
         <meta property="og:url" content="https://krk.finance/" />
         <meta
           property="og:description"
-          content="krk.finance | chain agnostic IT wizards 🪄"
+          content="We learn &amp; buidl stuff 🏗️"
         />
         <meta property="og:type" content="website" />
         <meta
@@ -47,12 +47,12 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
                   krk.finance
                 </h1>
                 <p className="text-sm text-white">
-                  chain-agnostic IT wizards{' '}
+                  <span className="text-3xl">🏗️</span> chain-agnostic
+                  crowdsourced dev guild <span className="text-3xl">👷</span>
                   {/* on{' '}
                   <span className="font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
                     Solana
                   </span>{' '} */}
-                  🪄
                 </p>
               </div>
               <Component {...pageProps} />

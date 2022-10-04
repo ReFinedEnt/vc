@@ -342,3 +342,8 @@ li.workshop::before {
     transform: translate(-2px, 2px);
   }
 }
+
+input:focus {
+  outline: none;
+  border: none;
+}

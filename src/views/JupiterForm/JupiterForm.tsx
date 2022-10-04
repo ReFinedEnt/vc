@@ -94,19 +94,19 @@ const JupiterForm: FunctionComponent<IJupiterFormProps> = (props) => {
   }
 
   return (
-    <div className="max-w-full md:max-w-lg">
+    <div className="max-w-full md:max-w-lg border-2 border-white rounded-xl">
       <h1 className="text-2xl font-bold title">zero-fee swap</h1>
       <p className="mb-5 text-sm font-bold">powered by Jup.ag</p>
-      <div className="panel-container">
+      <div className="panel-container bg-neutral flex justify-center items-center mb-2">
         <div className="panel">
-          <label htmlFor="amount" className="block text-sm font-medium">
+          {/* <label htmlFor="amount" className="inline-block text-sm font-medium">
             input ({inputTokenInfo?.symbol.toLowerCase()})
-          </label>
-          <div className="mt-1">
+          </label> */}
+          <div className="">
             <input
               name="amount"
               id="amount"
-              className="text-center shadow-sm bg-neutral p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+              className="w-full text-center shadow-sm bg-neutral p-2 sm:text-sm border-0 focus:border-0 rounded-l-xl"
               value={formValue.amount}
               type="text"
               pattern="[0-9]*"
@@ -122,15 +122,15 @@ const JupiterForm: FunctionComponent<IJupiterFormProps> = (props) => {
           </div>
         </div>
 
-        <div className="panel">
+        <div className="panel w-[50%]">
           <div className="inputContainer">
-            <label htmlFor="inputMint" className="block text-sm font-medium">
+            {/* <label htmlFor="inputMint" className="block text-sm font-medium">
               Input token
-            </label>
+            </label> */}
             <select
               id="inputMint"
               name="inputMint"
-              className="mt-1 bg-neutral block w-full pl-3 pr-10 py-2 text-base text-center border-gray-300 focus:outline-none sm:text-sm rounded-md"
+              className="w-full bg-neutral pl-3 pr-10 py-2 text-base text-center border-gray-300 focus:outline-none sm:text-sm rounded-r-xl"
               value={formValue.inputMint?.toBase58()}
               onChange={(e) => {
                 const pbKey = new PublicKey(e.currentTarget.value);
@@ -144,7 +144,11 @@ const JupiterForm: FunctionComponent<IJupiterFormProps> = (props) => {
             >
               {Array.from(routeMap.keys()).map((tokenMint) => {
                 return (
-                  <option key={tokenMint} value={tokenMint}>
+                  <option
+                    key={tokenMint}
+                    value={tokenMint}
+                    className="max-w-[200px]"
+                  >
                     {tokenMap.get(tokenMint)?.name || 'unknown'}
                   </option>
                 );
@@ -153,18 +157,42 @@ const JupiterForm: FunctionComponent<IJupiterFormProps> = (props) => {
           </div>
         </div>
       </div>
-      <div className="panel">
-        <div className="mb-2">
-          <label
+
+      {/* OUTPUT */}
+      <div className="panel w-full flex justify-center items-center">
+        <div className="panel w-[50%] bg-neutral flex justify-center items-center">
+          <div className="panel bg-neutral">
+            {routes?.[0] &&
+              (() => {
+                const route = routes[0];
+                if (route) {
+                  return (
+                    <div className="">
+                      <div className="">
+                        {/* output:{' '} */}
+                        <div className=" text-center shadow-sm bg-neutral p-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-l-xl">
+                          {(route.outAmount || 0) /
+                            10 ** (outputTokenInfo?.decimals || 1)}{' '}
+                          {outputTokenInfo?.symbol}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                }
+              })()}
+          </div>
+        </div>
+        <div className="panel w-[50%] bg-neutral flex justify-center items-center">
+          {/* <label
             htmlFor="outputMint"
             className="block text-sm font-medium text-center"
           >
             Output token
-          </label>
+          </label> */}
           <select
             id="outputMint"
             name="outputMint"
-            className="mt-1 bg-neutral block w-full pl-3 pr-10 py-2 text-base text-center sm:text-sm rounded-md"
+            className="w-full bg-neutral pl-3 mr-5 pr-10 py-2 text-base text-center border-gray-300 focus:outline-none sm:text-sm rounded-r-xl"
             value={formValue.outputMint?.toBase58()}
             onChange={(e) => {
               const pbKey = new PublicKey(e.currentTarget.value);
@@ -187,34 +215,11 @@ const JupiterForm: FunctionComponent<IJupiterFormProps> = (props) => {
         </div>
       </div>
 
-      <div className="panel-container">
-        <div className="panel">
-          {routes?.[0] &&
-            (() => {
-              const route = routes[0];
-              if (route) {
-                return (
-                  <div>
-                    <div className="block text-sm font-medium text-center">
-                      output:{' '}
-                      <div className="shadow-sm bg-neutral p-2 block w-full sm:text-sm border-gray-300 rounded-md">
-                        {(route.outAmount || 0) /
-                          10 ** (outputTokenInfo?.decimals || 1)}{' '}
-                        {outputTokenInfo?.symbol}
-                      </div>
-                    </div>
-                  </div>
-                );
-              }
-            })()}
-        </div>
-      </div>
-
       <div className="flex justify-center">
         <button
           className={`${
             isLoading ? 'opacity-50 cursor-not-allowed' : ''
-          } inline-flex items-center px-4 py-2 mt-4 border border-transparent text-base font-medium rounded-md shadow-sm text-white btn focus:outline-none focus:ring-2 focus:ring-offset-2`}
+          } inline-flex items-center mb-2 px-2 py-2 mt-2 border border-transparent text-base rounded-md shadow-sm text-white btn focus:outline-none focus:ring-2 focus:ring-offset-2`}
           type="button"
           onClick={fetchRoute}
           disabled={isLoading}
@@ -228,7 +233,7 @@ const JupiterForm: FunctionComponent<IJupiterFormProps> = (props) => {
         </button>
       </div>
 
-      <div className="w-100 h-100 block text-left pl-2">
+      <div className="w-100 h-100 text-center flex flex-col justify-center items-center">
         routes: {routes?.length}
         {routes?.[0] &&
           (() => {
@@ -296,7 +301,7 @@ const JupiterForm: FunctionComponent<IJupiterFormProps> = (props) => {
             }
             setIsSubmitting(false);
           }}
-          className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white btn focus:outline-none focus:ring-2 focus:ring-offset-2"
+          className="inline-flex items-center px-2 py-2 mb-2 border border-transparent text-base rounded-md shadow-sm text-white btn focus:outline-none focus:ring-2 focus:ring-offset-2"
         >
           {isSubmitting ? 'Swapping..' : 'Swap'}
         </button>

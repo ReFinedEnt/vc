@@ -17,71 +17,14 @@ const Portfolio: FC = (props) => {
         'Google Cloud',
         'InfluxDB',
         'Grafana',
-        'Docker',
+        'Docker'
       ],
       imageUrl: 'aaa',
       github: 'https://github.com/EsyWin/watchbar',
-      link: 'https://www.watchbar.space/',
+      link: 'https://www.watchbar.space/'
     },
     {
       id: 2,
-      title: 'NFT DAO',
-      status: 'paused',
-      description: 'Jpeg governance with solana labs governance program',
-      note: 'organic community growth',
-      blockchain: 'Solana',
-      stack: ['Rust', 'sugarCLI', 'realms.today'],
-      imageUrl: 'aaa',
-      github: '#',
-      link: '#',
-    },
-    {
-      id: 3,
-      title: 'Moralis x Cronos Hackathon',
-      description: "We're making a game learning Unity and C# from zero",
-      status: 'wip',
-      note: 'deadline 15th September',
-      blockchain: 'Cronos',
-      stack: [
-        'C#',
-        'Unity',
-        'Nakama',
-        'Docker',
-        'Typescript',
-        'Solidity',
-        'Hardhat',
-      ],
-      imageUrl: 'aaa',
-      github: '#',
-      link: '#',
-    },
-    {
-      id: 4,
-      title: 'Discord Bot : NFT verify',
-      status: 'half-way',
-      description: 'Discord bot to grant roles based on user token holdings',
-      note: 'after NFT DAO mint',
-      blockchain: 'Solana',
-      stack: ['Typescript', 'Slappey', 'NestJS', 'PostgreSQL', 'React'],
-      imageUrl: 'aaa',
-      github: '',
-      link: '#',
-    },
-    {
-      id: 5,
-      title: 'Discord Bot : Google Calendar',
-      status: 'half-way',
-      description:
-        'Discord bot to sync Google Calendar with Discord scheduled events new feature',
-      note: 'finishing after ongoing Moralis x Cronos Hackathon',
-      blockchain: 'Chain Agnostic',
-      stack: ['Typescript', 'Slappey', 'NestJS', 'PostgreSQL', 'React'],
-      imageUrl: 'aaa',
-      github: 'https://github.com/EsyWin/discord-google-calendar',
-      link: '#',
-    },
-    {
-      id: 6,
       title: 'Deso Fren',
       status: 'abandonned',
       description:
@@ -91,8 +34,77 @@ const Portfolio: FC = (props) => {
       stack: ['Javascript', 'Coingecko REST API', 'React'],
       imageUrl: 'aaa',
       github: 'https://github.com/EsyWin/deso-fren/',
-      link: 'https://deso-fren.vercel.app/',
+      link: 'https://deso-fren.vercel.app/'
     },
+    {
+      id: 3,
+      title: 'NFT DAO',
+      status: 'paused',
+      description: 'Jpeg governance with solana labs governance program',
+      note: 'organic community growth',
+      blockchain: 'Solana',
+      stack: ['Rust', 'sugarCLI', 'realms.today'],
+      imageUrl: 'aaa',
+      github: '#',
+      link: '#'
+    },
+    {
+      id: 4,
+      title: 'NFT PvP Game',
+      description: "We're making a game learning Unity and C# from zero",
+      status: 'paused',
+      note: 'deadline 15th September',
+      blockchain: 'Cronos',
+      stack: [
+        'C#',
+        'Unity',
+        'Nakama',
+        'Docker',
+        'Typescript',
+        'Solidity',
+        'Hardhat'
+      ],
+      imageUrl: 'aaa',
+      github: '#',
+      link: '#'
+    },
+    {
+      id: 5,
+      title: 'Discord Bot : NFT verify',
+      status: 'half-way',
+      description: 'Discord bot to grant roles based on user token holdings',
+      note: 'after NFT DAO mint',
+      blockchain: 'Solana',
+      stack: ['Typescript', 'Slappey', 'NestJS', 'PostgreSQL', 'React'],
+      imageUrl: 'aaa',
+      github: '',
+      link: '#'
+    },
+    {
+      id: 6,
+      title: 'Discord Bot : Google Calendar',
+      status: 'half-way',
+      description:
+        'Discord bot to sync Google Calendar with Discord scheduled events new feature',
+      note: 'finishing after ongoing Moralis x Cronos Hackathon',
+      blockchain: 'Chain Agnostic',
+      stack: ['Typescript', 'Slappey', 'NestJS', 'PostgreSQL', 'React'],
+      imageUrl: 'aaa',
+      github: 'https://github.com/EsyWin/discord-google-calendar',
+      link: '#'
+    },
+    {
+      id: 7,
+      title: 'NFT Unrekt',
+      status: 'done 🎉',
+      description: 'Got rekted in NFTs too many times ? Use the NFT Unrekt 😉',
+      note: 'Original content by XBorg, all rights reserved.',
+      blockchain: 'Chain Agnostic',
+      stack: ['Javascript', 'React', 'Tailwindcss'],
+      imageUrl: 'aaa',
+      github: 'https://github.com/EsyWin/unrekt',
+      link: 'https://unrekt.vercel.app/'
+    }
   ];
   return (
     <div className="container sm:mb-44 lg:mb-0">

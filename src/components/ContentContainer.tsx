@@ -13,25 +13,6 @@ export const ContentContainer: FC = (props) => {
       <div className="drawer-side">
         <label htmlFor="my-drawer" className="drawer-overlay"></label>
         <ul className="p-4 overflow-y-auto menu w-80 bg-black">
-          <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
-            Toolbox
-          </h1>
-
-          <li>
-            <Link href="/swap">
-              <a className="drawer-glitch" data-content="Swap">
-                Swap
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="https://dex.krk.finance">
-              <a className="drawer-glitch" data-content="DEX">
-                DEX
-              </a>
-            </Link>
-          </li>
-
           {/* <li>
             <Link href="/farms">
               <a>Farms</a>
@@ -48,27 +29,53 @@ export const ContentContainer: FC = (props) => {
             </Link>
           </li> */}
           <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
-            Governance
+            THE SQUAD
           </h1>
           <li>
-            <Link href="/dao">
-              <a className="drawer-glitch" data-content="DAO">
-                DAO
+            <Link href="/roadmap">
+              <a className="drawer-glitch" data-content="ROADMAP">
+                ROADMAP
               </a>
             </Link>
           </li>
           <li>
-            <Link href="/roadmap">
-              <a className="drawer-glitch" data-content="Roadmap">
-                Roadmap
+            <Link href="/projects">
+              <a className="drawer-glitch" data-content="PROJECTS">
+                PROJECTS
               </a>
             </Link>
           </li>
-          {/* <li>
-            <Link href="/whitepaper">
-              <a>Whitepaper</a>
+          <li>
+            <Link href="https://link.krk.finance/squad">
+              <a className="drawer-glitch" data-content="VAULT">
+                VAULT
+              </a>
             </Link>
-          </li> */}
+          </li>
+          <li>
+            <Link href="https://docs.krk.finance">
+              <a className="drawer-glitch" data-content="LITEPAPER">
+                LITEPAPER
+              </a>
+            </Link>
+          </li>
+          <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
+            TOOLBOX
+          </h1>
+          <li>
+            <Link href="/swap">
+              <a className="drawer-glitch" data-content="Swap">
+                SWAP
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="https://dex.krk.finance">
+              <a className="drawer-glitch" data-content="DEX">
+                DEX
+              </a>
+            </Link>
+          </li>
           {/* <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
             Archive
           </h1>

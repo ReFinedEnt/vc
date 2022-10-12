@@ -7,8 +7,15 @@
 @font-face {
   font-family: 'JetBrains Mono';
   src: local('JetBrains Mono'),
-    url('../fonts/JetBrainsMono-Regular.ttf') format('truetype');
+    url('../assets/fonts/JetBrainsMono-Regular.ttf') format('truetype');
   font-weight: normal;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -19,20 +26,20 @@ body {
   font-weight: 300;
   font-size: 13px;
   line-height: 1.2;
+  min-height: 100vh;
+  min-width: 100vw;
   /* text-shadow: 0.1px 0.1px 0.1px #fff; */
+  overflow: hidden;
+  text-rendering: optimizeLegibility;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   cursor: crosshair;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  box-sizing: border-box;
 }
 
 /* width */
@@ -347,3 +354,209 @@ input:focus {
   outline: none;
   border: none;
 }
+
+// 1ST IMAGES ROW
+.leaf {
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.leaf div {
+  top: 10%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.leaf div {
+  animation: fall 15s linear infinite;
+  overflow: hidden;
+}
+
+// start 1st round
+.leaf div:nth-child(1) {
+  animation: fall 15s linear infinite;
+  animation-delay: -1.875s;
+}
+
+.leaf div:nth-child(2) {
+  animation: fall 15s linear infinite;
+  animation-delay: -3.75s;
+}
+
+.leaf div:nth-child(3) {
+  animation: fall 15s linear infinite;
+  animation-delay: -5.625s;
+}
+
+.leaf div:nth-child(4) {
+  animation: fall 15s linear infinite;
+  animation-delay: -7.5s;
+}
+
+.leaf div:nth-child(5) {
+  animation: fall 15s linear infinite;
+  animation-delay: -9.375s;
+}
+
+.leaf div:nth-child(6) {
+  animation: fall 15s linear infinite;
+  animation-delay: -11.25s;
+}
+
+.leaf div:nth-child(7) {
+  animation: fall 15s linear infinite;
+  animation-delay: -13.125s;
+}
+
+.leaf div:nth-child(8) {
+  animation: fall 15s linear infinite;
+  animation-delay: -15s;
+}
+// end 1st round
+
+// START 2ND ROW
+.fael {
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.fael div {
+  top: 40%;
+  position: absolute;
+}
+
+.fael div {
+  animation: llaf 15s linear infinite;
+  overflow: hidden;
+}
+
+// start 2nd round
+.fael div:nth-child(1) {
+  animation: llaf 15s linear infinite;
+  animation-delay: -1.875s;
+}
+
+.fael div:nth-child(2) {
+  animation: llaf 15s linear infinite;
+  animation-delay: -3.75s;
+}
+
+.fael div:nth-child(3) {
+  animation: llaf 15s linear infinite;
+  animation-delay: -5.625s;
+}
+
+.fael div:nth-child(4) {
+  animation: llaf 15s linear infinite;
+  animation-delay: -7.5s;
+}
+
+.fael div:nth-child(5) {
+  animation: llaf 15s linear infinite;
+  animation-delay: -9.375s;
+}
+
+.fael div:nth-child(6) {
+  animation: llaf 15s linear infinite;
+  animation-delay: -11.25s;
+}
+
+.fael div:nth-child(7) {
+  animation: llaf 15s linear infinite;
+  animation-delay: -13.125s;
+}
+
+.fael div:nth-child(8) {
+  animation: llaf 15s linear infinite;
+  animation-delay: -15s;
+}
+// end 2nd round
+
+@keyframes fall {
+  0% {
+    left: -20%;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
+@keyframes llaf {
+  0% {
+    right: -20%;
+  }
+  100% {
+    right: 120%;
+  }
+}
+
+// 1ST IMAGES ROW
+.leaf2 {
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.leaf2 div {
+  top: 70%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.leaf2 div {
+  animation: fall 15s linear infinite;
+  overflow: hidden;
+}
+
+// start 1st round
+.leaf2 div:nth-child(1) {
+  animation: fall 15s linear infinite;
+  animation-delay: -1.875s;
+}
+
+.leaf2 div:nth-child(2) {
+  animation: fall 15s linear infinite;
+  animation-delay: -3.75s;
+}
+
+.leaf2 div:nth-child(3) {
+  animation: fall 15s linear infinite;
+  animation-delay: -5.625s;
+}
+
+.leaf2 div:nth-child(4) {
+  animation: fall 15s linear infinite;
+  animation-delay: -7.5s;
+}
+
+.leaf2 div:nth-child(5) {
+  animation: fall 15s linear infinite;
+  animation-delay: -9.375s;
+}
+
+.leaf2 div:nth-child(6) {
+  animation: fall 15s linear infinite;
+  animation-delay: -11.25s;
+}
+
+.leaf2 div:nth-child(7) {
+  animation: fall 15s linear infinite;
+  animation-delay: -13.125s;
+}
+
+.leaf2 div:nth-child(8) {
+  animation: fall 15s linear infinite;
+  animation-delay: -15s;
+}
+// end 1st round

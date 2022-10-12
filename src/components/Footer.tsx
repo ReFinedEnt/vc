@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 export const Footer: FC = () => {
   return (
-    <div className="border-t-2 border-white">
+    <div className="border-t-2 border-white z-50">
       <footer className="mx-auto  flex flex-row p-2 text-center justify-center items-center footer bg-black text-white">
         <div className="ml-5 text-white">$KRK &copy; 2022</div>
         <div className="max-w-md text-center flex align-center justify-center items-center mx-auto pr-10">
@@ -80,7 +80,7 @@ export const Footer: FC = () => {
               className="text-white text-base font-bold hover:text-primary-dark transition-all duration-200"
             >
               <span className="font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
-                Web3
+                Solono
               </span>
             </a>
           </div>

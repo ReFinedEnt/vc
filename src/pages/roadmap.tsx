@@ -7,7 +7,7 @@ import { RoadMap } from 'views/roadmap';
 const RoadMapPage: FC = ({}) => {
   return (
     <div className="md:hero mx-auto">
-      <div className="md:hero-content flex flex-col">
+      <div className="md:hero-content flex flex-col mb-10">
         {/* <div className="max-w-md mx-auto mockup-code bg-primary p-6 my-2">
           <pre data-prefix="$">
             <code className="">  </code>

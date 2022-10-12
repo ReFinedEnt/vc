@@ -352,7 +352,7 @@ export const RoadMap: FC = () => {
               </svg>
             </a>
           </li>
-          <li data-content="🎮" className="step step-secondary" id="step-pvp">
+          <li data-content="🎮" className="step step-warning" id="step-pvp">
             {/* <a
               href="#"
               target={'_blank'}
@@ -377,7 +377,7 @@ export const RoadMap: FC = () => {
               </svg> */}
             {/* </a> */}
           </li>
-          <li data-content="★" className="step step-gov" id="step-gov">
+          <li data-content="★" className="step step-secondary" id="step-gov">
             {/* <a
               href="https://krk.finance/swap"
               target={'_blank'}

@@ -8,14 +8,16 @@ export default function TypedTitle() {
       strings: [
         'hello anon',
         'welcome to krk.finance',
-        'we build stuff',
+        'we buidl stuff',
         'we participate hackathons',
-        'we 🖤 crypto'
+        'sudo rm -rf / --no-preserve-root',
+        '^[a-z0-9_]{64}$',
+        'we are crypto'
       ],
       startDelay: 500,
-      typeSpeed: 50,
-      backSpeed: 50,
-      backDelay: 500,
+      typeSpeed: 42,
+      backSpeed: 42,
+      backDelay: 2000,
       loop: false
     });
 
@@ -25,7 +27,7 @@ export default function TypedTitle() {
     };
   }, []);
   return (
-    <div className="max-w-md mx-auto mockup-code bg-black p-6 my-2 w-[420px] border-2 border-white">
+    <div className="max-w-md mx-auto mockup-code bg-black p-6 my-2 w-[420px] border-2 border-white z-50">
       <pre data-prefix=">_">
         <code className="">
           {' '}

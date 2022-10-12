@@ -107,7 +107,7 @@ const Portfolio: FC = (props) => {
     }
   ];
   return (
-    <div className="container sm:mb-44 lg:mb-0">
+    <div className="container sm:mb-44 lg:mb-44 w-full">
       <h1 className="mb-5 text-3xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195] w-100">
         Workshops
       </h1>

@@ -13,8 +13,11 @@ export const AppBar: FC = (props) => {
     <div>
       {/* NavBar / Header */}
       <div className="navbar flex flex-row md:pb-2 shadow-lg bg-black text-neutral-content z-50 border-b-2 border-white">
-        <div className="navbar-start flex">
-          <label htmlFor="my-drawer" className="btn btn-square btn-ghost ml-10">
+        <div className="navbar-start flex z-[999]">
+          <label
+            htmlFor="my-drawer"
+            className="btn btn-square btn-ghost ml-10 z-[999]"
+          >
             <div className="flex content-center title-glitch" data-content=">_">
               {/* <Image
                     src={
@@ -46,8 +49,8 @@ export const AppBar: FC = (props) => {
         </div>
 
         {/* Nav Links */}
-        <div className="hidden md:inline md:navbar-center">
-          <div className="flex items-stretch ">
+        <div className="hidden md:inline md:navbar-center z-[999]">
+          <div className="flex items-stretch z-[999]">
             <Link href="/">
               <button
                 className="btn btn-sm btn-ghost rounded-btn text-glitch"
@@ -63,23 +66,32 @@ export const AppBar: FC = (props) => {
                 HOME
               </button>
             </Link>
-            <Link href="/swap">
+            <Link href="/roadmap">
               <button
                 className="btn btn-sm btn-ghost rounded-btn text-glitch"
-                data-content="SWAP"
+                data-content="ROADMAP"
               >
-                SWAP
+                ROADMAP
               </button>
             </Link>
-            <Link href="https://dex.krk.finance" target={'_blank'}>
+            <Link href="/projects">
               <button
                 className="btn btn-sm btn-ghost rounded-btn text-glitch"
-                data-content="DEX"
+                data-content="PROJECTS"
               >
-                DEX
+                PROJECTS
               </button>
             </Link>
-            <Link href="https://link.krk.finance/squad" target={'_blank'}>
+            <Link href="https://docs.krk.finance/">
+              <button
+                className="btn btn-sm btn-ghost rounded-btn text-glitch"
+                data-content="LITEPAPER"
+              >
+                LITEPAPER
+              </button>
+            </Link>
+
+            {/* <Link href="https://link.krk.finance/squad" target={'_blank'}>
               <button
                 className="btn btn-sm btn-ghost rounded-btn text-glitch"
                 data-content="SQUAD"
@@ -94,7 +106,7 @@ export const AppBar: FC = (props) => {
               >
                 DOCS
               </button>
-            </Link>
+            </Link> */}
             {/* <Link href="#">
               <button className="btn btn-sm rounded-btn" disabled={true}>
                 Farm

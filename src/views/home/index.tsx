@@ -17,7 +17,6 @@ import Carousel from 'components/Carousel';
 // import { RoadMap } from 'views/roadmap';
 
 import Typed from 'components/Typed';
-import Portfolio from 'components/Portfolio';
 
 export const HomeView: FC = ({}) => {
   // const wallet = useWallet();

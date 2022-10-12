@@ -520,6 +520,9 @@ input:focus {
   0% {
     left: -20%;
   }
+  50% {
+    left: 50%;
+  }
   100% {
     left: 120%;
   }
@@ -528,6 +531,9 @@ input:focus {
 @keyframes llaf {
   0% {
     right: -20%;
+  }
+  50% {
+    right: 50%;
   }
   100% {
     right: 120%;

@@ -31,16 +31,16 @@ export const SideQuests: FC = ({}) => {
 
         <div className="w-full">
           <ul className="steps steps-vertical">
-            <li data-content="🎁" className="step">
-              WL + Airdrops
-            </li>
             <li data-content="🤖" className="step step-warning">
               Discord Bot
+            </li>
+            <li data-content="🎮" className="step step-warning">
+              NFT PvP Game
             </li>
             <li data-content="🧁" className="step">
               Cupcakes
             </li>
-            <li data-content="🏗️" className="step">
+            <li data-content="🏗️" className="step step-error">
               RPC Node
             </li>
             <li data-content="🧢" className="step">

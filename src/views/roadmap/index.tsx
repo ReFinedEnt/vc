@@ -352,16 +352,16 @@ export const RoadMap: FC = () => {
               </svg>
             </a>
           </li>
-          <li data-content="🎮" className="step step-warning" id="step-pvp">
-            {/* <a
-              href="#"
+          <li data-content="🪙" className="step step-success" id="step-token">
+            <a
+              href="https://solscan.io/token/6d5Sz3eEXXTvqGXye3XjFzhPT6ozzBoMDYdJd9sLCQSq"
               target={'_blank'}
               rel="noreferrer"
               // className="mini-glitch"
               // data-content="NFT PvP Game"
-            > */}
-            NFT PvP Game{' '}
-            {/* <svg
+            >
+              $KRK Token{' '}
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -374,10 +374,20 @@ export const RoadMap: FC = () => {
                   strokeLinejoin="round"
                   d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
                 />
-              </svg> */}
-            {/* </a> */}
+              </svg>
+            </a>
           </li>
-          <li data-content="★" className="step step-secondary" id="step-gov">
+
+          <li data-content="🔒" className="step step-secondary" id="step-pvp">
+            Vesting{' '}
+          </li>
+          <li data-content="🔥" className="step" id="step-burn">
+            $KRK Burn
+          </li>
+          <li data-content="📄" className="step">
+            Mint Whitelist
+          </li>
+          <li data-content="★" className="step" id="step-gov">
             {/* <a
               href="https://krk.finance/swap"
               target={'_blank'}
@@ -402,20 +412,18 @@ export const RoadMap: FC = () => {
               </svg>
             </a> */}
           </li>
+          <li data-content="🪂" className="step">
+            $KRK Airdrop
+          </li>
           <li data-content="🥩" className="step" id="step-steak">
             NFT Staking
           </li>
-          <li data-content="🎁" className="step" id="step-token">
-            $KRK Token
-          </li>
+
           <li data-content="📈" className="step" id="step-token">
             Serum Markets
           </li>
           <li data-content="💱" className="step" id="step-lend">
             Lending Markets
-          </li>
-          <li data-content="🔥" className="step" id="step-burn">
-            Burn $KRK
           </li>
           {/* <li data-content="🌐" className="step step-warning" id="step-DEX">
             AMM

@@ -31,14 +31,17 @@ export const Legend: FC = ({}) => {
 
         <div className="w-full">
           <ul className="steps steps-vertical">
-            <li data-content="" className="step step-warning">
-              WIP
-            </li>
             <li data-content="" className="step step-success">
               Shipped!
             </li>
             <li data-content="" className="step step-secondary">
               Next
+            </li>
+            <li data-content="" className="step step-error">
+              Cancelled
+            </li>
+            <li data-content="" className="step step-warning">
+              WIP
             </li>
           </ul>
         </div>

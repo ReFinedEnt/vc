@@ -20,7 +20,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
         <title>krk.finance</title>
         <meta
           property="og:title"
-          content="krk.finance | 🏗️ chain-agnostic crowdsourced dev guild 👷"
+          content="🏗️ chain-agnostic crowdsourced dev guild 👷"
         />
         <meta property="og:site_name" content="krk.finance" />
         <meta property="og:url" content="https://krk.finance/" />

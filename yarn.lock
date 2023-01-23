@@ -110,12 +110,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jup-ag/api@npm:^0.0.3":
-  version: 0.0.3
-  resolution: "@jup-ag/api@npm:0.0.3"
-  dependencies:
-    cross-fetch: ^3.1.5
-  checksum: f97615dc4614c27936cba4f270a99911a2dfcd6f2de1b56e67065880392469a7b65c36eda408a21e2510960691951ff55a65e97a6e1c472fc23f0ea56650918a
+"@jup-ag/api@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@jup-ag/api@npm:4.0.0"
+  checksum: 7197aa849d77f8371e1128443dbd0986dd95bfbdc83fd1e32b8ea2c56da85bd5bbc371b692e04837336b4d06d03808bdbd3fb87262770b327fe232af06d3ab69
   languageName: node
   linkType: hard
 
@@ -3262,7 +3260,7 @@ __metadata:
 
 "fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"
   dependencies:
     node-gyp: latest
   conditions: os=darwin
@@ -5246,7 +5244,7 @@ __metadata:
 
 "resolve@patch:resolve@^1.1.7#~builtin<compat/resolve>, resolve@patch:resolve@^1.22.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.22.1#~builtin<compat/resolve>":
   version: 1.22.1
-  resolution: "resolve@patch:resolve@npm%3A1.22.1#~builtin<compat/resolve>::version=1.22.1&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A1.22.1#~builtin<compat/resolve>::version=1.22.1&hash=07638b"
   dependencies:
     is-core-module: ^2.9.0
     path-parse: ^1.0.7
@@ -5259,7 +5257,7 @@ __metadata:
 
 "resolve@patch:resolve@^2.0.0-next.4#~builtin<compat/resolve>":
   version: 2.0.0-next.4
-  resolution: "resolve@patch:resolve@npm%3A2.0.0-next.4#~builtin<compat/resolve>::version=2.0.0-next.4&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A2.0.0-next.4#~builtin<compat/resolve>::version=2.0.0-next.4&hash=07638b"
   dependencies:
     is-core-module: ^2.9.0
     path-parse: ^1.0.7
@@ -5595,7 +5593,7 @@ __metadata:
   resolution: "solana-dapp-next@workspace:."
   dependencies:
     "@heroicons/react": ^2.0.13
-    "@jup-ag/api": ^0.0.3
+    "@jup-ag/api": ^4.0.0
     "@solana/spl-token-registry": ^0.2.4574
     "@solana/wallet-adapter-base": ^0.9.3
     "@solana/wallet-adapter-react": ^0.15.19
@@ -5992,7 +5990,7 @@ __metadata:
 
 "typescript@patch:typescript@4.8.3#~builtin<compat/typescript>":
   version: 4.8.3
-  resolution: "typescript@patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=aae4e6"
+  resolution: "typescript@patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=a1c5e5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver

@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@heroicons/react": "^1.0.5",
+    "@heroicons/react": "^2.0.13",
     "@jup-ag/api": "^0.0.3",
     "@solana/spl-token-registry": "^0.2.4574",
     "@solana/wallet-adapter-base": "^0.9.3",
@@ -38,7 +38,7 @@
     "zustand": "^3.6.9"
   },
   "devDependencies": {
-    "@types/node": "18.7.22",
+    "@types/node": "18.11.9",
     "@types/react": "17.0.38",
     "autoprefixer": "^10.4.12",
     "eslint": "8.7.0",

@@ -54,12 +54,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gar/promisify@npm:^1.1.3":
-  version: 1.1.3
-  resolution: "@gar/promisify@npm:1.1.3"
-  checksum: 4059f790e2d07bf3c3ff3e0fec0daa8144fe35c1f6e0111c9921bd32106adaa97a4ab096ad7dab1e28ee6a9060083c4d1a4ada42a7f5f3f7a96b8812e2b757c1
-  languageName: node
-  linkType: hard
+"@heroicons/react@^2.0.13":
+  version "2.0.13"
+  resolved "https://registry.yarnpkg.com/@heroicons/react/-/react-2.0.13.tgz#9b1cc54ff77d6625c9565efdce0054a4bcd9074c"
+  integrity sha512-iSN5XwmagrnirWlYEWNPdCDj9aRYVD/lnK3JlsC9/+fqGF80k8C7rl+1HCvBX0dBoagKqOFBs6fMhJJ1hOg1EQ==
 
 "@heroicons/react@npm:^1.0.5":
   version: 1.0.5
@@ -928,25 +926,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@toruslabs/solana-embed@npm:^0.1.5":
-  version: 0.1.6
-  resolution: "@toruslabs/solana-embed@npm:0.1.6"
-  dependencies:
-    "@solana/web3.js": ^1.35.0
-    "@toruslabs/base-controllers": ^1.6.1
-    "@toruslabs/http-helpers": ^2.2.0
-    "@toruslabs/openlogin-jrpc": ^1.4.0
-    eth-rpc-errors: ^4.0.3
-    fast-deep-equal: ^3.1.3
-    is-stream: ^2.0.0
-    lodash-es: ^4.17.21
-    loglevel: ^1.8.0
-    pump: ^3.0.0
-  peerDependencies:
-    "@babel/runtime": 7.x
-  checksum: f018af8a4201c09663dffb8b2978af64601efc943b756af389299cba515008f75b6ea171a2f9ff1e53f5d756b477659478df55acfc3f7a6185dd735ce785c627
-  languageName: node
-  linkType: hard
+"@types/node@*", "@types/node@18.11.9":
+  version "18.11.9"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.9.tgz#02d013de7058cea16d36168ef2fc653464cfbad4"
+  integrity sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==
 
 "@types/bn.js@npm:^5.1.0":
   version: 5.1.0
@@ -1760,33 +1743,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"camelcase-css@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "camelcase-css@npm:2.0.1"
-  checksum: 1cec2b3b3dcb5026688a470b00299a8db7d904c4802845c353dbd12d9d248d3346949a814d83bfd988d4d2e5b9904c07efe76fecd195a1d4f05b543e7c0b56b1
-  languageName: node
-  linkType: hard
+caniuse-lite@^1.0.30001400, caniuse-lite@^1.0.30001406, caniuse-lite@^1.0.30001407:
+  version "1.0.30001412"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001412.tgz#30f67d55a865da43e0aeec003f073ea8764d5d7c"
+  integrity sha512-+TeEIee1gS5bYOiuf+PS/kp2mrXic37Hl66VY6EAfxasIk5fELTktK2oOezYed12H8w7jt3s512PpulQidPjwA==
 
-"caniuse-lite@npm:^1.0.30001400, caniuse-lite@npm:^1.0.30001406, caniuse-lite@npm:^1.0.30001407":
-  version: 1.0.30001412
-  resolution: "caniuse-lite@npm:1.0.30001412"
-  checksum: 7f5f476355f25a9841c30785c11df5225e2e7613f3334573e8da5490f195ac897a525fe4b514fa926b7be7e7937f15743e466bbc3a3272e848fb7ace7432ae02
-  languageName: node
-  linkType: hard
-
-"chalk@npm:^4.0.0":
-  version: 4.1.2
-  resolution: "chalk@npm:4.1.2"
-  dependencies:
-    ansi-styles: ^4.1.0
-    supports-color: ^7.1.0
-  checksum: fe75c9d5c76a7a98d45495b91b2172fa3b7a09e0cc9370e5c8feb1c567b85c4288e2b3fded7cfdd7359ac28d6b3844feb8b82b8686842e93d23c827c417e83fc
-  languageName: node
-  linkType: hard
-
-"chokidar@npm:>=3.0.0 <4.0.0, chokidar@npm:^3.5.3":
-  version: 3.5.3
-  resolution: "chokidar@npm:3.5.3"
+chalk@^4.0.0:
+  version "4.1.2"
+  resolved "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz"
+  integrity sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
   dependencies:
     anymatch: ~3.1.2
     braces: ~3.0.2
@@ -5265,68 +5230,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"socks-proxy-agent@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "socks-proxy-agent@npm:7.0.0"
-  dependencies:
-    agent-base: ^6.0.2
-    debug: ^4.3.3
-    socks: ^2.6.2
-  checksum: 720554370154cbc979e2e9ce6a6ec6ced205d02757d8f5d93fe95adae454fc187a5cbfc6b022afab850a5ce9b4c7d73e0f98e381879cf45f66317a4895953846
-  languageName: node
-  linkType: hard
-
-"socks@npm:^2.6.2":
-  version: 2.7.0
-  resolution: "socks@npm:2.7.0"
-  dependencies:
-    ip: ^2.0.0
-    smart-buffer: ^4.2.0
-  checksum: 0b5d94e2b3c11e7937b40fc5dac1e80d8b92a330e68c51f1d271ce6980c70adca42a3f8cd47c4a5769956bada074823b53374f2dc5f2ea5c2121b222dec6eadf
-  languageName: node
-  linkType: hard
-
-"solana-dapp-next@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "solana-dapp-next@workspace:."
-  dependencies:
-    "@heroicons/react": ^1.0.5
-    "@jup-ag/api": ^0.0.3
-    "@solana/spl-token-registry": ^0.2.4574
-    "@solana/wallet-adapter-base": ^0.9.3
-    "@solana/wallet-adapter-react": ^0.15.19
-    "@solana/wallet-adapter-react-ui": ^0.9.5
-    "@solana/wallet-adapter-wallets": 0.16.1
-    "@solana/web3.js": ^1.63.1
-    "@supabase/supabase-js": ^2.1.1
-    "@tailwindcss/typography": ^0.5.2
-    "@types/node": 18.7.22
-    "@types/react": 17.0.38
-    add: ^2.0.6
-    animate.css: ^4.1.1
-    autoprefixer: ^10.4.12
-    axios: ^1.2.0
-    daisyui: 2.31.0
-    dotenv: ^16.0.1
-    eslint: 8.7.0
-    eslint-config-next: 12.3.1
-    immer: ^9.0.15
-    next: 12.3.1
-    next-compose-plugins: ^2.2.1
-    next-transpile-modules: ^9.0.0
-    postcss: ^8.4.5
-    react: 17.0.2
-    react-dom: 17.0.2
-    sass: ^1.55.0
-    tailwindcss: ^3.1.8
-    tweetnacl: ^1.0.3
-    typed.js: ^2.0.12
-    typescript: 4.8.3
-    uuid: ^9.0.0
-    yarn: ^1.22.19
-    zustand: ^3.6.9
-  languageName: unknown
-  linkType: soft
+"source-map-js@>=0.6.2 <2.0.0", source-map-js@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/source-map-js/-/source-map-js-1.0.2.tgz"
+  integrity sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==
 
 "source-map-js@npm:>=0.6.2 <2.0.0, source-map-js@npm:^1.0.2":
   version: 1.0.2

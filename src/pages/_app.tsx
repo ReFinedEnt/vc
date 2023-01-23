@@ -49,7 +49,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
                       krk.finance
                     </h1>
                     <p className="text-sm text-white z-[999]">
-                      It ain't much, but it's honest work.
+                      It ain&apos;t much, but it&apos;s honest work.
                     </p>
                     {/* <p className="text-sm text-white z-[999]">
                   <span className="text-3xl">🏗️</span> chain-agnostic dev guild{" "}

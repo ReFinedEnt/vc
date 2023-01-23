@@ -17,8 +17,8 @@ import Carousel from "components/Carousel";
 // import { RoadMap } from 'views/roadmap';
 
 import Typed from "components/Typed";
-import { QuestView } from "./quest";
-import { AlchemyView } from "./alchemy";
+// import { QuestView } from "./quest";
+// import { AlchemyView } from "./alchemy";
 
 export const HomeView: FC = ({}) => {
   // const wallet = useWallet();
@@ -40,17 +40,25 @@ export const HomeView: FC = ({}) => {
 
       <div className="md:hero-content hero-content flex flex-col overflow-hidden">
         <Typed />
+
         {/* <Portfolio /> */}
+
         {/* <div className="max-w-md mx-auto mockup-code bg-primary p-6 my-2">
           <pre data-prefix=">_">
             <code className="">we build stuff</code>
           </pre>
         </div> */}
+
         {/* <RoadMap /> */}
-        {/* <RequestAirdrop />
+
+        {/* 
+          <RequestAirdrop />
           {wallet.publicKey && <p>Public Key: {wallet.publicKey.toBase58()}</p>}
-          {wallet && <p>SOL Balance: {(balance || 0).toLocaleString()}</p>} */}
+          {wallet && <p>SOL Balance: {(balance || 0).toLocaleString()}</p>}
+        */}
+
         <Carousel />
+
         {/* <QuestView />
         <AlchemyView /> */}
       </div>

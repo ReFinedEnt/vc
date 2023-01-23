@@ -142,7 +142,7 @@ export const AppBar: FC = (props) => {
             </ul>
           </div> */}
           {/* <div className="badge badge-sm badge-success px-3 z-[999]">pre-alpha</div> */}
-          <Link href="/apply">
+          <Link href="/wl">
             <button
               className="btn btn-sm btn-ghost rounded-btn text-glitch"
               data-content="Get WL."

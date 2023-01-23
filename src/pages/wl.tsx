@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
-const SignUp: NextPage = (props) => {
+const WL: NextPage = (props) => {
   return (
     <>
       <Head>
@@ -24,4 +24,4 @@ const SignUp: NextPage = (props) => {
   );
 };
 
-export default SignUp;
+export default WL;

@@ -46,7 +46,25 @@ export default async function handler(
       });
   };
 
+  const ethUsd = async () => {
+    const options = { method: "GET" };
+    let usd = 0;
+    await fetch(
+      "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd",
+      options
+    )
+      .then((response) => response.json())
+      .then((response) => {
+        usd = response.data["ethereum"]["usd"];
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    return usd;
+  };
+
   await promFloor().then(async () => {
+    const usd = await ethUsd();
     res.status(200).json({
       assets: [
         {
@@ -58,7 +76,7 @@ export default async function handler(
               type: "non-fungible",
               qty: 1,
               raw: promfloor,
-              usd: promfloor * ethUsd,
+              usd: promfloor * usd,
             },
             {
               slug: "swissborg",

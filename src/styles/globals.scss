@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&family=Source+Code+Pro:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&family=Source+Code+Pro:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap");
 
 @font-face {
-  font-family: 'JetBrains Mono';
-  src: local('JetBrains Mono'),
-    url('../assets/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+  font-family: "JetBrains Mono";
+  src: local("JetBrains Mono"),
+    url("../assets/fonts/JetBrainsMono-Regular.ttf") format("truetype");
   font-weight: normal;
 }
 
@@ -22,19 +23,34 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'JetBrains Mono';
+  font-family: "JetBrains Mono";
   font-weight: 300;
   font-size: 13px;
   line-height: 1.2;
   min-height: 100vh;
   min-width: 100vw;
   /* text-shadow: 0.1px 0.1px 0.1px #fff; */
-  overflow: hidden;
+  overflow-x: hidden;
   text-rendering: optimizeLegibility;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: crosshair;
+}
+
+.wrapper {
+  max-width: 963px;
+  min-height: 100wh;
+  border: 2px solid white;
+  background: black !important;
+  z-index: 999;
+}
+
+.iso {
+  max-width: 963px;
+
+  background: black !important;
+  z-index: 999;
 }
 
 a {
@@ -67,7 +83,7 @@ a {
 h1,
 h2 {
   /* font-size: clamp(3.8rem, 8vw, 6rem); */
-  font-family: 'JetBrains Mono', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 h2 {
@@ -76,7 +92,7 @@ h2 {
 
 li.workshop::before {
   // list-style-type: square;
-  content: '· ';
+  content: "· ";
 }
 
 .episode {
@@ -362,18 +378,18 @@ input:focus {
   height: 100%;
   top: 0;
   left: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .leaf div {
   top: 10%;
   position: absolute;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .leaf div {
   animation: fall 15s linear infinite;
-  overflow: hidden;
+  overflow-x: hidden;
   -webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
   animation-timing-function: linear;
 }
@@ -443,7 +459,7 @@ input:focus {
   height: 100%;
   top: 0;
   right: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .fael div {
@@ -453,7 +469,7 @@ input:focus {
 
 .fael div {
   animation: llaf 15s linear infinite;
-  overflow: hidden;
+  overflow-x: hidden;
   -webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
   animation-timing-function: linear;
 }
@@ -547,18 +563,18 @@ input:focus {
   height: 100%;
   top: 0;
   left: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .leaf2 div {
   top: 70%;
   position: absolute;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .leaf2 div {
   animation: fall 15s linear infinite;
-  overflow: hidden;
+  overflow-x: hidden;
   -webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
   animation-timing-function: linear;
 }
@@ -620,3 +636,30 @@ input:focus {
   animation-timing-function: linear;
 }
 // end 1st round
+
+.sign-up {
+  height: calc(100% - 100px);
+}
+
+// Spinner
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #383636; /* Black */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
+table,
+td {
+  border-bottom-width: 0 !important;
+}

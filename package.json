@@ -2,7 +2,6 @@
   "name": "solana-dapp-next",
   "version": "0.0.1",
   "license": "MIT",
-  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -18,12 +17,15 @@
     "@solana/wallet-adapter-react-ui": "^0.9.5",
     "@solana/wallet-adapter-wallets": "0.16.1",
     "@solana/web3.js": "^1.63.1",
+    "@supabase/supabase-js": "^2.1.1",
     "@tailwindcss/typography": "^0.5.2",
+    "add": "^2.0.6",
     "animate.css": "^4.1.1",
+    "axios": "^1.2.0",
     "daisyui": "2.31.0",
     "dotenv": "^16.0.1",
-    "next": "12.3.1",
     "immer": "^9.0.15",
+    "next": "12.3.1",
     "next-compose-plugins": "^2.2.1",
     "next-transpile-modules": "^9.0.0",
     "react": "17.0.2",
@@ -32,6 +34,7 @@
     "tweetnacl": "^1.0.3",
     "typed.js": "^2.0.12",
     "uuid": "^9.0.0",
+    "yarn": "^1.22.19",
     "zustand": "^3.6.9"
   },
   "devDependencies": {

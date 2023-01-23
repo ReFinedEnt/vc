@@ -1,9 +1,9 @@
-import { FC } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import { FC } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
-import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
-import { useAutoConnect } from '../contexts/AutoConnectProvider';
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import { useAutoConnect } from "../contexts/AutoConnectProvider";
 // import "";
 
 export const AppBar: FC = (props) => {
@@ -82,36 +82,18 @@ export const AppBar: FC = (props) => {
                 PROJECTS
               </button>
             </Link>
-            <Link href="https://docs.krk.finance/">
+            <Link
+              href="https://usdkrk.gitbook.io/krk./krk./quest./"
+              target={"_blank"}
+              rel="noreferrer"
+            >
               <button
                 className="btn btn-sm btn-ghost rounded-btn text-glitch"
-                data-content="LITEPAPER"
+                data-content="Whitepaper"
               >
-                LITEPAPER
+                Whitepaper
               </button>
             </Link>
-
-            {/* <Link href="https://link.krk.finance/squad" target={'_blank'}>
-              <button
-                className="btn btn-sm btn-ghost rounded-btn text-glitch"
-                data-content="SQUAD"
-              >
-                SQUAD
-              </button>
-            </Link>
-            <Link href="https://docs.krk.finance" target={'_blank'}>
-              <button
-                className="btn btn-sm btn-ghost rounded-btn text-glitch"
-                data-content="DOCS"
-              >
-                DOCS
-              </button>
-            </Link> */}
-            {/* <Link href="#">
-              <button className="btn btn-sm rounded-btn" disabled={true}>
-                Farm
-              </button>
-            </Link> */}
           </div>
         </div>
 
@@ -159,8 +141,19 @@ export const AppBar: FC = (props) => {
               </li>
             </ul>
           </div> */}
-          {/* <div className="badge badge-sm badge-success">pre-alpha</div>
-          <WalletMultiButton className="btn mx-2" /> */}
+          {/* <div className="badge badge-sm badge-success px-3 z-[999]">pre-alpha</div> */}
+          <Link href="/apply">
+            <button
+              className="btn btn-sm btn-ghost rounded-btn text-glitch"
+              data-content="Get WL."
+            >
+              Get WL.
+            </button>
+          </Link>
+          <button className="btn btn-sm btn-success mr-10 mx-5 px-5 z-[999]">
+            Sign-In
+          </button>
+          {/* <WalletMultiButton className="btn mx-2 z-[999]" /> */}
         </div>
       </div>
       {props.children}

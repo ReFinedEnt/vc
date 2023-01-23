@@ -1,11 +1,11 @@
-import { FC } from 'react';
-import Link from 'next/link';
+import { FC } from "react";
+import Link from "next/link";
 export const ContentContainer: FC = (props) => {
   return (
     <div className="flex-1 drawer h-100">
       {/* <div className="h-screen drawer drawer-mobile w-full"> */}
       <input id="my-drawer" type="checkbox" className="grow drawer-toggle" />
-      <div className="items-center  drawer-content h-screen">
+      <div className="items-center  drawer-content min-h-screen">
         {props.children}
       </div>
 
@@ -46,16 +46,16 @@ export const ContentContainer: FC = (props) => {
             </Link>
           </li>
           <li>
-            <Link href="https://link.krk.finance/squad">
+            <Link href="https://v3.squads.so/vault/assets/J5fiU6YrKtSHf3Wq1Tjn3TB7mjJPW1UNTSxSUueHaXJv">
               <a className="drawer-glitch" data-content="VAULT">
                 VAULT
               </a>
             </Link>
           </li>
           <li>
-            <Link href="https://docs.krk.finance">
-              <a className="drawer-glitch" data-content="LITEPAPER">
-                LITEPAPER
+            <Link href="https://usdkrk.gitbook.io/krk./krk./">
+              <a className="drawer-glitch" data-content="WHITEPAPER">
+                WHITEPAPER
               </a>
             </Link>
           </li>
@@ -69,13 +69,13 @@ export const ContentContainer: FC = (props) => {
               </a>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="https://dex.krk.finance">
               <a className="drawer-glitch" data-content="DEX">
                 DEX
               </a>
             </Link>
-          </li>
+          </li> */}
           {/* <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
             Archive
           </h1>

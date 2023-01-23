@@ -1,18 +1,18 @@
 // Next, React
-import { FC, useEffect, useState } from 'react';
-import Link from 'next/link';
+import { FC, useEffect, useState } from "react";
+import Link from "next/link";
 
 // Wallet
-import { useWallet, useConnection } from '@solana/wallet-adapter-react';
+import { useWallet, useConnection } from "@solana/wallet-adapter-react";
 
 // Components
-import { RequestAirdrop } from '../../components/RequestAirdrop';
-import pkg from '../../../package.json';
-import { SideQuests } from './components/sidequests';
-import { Legend } from './components/legend';
+import { RequestAirdrop } from "../../components/RequestAirdrop";
+import pkg from "../../../package.json";
+import { SideQuests } from "./components/sidequests";
+import { Legend } from "./components/legend";
 
 // Store
-import useUserSOLBalanceStore from '../../stores/useUserSOLBalanceStore';
+import useUserSOLBalanceStore from "../../stores/useUserSOLBalanceStore";
 
 export const RoadMap: FC = () => {
   const wallet = useWallet();
@@ -256,20 +256,14 @@ export const RoadMap: FC = () => {
   // );
 
   return (
-    <div className="flex justify-center items-center flex-col w-screen">
+    <div className="w-full flex-col flex justify-center align-center">
       <h2
         data-content="Roadmap"
-        className="text-link text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195] solana"
+        className="w-full text-link text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195] solana"
       >
         Roadmap
       </h2>
-      <div className="w-screen flex justify-center align-center">
-        <div className="absolute left-10 sm:hidden md:hidden lg:block">
-          <SideQuests />
-        </div>
-        <div className="absolute right-10">
-          <Legend />
-        </div>
+      <div className="w-full flex flex-col justify-center items-center">
         <ul className="steps steps-vertical">
           <li
             data-content="📑"
@@ -278,13 +272,13 @@ export const RoadMap: FC = () => {
           >
             <div>
               <a
-                href="https://docs.krk.finance"
-                target={'_blank'}
+                href="https://docs.krk.finance/"
+                target={"_blank"}
                 rel="noreferrer"
                 className="roadmap-glitch"
                 data-content="Whitepaper"
               >
-                Whitepaper{' '}
+                Whitepaper{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -302,15 +296,15 @@ export const RoadMap: FC = () => {
               </a>
             </div>
           </li>
-          <li data-content="🌐" className="step step-success" id="step-DEX">
+          {/* <li data-content="🌐" className="step step-success" id="step-DEX">
             <a
               href="https://dex.krk.finance"
-              target={'_blank'}
+              target={"_blank"}
               rel="noreferrer"
               className="roadmap-glitch"
-              data-content="Serum DEX"
+              data-content="DEX UI"
             >
-              Serum DEX{' '}
+              DEX UI{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -326,16 +320,16 @@ export const RoadMap: FC = () => {
                 />
               </svg>
             </a>
-          </li>
+          </li> */}
           <li data-content="🔁" className="step step-success" id="step-swap">
             <a
               href="https://krk.finance/swap"
-              target={'_blank'}
+              target={"_blank"}
               rel="noreferrer"
               // className="mini-glitch"
               // data-content="Swap"
             >
-              Swap{' '}
+              Swap{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -355,12 +349,12 @@ export const RoadMap: FC = () => {
           <li data-content="🪙" className="step step-success" id="step-token">
             <a
               href="https://solscan.io/token/6d5Sz3eEXXTvqGXye3XjFzhPT6ozzBoMDYdJd9sLCQSq"
-              target={'_blank'}
+              target={"_blank"}
               rel="noreferrer"
               // className="mini-glitch"
               // data-content="NFT PvP Game"
             >
-              $KRK Token{' '}
+              $KRK Token{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -379,15 +373,21 @@ export const RoadMap: FC = () => {
           </li>
 
           <li data-content="🔒" className="step step-secondary" id="step-pvp">
-            Vesting{' '}
+            $KRK Vesting{" "}
+          </li>
+          <li data-content="✅" className="step">
+            Whitelist
           </li>
           <li data-content="🔥" className="step" id="step-burn">
-            $KRK Burn
+            Quest Burn Event ⚔️
           </li>
-          <li data-content="📄" className="step">
-            Mint Whitelist
+          <li data-content="🪂" className="step">
+            $KRK Airdrop
           </li>
-          <li data-content="★" className="step" id="step-gov">
+          <li data-content="💧" className="step" id="step-token">
+            $KRK Liquidity
+          </li>
+          <li data-content="🍬" className="step" id="step-gov">
             {/* <a
               href="https://krk.finance/swap"
               target={'_blank'}
@@ -395,7 +395,7 @@ export const RoadMap: FC = () => {
               // className="mini-glitch"
               // data-content="NFT DAO"
             > */}
-            NFT DAO{' '}
+            Mint{" "}
             {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -412,19 +412,10 @@ export const RoadMap: FC = () => {
               </svg>
             </a> */}
           </li>
-          <li data-content="🪂" className="step">
-            $KRK Airdrop
-          </li>
           <li data-content="🥩" className="step" id="step-steak">
             NFT Staking
           </li>
 
-          <li data-content="📈" className="step" id="step-token">
-            Serum Markets
-          </li>
-          <li data-content="💱" className="step" id="step-lend">
-            Lending Markets
-          </li>
           {/* <li data-content="🌐" className="step step-warning" id="step-DEX">
             AMM
           </li> */}
@@ -432,7 +423,7 @@ export const RoadMap: FC = () => {
             Governance
           </li> */}
           <li data-content="🏆" className="step" id="step-network">
-            <Link href="https://thenetworkstate.com/">Network State</Link>
+            <Link href="https://thenetworkstate.com/">NFT DAO</Link>
           </li>
         </ul>
       </div>

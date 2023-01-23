@@ -1,9 +1,9 @@
 // Next, React
-import { FC, useEffect, useState } from 'react';
-import Link from 'next/link';
+import { FC, useEffect, useState } from "react";
+import Link from "next/link";
 
 // Wallet
-import { useWallet, useConnection } from '@solana/wallet-adapter-react';
+import { useWallet, useConnection } from "@solana/wallet-adapter-react";
 
 // Store
 // import useUserSOLBalanceStore from "../../stores/useUserSOLBalanceStore";
@@ -31,8 +31,8 @@ export const SideQuests: FC = ({}) => {
 
         <div className="w-full">
           <ul className="steps steps-vertical">
-            <li data-content="🤖" className="step step-warning">
-              Discord Bot
+            <li data-content="🤖" className="step step-secondary">
+              Discord Bots
             </li>
             <li data-content="🎮" className="step step-warning">
               NFT PvP Game
@@ -40,16 +40,16 @@ export const SideQuests: FC = ({}) => {
             <li data-content="🧁" className="step">
               Cupcakes
             </li>
-            <li data-content="🏗️" className="step step-error">
+            {/* <li data-content="🏗️" className="step step-error">
               RPC Node
-            </li>
-            <li data-content="🧢" className="step">
+            </li> */}
+            {/* <li data-content="🧢" className="step">
               Merch
-            </li>
-            <li data-content="🌱" className="step">
+            </li> */}
+            <li data-content="🌱" className="step step-secondary">
               Hacker House
             </li>
-            <li data-content="🧘" className="step">
+            <li data-content="🧘" className="step step-secondary">
               Wellbeing
             </li>
           </ul>

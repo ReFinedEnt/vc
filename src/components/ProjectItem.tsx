@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import { FC } from "react";
+import { v4 as uuidv4 } from "uuid";
 // import projectInterface from '../constants/projectInterface';
 
 interface Project {
@@ -19,7 +19,7 @@ type Props = {
   project: Project;
 };
 
-type Status = 'paused' | 'wip' | 'done';
+type Status = "paused" | "wip" | "done";
 
 const ProjectItem: FC<Props> = ({ project }) => {
   //   console.log(project);
@@ -32,26 +32,28 @@ const ProjectItem: FC<Props> = ({ project }) => {
     stack,
     imageUrl,
     github,
-    link
+    link,
   } = project;
   return (
     <div className="card w-96 bg-black text-white shadow-xl mx-auto border-2 border-white">
-      {/* <div
-        className="background-image"
-        style={{
-          backgroundImage: `url(${imageUrl})`,
-        }}
-      /> */}
+      <figure>
+        <img src={`${imageUrl}`} alt={`${title}`} />
+      </figure>
+
       <div className="card-body">
         <div className="container grow">
           <h2 className="mb-4 text-xl text-center text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
             {title}
           </h2>
           <div className="text-sm">
-            status :{' '}
+            status :{" "}
             <span
               className={`badge ${
-                status === 'wip' ? 'badge-accent' : 'badge-primary'
+                status === "done 🎉"
+                  ? "badge-success"
+                  : status === "paused"
+                  ? "badge-warning"
+                  : "badge-secondary"
               }`}
             >
               {status}
@@ -60,20 +62,22 @@ const ProjectItem: FC<Props> = ({ project }) => {
           <div className="py-2 text-sm">{description}</div>
           <div className="mb-2 text-sm">note : {note}</div>
           <div className="mb-2 text-sm">
-            chain :{' '}
+            chain :{" "}
             <span className="text-transparent text-bold bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
               {blockchain}
             </span>
           </div>
           <ul className="mb-2 text-sm">
             stack :
-            {stack.map((element) => {
-              return (
-                <li className="pl-3 workshop" key={`${uuidv4()}`}>
-                  {element}
-                </li>
-              );
-            })}
+            <div className="mt-1">
+              {stack.map((element) => {
+                return (
+                  <li className="pl-3 workshop" key={`${uuidv4()}`}>
+                    {element}
+                  </li>
+                );
+              })}
+            </div>
           </ul>
         </div>
         <div className="flex w-100 justify-center items-center space-x-4 relative bottom-0">

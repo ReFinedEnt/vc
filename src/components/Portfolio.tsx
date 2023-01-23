@@ -1,110 +1,156 @@
-import { FC } from 'react';
+import { FC } from "react";
 
-import ProjectItem from './ProjectItem';
+import ProjectItem from "./ProjectItem";
 
 const Portfolio: FC = (props) => {
   const projectsArr = [
     {
       id: 1,
-      title: 'Watchbar',
-      status: 'paused',
-      description: 'Analytics tooling for Hedera ecosystem',
-      note: 'expensive infra',
-      blockchain: 'Hedera',
-      stack: [
-        'JavaScript',
-        'Node.js',
-        'Google Cloud',
-        'InfluxDB',
-        'Grafana',
-        'Docker'
-      ],
-      imageUrl: 'aaa',
-      github: 'https://github.com/EsyWin/watchbar',
-      link: 'https://www.watchbar.space/'
+      title: "NFT Unrekt",
+      status: "done 🎉",
+      description: "Got rekted in NFTs too many times ? Use the NFT Unrekt 😉",
+      note: "Original content by XBorg, all rights reserved.",
+      blockchain: "Chain Agnostic",
+      stack: ["Javascript", "Node.js", "React", "Tailwindcss"],
+      imageUrl:
+        "https://raw.githubusercontent.com/EsyWin/unrekt/main/public/pepe.png",
+      github: "https://github.com/krk-finance/unrekt",
+      link: "https://unrekt.vercel.app/",
     },
     {
       id: 2,
-      title: 'Deso Fren',
-      status: 'abandonned',
-      description:
-        'Simple analytics tool to match minimal wage in $DESO diamonds worldwide',
-      note: 'going to zero (not FA)',
-      blockchain: 'Deso',
-      stack: ['Javascript', 'Coingecko REST API', 'React'],
-      imageUrl: 'aaa',
-      github: 'https://github.com/EsyWin/deso-fren/',
-      link: 'https://deso-fren.vercel.app/'
+      title: "Discord Bot : Crypto Ticker",
+      status: "done 🎉",
+      description: "Track your favorite crypto prices from within Discord",
+      note: "Free Open-Source Software, feel free to host your own !",
+      blockchain: "Chain Agnostic",
+      stack: ["Javascript", "Node.js", "Discord.js", "Coingecko API", "Docker"],
+      imageUrl:
+        "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/ticker_big.png",
+      github: "https://github.com/EsyWin/unrekt",
+      link: "https://unrekt.vercel.app/",
     },
     {
       id: 3,
-      title: 'NFT DAO',
-      status: 'paused',
-      description: 'Jpeg governance with solana labs governance program',
-      note: 'organic community growth',
-      blockchain: 'Solana',
-      stack: ['Rust', 'sugarCLI', 'realms.today'],
-      imageUrl: 'aaa',
-      github: '#',
-      link: '#'
+      title: "Fedscrap",
+      status: "WIP",
+      description: "US Federal Reverse Net Liquidity",
+      note: "Back-End & Front-End almost done, Discord Bot left to do!",
+      blockchain: "Chain Agnostic",
+      stack: [
+        "Typescript",
+        "Node.js",
+        "Nest.js",
+        "Supabase",
+        "React",
+        "Next.js",
+        "Python",
+        "Selenium",
+        "Redis",
+        "Docker",
+      ],
+      imageUrl:
+        "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
+      github: "",
+      link: "https://fed-liq.vercel.app/",
     },
     {
       id: 4,
-      title: 'NFT PvP Game',
-      description: "We're making a game learning Unity and C# from zero",
-      status: 'paused',
-      note: 'deadline 15th September',
-      blockchain: 'Cronos',
-      stack: [
-        'C#',
-        'Unity',
-        'Nakama',
-        'Docker',
-        'Typescript',
-        'Solidity',
-        'Hardhat'
-      ],
-      imageUrl: 'aaa',
-      github: '#',
-      link: '#'
+      title: "NFT DAO",
+      status: "WIP",
+      description: "Jpeg governance with solana labs governance program",
+      note: "organic community growth",
+      blockchain: "Solana",
+      stack: ["Rust", "sugarCLI", "realms.today"],
+      imageUrl:
+        "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
+      github: "#",
+      link: "#",
     },
     {
       id: 5,
-      title: 'Discord Bot : NFT verify',
-      status: 'half-way',
-      description: 'Discord bot to grant roles based on user token holdings',
-      note: 'after NFT DAO mint',
-      blockchain: 'Solana',
-      stack: ['Typescript', 'Slappey', 'NestJS', 'PostgreSQL', 'React'],
-      imageUrl: 'aaa',
-      github: '',
-      link: '#'
+      title: "NFT PvP Game",
+      description:
+        "We're making a Blockchain Game while learning Solidity, Unity and C#",
+      status: "paused",
+      note: "Started on 'Moralis x Cronos' hackathon",
+      blockchain: "Ethereum Virtual Machine",
+      stack: [
+        "Typescript",
+        "Node.js",
+        "Solidity",
+        "Hardhat",
+        "C#",
+        "Unity",
+        "Nakama",
+        "Docker",
+      ],
+      imageUrl:
+        "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
+      github: "#",
+      link: "#",
     },
     {
       id: 6,
-      title: 'Discord Bot : Google Calendar',
-      status: 'half-way',
-      description:
-        'Discord bot to sync Google Calendar with Discord scheduled events new feature',
-      note: 'finishing after ongoing Moralis x Cronos Hackathon',
-      blockchain: 'Chain Agnostic',
-      stack: ['Typescript', 'Slappey', 'NestJS', 'PostgreSQL', 'React'],
-      imageUrl: 'aaa',
-      github: 'https://github.com/EsyWin/discord-google-calendar',
-      link: '#'
+      title: "Discord Bot : NFT verify",
+      status: "paused",
+      description: "Discord bot to grant roles based on user token holdings",
+      note: "after NFT DAO mint",
+      blockchain: "Solana",
+      stack: ["Typescript", "Slappey", "NestJS", "PostgreSQL", "React"],
+      imageUrl:
+        "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
+      github: "",
+      link: "#",
     },
     {
       id: 7,
-      title: 'NFT Unrekt',
-      status: 'done 🎉',
-      description: 'Got rekted in NFTs too many times ? Use the NFT Unrekt 😉',
-      note: 'Original content by XBorg, all rights reserved.',
-      blockchain: 'Chain Agnostic',
-      stack: ['Javascript', 'React', 'Tailwindcss'],
-      imageUrl: 'aaa',
-      github: 'https://github.com/EsyWin/unrekt',
-      link: 'https://unrekt.vercel.app/'
-    }
+      title: "Discord Bot : Google Calendar",
+      status: "paused",
+      description:
+        "Discord bot to sync Google Calendar with Discord scheduled events new feature",
+      note: "finishing after ongoing Moralis x Cronos Hackathon",
+      blockchain: "Chain Agnostic",
+      stack: ["Typescript", "Slappey", "NestJS", "PostgreSQL", "React"],
+      imageUrl:
+        "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
+      github: "https://github.com/EsyWin/discord-google-calendar",
+      link: "#",
+    },
+    {
+      id: 8,
+      title: "Watchbar",
+      status: "paused",
+      description: "Analytics tooling for Hedera ecosystem",
+      note: "expensive infra",
+      blockchain: "Hedera",
+      stack: [
+        "JavaScript",
+        "Node.js",
+        "Google Cloud",
+        "InfluxDB",
+        "Grafana",
+        "Docker",
+      ],
+      imageUrl:
+        "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
+      github: "https://github.com/EsyWin/watchbar",
+      link: "https://www.watchbar.space/",
+    },
+    {
+      id: 9,
+      title: "Deso Fren",
+      status: "paused",
+      description:
+        "Simple analytics tool to match minimal wage in $DESO diamonds worldwide",
+      note: "going to zero (not FA)",
+      blockchain: "Deso",
+      stack: ["Javascript", "Coingecko API", "React"],
+      imageUrl:
+        "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
+      github: "https://github.com/EsyWin/deso-fren/",
+      link: "https://deso-fren.vercel.app/",
+    },
   ];
   return (
     <div className="container sm:mb-44 lg:mb-44 w-full">

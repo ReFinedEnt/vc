@@ -6,8 +6,8 @@ const Fed: NextPage = (props) => {
   return (
     <>
       <Head>
-        <title>krk.finance | FED</title>
-        <meta name="description" content="krk.finance FED" />
+        <title>US FED Net Liquidity</title>
+        <meta name="description" content="US FED Net Liquidity" />
       </Head>
       <BasicsView />
     </>

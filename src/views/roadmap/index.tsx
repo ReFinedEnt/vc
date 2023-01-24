@@ -257,12 +257,6 @@ export const RoadMap: FC = () => {
 
   return (
     <div className="w-full flex-col flex justify-center align-center">
-      <h2
-        data-content="Roadmap"
-        className="w-full text-link text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195] solana"
-      >
-        Roadmap
-      </h2>
       <div className="w-full flex flex-col justify-center items-center">
         <ul className="steps steps-vertical">
           <li

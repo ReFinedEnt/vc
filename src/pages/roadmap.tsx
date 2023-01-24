@@ -1,18 +1,16 @@
 // Next, React
-import { FC, useEffect, useState } from 'react';
-import Link from 'next/link';
+import { FC, useEffect, useState } from "react";
+import Link from "next/link";
 
-import { RoadMap } from 'views/roadmap';
+import { RoadMap } from "views/roadmap";
 
 const RoadMapPage: FC = ({}) => {
   return (
     <div className="md:hero mx-auto">
       <div className="md:hero-content flex flex-col mb-10">
-        {/* <div className="max-w-md mx-auto mockup-code bg-primary p-6 my-2">
-          <pre data-prefix="$">
-            <code className="">  </code>
-          </pre>
-        </div>         */}
+        <h1 className="text-center text-3xl font-bold text-transparent bg-clip-text mb-3 tracking-tight bg-gradient-to-tr from-[#14F195] to-[#9945FF] rgbg">
+          Roadmap
+        </h1>
         <RoadMap />
         {/* <RequestAirdrop />
           {wallet.publicKey && <p>Public Key: {wallet.publicKey.toBase58()}</p>}

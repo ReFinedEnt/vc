@@ -45,10 +45,12 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
               <JupiterApiProvider>
                 <div className="max-w-[963px] mx-auto z-[963] bg-black">
                   <div className="md:w-full mt-3 text-center text-slate-300 flex justify-center items-center align-center flex-col z-[999]">
-                    <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195] w-100 z-[999]">
-                      krk.finance
-                    </h1>
-                    <p className="text-sm text-white z-[999]">
+                    <div className="w-full bg-base-300 rounded-xl border-2 border-white flex flex-col justify-center items-center mb-2 z-[999]">
+                      <h1 className="p-2 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195] w-100 z-[999]">
+                        krk.finance
+                      </h1>
+                    </div>
+                    <p className="text-sm text-white z-[999] bg-base-300 p-1 rounded">
                       It ain&apos;t much, but it&apos;s honest work.
                     </p>
                     {/* <p className="text-sm text-white z-[999]">

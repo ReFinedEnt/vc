@@ -154,9 +154,12 @@ const Portfolio: FC = (props) => {
   ];
   return (
     <div className="container sm:mb-44 lg:mb-44 w-full">
-      <h1 className="mb-5 text-3xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195] w-100">
-        Workshops
-      </h1>
+      <div className="w-full bg-base-300 rounded-xl border-2 border-white flex flex-col justify-center items-center mb-2">
+        <h1 className="p-2 text-3xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] w-100">
+          Stuff we do.
+        </h1>
+      </div>
+
       <div className="grid gap-4 grid-cols-1 grid-rows-1 md:gap-4 md:grid-cols-3 md:grid-rows-3">
         {projectsArr.map((project) => {
           // console.log(project);

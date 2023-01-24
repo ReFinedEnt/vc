@@ -44,7 +44,7 @@ const ProjectItem: FC<Props> = ({ project }) => {
 
       <div className="card-body">
         <div className="container grow">
-          <h2 className="mb-4 text-xl text-center text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
+          <h2 className="mb-4 text-xl text-center text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195] font-bold">
             {title}
           </h2>
           <div className="text-sm">

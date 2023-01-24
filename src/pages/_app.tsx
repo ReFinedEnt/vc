@@ -26,7 +26,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
         <meta property="og:url" content="https://krk.finance/" />
         <meta
           property="og:description"
-          content="We learn &amp; buidl stuff 🏗️"
+          content="It ain't much, but it's honest work."
         />
         <meta property="og:type" content="website" />
         <meta

@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import Carousel from "components/Carousel";
 import Portfolio from "components/Portfolio";
+import Spinner from "components/Spinner";
 
 // Wallet
 // import { useWallet, useConnection } from '@solana/wallet-adapter-react';
@@ -35,29 +36,29 @@ export const HomeView: FC = ({}) => {
   //   }
   // }, [wallet.publicKey, connection, getUserSOLBalance]);
 
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1337);
+  }, []);
+
   return (
     <div className="md:hero hero mx-auto bg-black">
       <div className="w-full h-screen absolute top-0 bg-[rgba(0,0,0,0.1)] z-3"></div>
 
       <div className="md:hero-content hero-content flex flex-col">
-        <Typed />
-        <Portfolio />
-
-        {/* <div className="max-w-md mx-auto mockup-code bg-primary p-6 my-2">
-          <pre data-prefix=">_">
-            <code className="">we build stuff</code>
-          </pre>
-        </div> */}
-
-        {/* <RoadMap /> */}
-
-        {/* 
-          <RequestAirdrop />
-          {wallet.publicKey && <p>Public Key: {wallet.publicKey.toBase58()}</p>}
-          {wallet && <p>SOL Balance: {(balance || 0).toLocaleString()}</p>}
-        */}
-
-        <Carousel />
+        {loading ? (
+          <Spinner />
+        ) : (
+          <>
+            <Typed />
+            <Portfolio />
+            <Carousel />
+          </>
+        )}
 
         {/* <QuestView />
         <AlchemyView /> */}

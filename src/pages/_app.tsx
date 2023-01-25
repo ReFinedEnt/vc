@@ -24,10 +24,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
         />
         <meta property="og:site_name" content="krk.finance" />
         <meta property="og:url" content="https://krk.finance/" />
-        <meta
-          property="og:description"
-          content="We learn &amp; buidl stuff 🏗️"
-        />
+        <meta property="og:description" content="We learn & buidl stuff." />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
@@ -51,7 +48,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
                       </h1>
                     </div>
                     <p className="text-sm text-white z-[999] bg-base-300 p-1 rounded">
-                      It ain&apos;t much, but it&apos;s honest work.
+                      🏗️ chain-agnostic crowdsourced dev guild 👷
                     </p>
                     {/* <p className="text-sm text-white z-[999]">
                   <span className="text-3xl">🏗️</span> chain-agnostic dev guild{" "}

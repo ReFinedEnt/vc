@@ -9,8 +9,8 @@ import { LineChart, Line, CartesianGrid, XAxis, YAxis } from "recharts";
 
 // Components
 
-const Founders: NextPage = ({ data }: { data: any }) => {
-  const [chart, setData] = useState([]);
+const Founders: NextPage = () => {
+  const [data, setData] = useState([]);
   useEffect(() => {
     console.log("useEffect firing !");
   });

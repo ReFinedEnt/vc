@@ -74,16 +74,8 @@ export const AppBar: FC = (props) => {
                 ROADMAP
               </button>
             </Link>
-            <Link href="/projects">
-              <button
-                className="btn btn-sm btn-ghost rounded-btn text-glitch"
-                data-content="PROJECTS"
-              >
-                PROJECTS
-              </button>
-            </Link>
             <Link
-              href="https://usdkrk.gitbook.io/krk./krk./quest./"
+              href="https://usdkrk.gitbook.io/krk./krk./"
               target={"_blank"}
               rel="noreferrer"
             >

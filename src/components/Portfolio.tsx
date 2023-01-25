@@ -32,6 +32,41 @@ const Portfolio: FC = (props) => {
     },
     {
       id: 3,
+      title: "Color Theorycraft",
+      status: "done 🎉",
+      description:
+        "A Tool to pick relational colors altogether - still some bugs.",
+      note: "Based upon LoopX tweet about color theorycrafting",
+      blockchain: "Chain Agnostic",
+      stack: [
+        "Javascript",
+        "Node.js",
+        "Typescript",
+        "React",
+        "Next.js",
+        "CSS",
+        "Vercel",
+      ],
+      imageUrl:
+        "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/theorycraft.png",
+      github: "https://twitter.com/LoopxNFT/status/1612219767355572225",
+      link: "https://krk.finance/colors",
+    },
+    {
+      id: 4,
+      title: "NFT DAO",
+      status: "WIP",
+      description: "Jpeg governance with solana labs governance program",
+      note: "organic community growth",
+      blockchain: "Solana",
+      stack: ["Rust", "sugarCLI", "realms.today"],
+      imageUrl:
+        "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
+      github: "#",
+      link: "#",
+    },
+    {
+      id: 5,
       title: "Fedscrap",
       status: "WIP",
       description: "US Federal Reverse Net Liquidity",
@@ -52,23 +87,11 @@ const Portfolio: FC = (props) => {
       imageUrl:
         "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
       github: "",
-      link: "https://fed-liq.vercel.app/",
-    },
-    {
-      id: 4,
-      title: "NFT DAO",
-      status: "WIP",
-      description: "Jpeg governance with solana labs governance program",
-      note: "organic community growth",
-      blockchain: "Solana",
-      stack: ["Rust", "sugarCLI", "realms.today"],
-      imageUrl:
-        "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
-      github: "#",
       link: "#",
     },
+
     {
-      id: 5,
+      id: 6,
       title: "NFT PvP Game",
       description:
         "We're making a Blockchain Game while learning Solidity, Unity and C#",
@@ -91,7 +114,7 @@ const Portfolio: FC = (props) => {
       link: "#",
     },
     {
-      id: 6,
+      id: 7,
       title: "Discord Bot : NFT verify",
       status: "paused",
       description: "Discord bot to grant roles based on user token holdings",
@@ -104,7 +127,7 @@ const Portfolio: FC = (props) => {
       link: "#",
     },
     {
-      id: 7,
+      id: 8,
       title: "Discord Bot : Google Calendar",
       status: "paused",
       description:
@@ -118,7 +141,7 @@ const Portfolio: FC = (props) => {
       link: "#",
     },
     {
-      id: 8,
+      id: 9,
       title: "Watchbar",
       status: "paused",
       description: "Analytics tooling for Hedera ecosystem",
@@ -138,7 +161,7 @@ const Portfolio: FC = (props) => {
       link: "https://www.watchbar.space/",
     },
     {
-      id: 9,
+      id: 10,
       title: "Deso Fren",
       status: "paused",
       description:
@@ -155,9 +178,12 @@ const Portfolio: FC = (props) => {
   return (
     <div className="container sm:mb-44 lg:mb-44 w-full">
       <div className="w-full bg-base-300 rounded-xl border-2 border-white flex flex-col justify-center items-center mb-2">
-        <h1 className="p-2 text-3xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] w-100">
+        <h1 className="pt-2 text-3xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] w-100">
           Stuff we do.
         </h1>
+        <p className="pb-2 text-sm text-white z-[999] bg-base-300 p-1 rounded">
+          It ain&apos;t much, but it&apos;s honest work.
+        </p>
       </div>
 
       <div className="grid gap-4 grid-cols-1 grid-rows-1 md:gap-4 md:grid-cols-3 md:grid-rows-3">

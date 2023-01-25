@@ -1,33 +1,33 @@
-import { FC } from 'react';
-import Image from 'next/image';
+import { FC } from "react";
+import Image from "next/image";
 
 // 1st chunk
-import image1 from 'assets/img/0.png';
-import image2 from 'assets/img/1.png';
-import image3 from 'assets/img/2.png';
-import image4 from 'assets/img/3.png';
-import image5 from 'assets/img/4.png';
-import image6 from 'assets/img/5.png';
-import image7 from 'assets/img/6.png';
-import image8 from 'assets/img/7.png';
+import image1 from "assets/img/0.png";
+import image2 from "assets/img/1.png";
+import image3 from "assets/img/2.png";
+import image4 from "assets/img/3.png";
+import image5 from "assets/img/4.png";
+import image6 from "assets/img/5.png";
+import image7 from "assets/img/6.png";
+import image8 from "assets/img/7.png";
 // 2nd chunk
-import image9 from 'assets/img/8.png';
-import image10 from 'assets/img/9.png';
-import image11 from 'assets/img/10.png';
-import image12 from 'assets/img/11.png';
-import image13 from 'assets/img/12.png';
-import image14 from 'assets/img/13.png';
-import image15 from 'assets/img/14.png';
-import image16 from 'assets/img/15.png';
+import image9 from "assets/img/8.png";
+import image10 from "assets/img/9.png";
+import image11 from "assets/img/10.png";
+import image12 from "assets/img/11.png";
+import image13 from "assets/img/12.png";
+import image14 from "assets/img/13.png";
+import image15 from "assets/img/14.png";
+import image16 from "assets/img/15.png";
 // 3rd chunk
-import image17 from 'assets/img/16.png';
-import image18 from 'assets/img/17.png';
-import image19 from 'assets/img/18.png';
-import image20 from 'assets/img/19.png';
-import image21 from 'assets/img/20.png';
-import image22 from 'assets/img/21.png';
-import image23 from 'assets/img/22.png';
-import image24 from 'assets/img/23.png';
+import image17 from "assets/img/16.png";
+import image18 from "assets/img/17.png";
+import image19 from "assets/img/18.png";
+import image20 from "assets/img/19.png";
+import image21 from "assets/img/20.png";
+import image22 from "assets/img/21.png";
+import image23 from "assets/img/22.png";
+import image24 from "assets/img/23.png";
 
 const Carousel: FC = () => {
   return (

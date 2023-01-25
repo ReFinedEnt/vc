@@ -30,6 +30,7 @@ const Founders: NextPage = () => {
         <meta name="description" content="Analytics" />
       </Head>
       <div className="w-full flex justify-center items-center mx-auto">
+        <h1>aaa</h1>
         {renderLineChart}
       </div>
     </>

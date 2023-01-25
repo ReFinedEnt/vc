@@ -1201,17 +1201,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
+"@types/node@npm:*, @types/node@npm:18.11.18":
   version: 18.11.18
   resolution: "@types/node@npm:18.11.18"
   checksum: 03f17f9480f8d775c8a72da5ea7e9383db5f6d85aa5fefde90dd953a1449bd5e4ffde376f139da4f3744b4c83942166d2a7603969a6f8ea826edfb16e6e3b49d
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:18.11.9":
-  version: 18.11.9
-  resolution: "@types/node@npm:18.11.9"
-  checksum: cc0aae109e9b7adefc32eecb838d6fad931663bb06484b5e9cbbbf74865c721b03d16fd8d74ad90e31dbe093d956a7c2c306ba5429ba0c00f3f7505103d7a496
   languageName: node
   linkType: hard
 
@@ -6018,7 +6011,7 @@ __metadata:
     "@solana/web3.js": ^1.63.1
     "@supabase/supabase-js": ^2.1.1
     "@tailwindcss/typography": ^0.5.2
-    "@types/node": 18.11.9
+    "@types/node": 18.11.18
     "@types/react": 17.0.38
     add: ^2.0.6
     animate.css: ^4.1.1

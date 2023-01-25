@@ -198,9 +198,9 @@ const Portfolio: FC = (props) => {
         <h1 className="py-2 text-3xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] w-100">
           Stuff we do.
         </h1>
-        {/* <p className="pb-2 text-sm text-white z-[999] bg-base-300 p-1 rounded">
-          It ain&apos;t much, but it&apos;s honest work.
-        </p> */}
+        <p className="pb-2 text-sm text-white z-[999] bg-base-300 p-1 rounded">
+          We learn & buidl stuff.
+        </p>
       </div>
 
       <div className="grid gap-4 grid-cols-1 grid-rows-1 md:gap-4 md:grid-cols-3 md:grid-rows-3">

@@ -32,6 +32,41 @@ const Portfolio: FC = (props) => {
     },
     {
       id: 3,
+      title: "Color Theory",
+      status: "done 🎉",
+      description:
+        "A Tool to pick relational colors altogether - still some bugs.",
+      note: "Based upon LoopX tweet about color theorycrafting",
+      blockchain: "Chain Agnostic",
+      stack: [
+        "Javascript",
+        "Node.js",
+        "Typescript",
+        "React",
+        "Next.js",
+        "CSS",
+        "Vercel",
+      ],
+      imageUrl:
+        "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/color_theorycraft.png",
+      github: "https://twitter.com/LoopxNFT/status/1612219767355572225",
+      link: "https://krk.finance/colors",
+    },
+    {
+      id: 4,
+      title: "NFT DAO",
+      status: "WIP",
+      description: "Jpeg governance with solana labs governance program",
+      note: "organic community growth",
+      blockchain: "Solana",
+      stack: ["Rust", "sugarCLI", "realms.today"],
+      imageUrl:
+        "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
+      github: "#",
+      link: "#",
+    },
+    {
+      id: 5,
       title: "Fedscrap",
       status: "WIP",
       description: "US Federal Reverse Net Liquidity",
@@ -54,21 +89,9 @@ const Portfolio: FC = (props) => {
       github: "",
       link: "#",
     },
+
     {
-      id: 4,
-      title: "NFT DAO",
-      status: "WIP",
-      description: "Jpeg governance with solana labs governance program",
-      note: "organic community growth",
-      blockchain: "Solana",
-      stack: ["Rust", "sugarCLI", "realms.today"],
-      imageUrl:
-        "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
-      github: "#",
-      link: "#",
-    },
-    {
-      id: 5,
+      id: 6,
       title: "NFT PvP Game",
       description:
         "We're making a Blockchain Game while learning Solidity, Unity and C#",
@@ -91,7 +114,7 @@ const Portfolio: FC = (props) => {
       link: "#",
     },
     {
-      id: 6,
+      id: 7,
       title: "Discord Bot : NFT verify",
       status: "paused",
       description: "Discord bot to grant roles based on user token holdings",
@@ -104,7 +127,7 @@ const Portfolio: FC = (props) => {
       link: "#",
     },
     {
-      id: 7,
+      id: 8,
       title: "Discord Bot : Google Calendar",
       status: "paused",
       description:
@@ -118,7 +141,7 @@ const Portfolio: FC = (props) => {
       link: "#",
     },
     {
-      id: 8,
+      id: 9,
       title: "Watchbar",
       status: "paused",
       description: "Analytics tooling for Hedera ecosystem",
@@ -138,7 +161,7 @@ const Portfolio: FC = (props) => {
       link: "https://www.watchbar.space/",
     },
     {
-      id: 9,
+      id: 10,
       title: "Deso Fren",
       status: "paused",
       description:

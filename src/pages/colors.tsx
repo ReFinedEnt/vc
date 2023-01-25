@@ -121,10 +121,13 @@ const Colorful: NextPage = (props) => {
   return (
     <>
       <Head>
-        <title>Colorful</title>
-        <meta name="description" content="US FED Net Liquidity" />
+        <title>Colors Theorycraft</title>
+        <meta name="description" content="Colors Theorycraft" />
       </Head>
-      <div className="flex flex-col grow align-center items-center z-[50]">
+      <div className="container sm:mb-44 lg:mb-44 w-full flex flex-col grow align-center items-center z-[50]">
+        <h1 className="py-2 text-3xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] w-100">
+          Color Theorycraft
+        </h1>
         <div className="grid grid-rows-2 grid-flow-col gap-2">
           {/* COLOR #1 */}
           <div

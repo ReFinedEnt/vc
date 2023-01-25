@@ -71,8 +71,8 @@ export const ContentContainer: FC = (props) => {
           </li>
           <li>
             <Link href="/colors">
-              <a className="drawer-glitch" data-content="COLORS">
-                COLORS
+              <a className="drawer-glitch" data-content="COLOR THEORY">
+                COLOR THEORY
               </a>
             </Link>
           </li>

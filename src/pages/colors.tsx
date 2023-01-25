@@ -133,7 +133,7 @@ const Colorful: NextPage = (props) => {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/color_theorycraft.png"
+          content="https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/theorycraft.png"
         />
       </Head>
       <div className="container sm:mb-44 lg:mb-44 w-full flex flex-col grow align-center items-center z-[50]">

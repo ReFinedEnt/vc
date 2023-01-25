@@ -32,7 +32,7 @@ const Portfolio: FC = (props) => {
     },
     {
       id: 3,
-      title: "Color Theory",
+      title: "Color Theorycraft",
       status: "done 🎉",
       description:
         "A Tool to pick relational colors altogether - still some bugs.",
@@ -48,7 +48,7 @@ const Portfolio: FC = (props) => {
         "Vercel",
       ],
       imageUrl:
-        "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/color_theorycraft.png",
+        "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/theorycraft.png",
       github: "https://twitter.com/LoopxNFT/status/1612219767355572225",
       link: "https://krk.finance/colors",
     },

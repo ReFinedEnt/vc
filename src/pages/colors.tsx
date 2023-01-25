@@ -123,6 +123,18 @@ const Colorful: NextPage = (props) => {
       <Head>
         <title>Colors Theorycraft</title>
         <meta name="description" content="Colors Theorycraft" />
+        <meta property="og:title" content="🏗️ Colors Theorycraft 👷" />
+        <meta property="og:site_name" content="krk.finance/colors" />
+        <meta property="og:url" content="https://krk.finance/colors" />
+        <meta
+          property="og:description"
+          content="It ain't much, but it's honest work."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/color_theorycraft.png"
+        />
       </Head>
       <div className="container sm:mb-44 lg:mb-44 w-full flex flex-col grow align-center items-center z-[50]">
         <h1 className="py-2 text-3xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] w-100">

@@ -37,7 +37,7 @@ const ProjectItem: FC<Props> = ({ project }) => {
   return (
     <div className="card w-96 bg-base-300 text-white shadow-xl mx-auto border-2 border-white">
       <figure>
-        <a href={status == "done 🎉" ? `` : `${link}`}>
+        <a href={`${link}`}>
           <img src={`${imageUrl}`} alt={`${title}`} />
         </a>
       </figure>

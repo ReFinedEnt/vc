@@ -142,9 +142,11 @@ export const AppBar: FC = (props) => {
               Get WL.
             </button>
           </Link>
-          <button className="btn btn-sm btn-success mr-10 mx-5 px-5 z-[999]">
-            Sign-In
-          </button>
+          <Link href="/sign-in">
+            <button className="btn btn-sm btn-success mr-10 mx-5 px-5 z-[999]">
+              Sign-In
+            </button>
+          </Link>
           {/* <WalletMultiButton className="btn mx-2 z-[999]" /> */}
         </div>
       </div>

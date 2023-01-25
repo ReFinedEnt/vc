@@ -63,13 +63,6 @@ export const ContentContainer: FC = (props) => {
             TOOLBOX
           </h1>
           <li>
-            <Link href="/swap">
-              <a className="drawer-glitch" data-content="Swap">
-                SWAP
-              </a>
-            </Link>
-          </li>
-          <li>
             <Link href="/colors">
               <a className="drawer-glitch" data-content="COLOR THEORY">
                 COLOR THEORY

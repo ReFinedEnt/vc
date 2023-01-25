@@ -27,8 +27,8 @@ const Portfolio: FC = (props) => {
       stack: ["Javascript", "Node.js", "Discord.js", "Coingecko API", "Docker"],
       imageUrl:
         "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/ticker_big.png",
-      github: "https://github.com/EsyWin/unrekt",
-      link: "https://unrekt.vercel.app/",
+      github: "https://github.com/krk-finance/discordjs-crypto-ticker",
+      link: "/bots",
     },
     {
       id: 3,
@@ -45,6 +45,7 @@ const Portfolio: FC = (props) => {
         "React",
         "Next.js",
         "CSS",
+        "Tailwindcss",
         "Vercel",
       ],
       imageUrl:
@@ -115,6 +116,33 @@ const Portfolio: FC = (props) => {
     },
     {
       id: 7,
+      title: "NFT Marketplace",
+      description: "On-chain NFT marketplace that pay his token holders.",
+      status: "paused",
+      note: "Started on 'Moralis x Cronos' hackathon",
+      blockchain: "Ethereum Virtual Machine",
+      stack: ["Typescript", "Node.js", "Jest", "Solidity", "Hardhat"],
+      imageUrl:
+        "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
+      github: "#",
+      link: "#",
+    },
+    {
+      id: 8,
+      title: "Dividend Token",
+      description:
+        "A token that let his holders claim a share of revenue split equally.",
+      status: "paused",
+      note: "Started on 'Moralis x Cronos' hackathon",
+      blockchain: "Ethereum Virtual Machine",
+      stack: ["Typescript", "Node.js", "Jest", "Solidity", "Hardhat"],
+      imageUrl:
+        "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
+      github: "#",
+      link: "#",
+    },
+    {
+      id: 9,
       title: "Discord Bot : NFT verify",
       status: "paused",
       description: "Discord bot to grant roles based on user token holdings",
@@ -127,7 +155,7 @@ const Portfolio: FC = (props) => {
       link: "#",
     },
     {
-      id: 8,
+      id: 10,
       title: "Discord Bot : Google Calendar",
       status: "paused",
       description:
@@ -141,7 +169,7 @@ const Portfolio: FC = (props) => {
       link: "#",
     },
     {
-      id: 9,
+      id: 11,
       title: "Watchbar",
       status: "paused",
       description: "Analytics tooling for Hedera ecosystem",
@@ -161,7 +189,7 @@ const Portfolio: FC = (props) => {
       link: "https://www.watchbar.space/",
     },
     {
-      id: 10,
+      id: 12,
       title: "Deso Fren",
       status: "paused",
       description:
@@ -178,12 +206,12 @@ const Portfolio: FC = (props) => {
   return (
     <div className="container sm:mb-44 lg:mb-44 w-full">
       <div className="w-full bg-base-300 rounded-xl border-2 border-white flex flex-col justify-center items-center mb-2">
-        <h1 className="pt-2 text-3xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] w-100">
+        <h1 className="py-2 text-3xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] w-100">
           Stuff we do.
         </h1>
-        <p className="pb-2 text-sm text-white z-[999] bg-base-300 p-1 rounded">
+        {/* <p className="pb-2 text-sm text-white z-[999] bg-base-300 p-1 rounded">
           It ain&apos;t much, but it&apos;s honest work.
-        </p>
+        </p> */}
       </div>
 
       <div className="grid gap-4 grid-cols-1 grid-rows-1 md:gap-4 md:grid-cols-3 md:grid-rows-3">

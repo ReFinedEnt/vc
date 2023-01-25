@@ -37,7 +37,7 @@
     "typed.js": "^2.0.12",
     "uuid": "^9.0.0",
     "yarn": "^1.22.19",
-    "zustand": "^3.6.9"
+    "zustand": "^4.3.2"
   },
   "devDependencies": {
     "@types/node": "18.11.18",

@@ -26,7 +26,7 @@ export const JupiterApiProvider: React.FC<{}> = ({ children }) => {
     (async () => {
       const [tokens, indexedRouteMapResult] = await Promise.all([
         new TokenListProvider().resolve(),
-        api.v1IndexedRouteMapGet(),
+        api.v4IndexedRouteMapGet(),
       ]);
       const tokenList = tokens.filterByChainId(CHAIN_ID).getList();
 

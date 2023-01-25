@@ -126,10 +126,7 @@ const Colorful: NextPage = (props) => {
         <meta property="og:title" content="🏗️ Colors Theorycraft 👷" />
         <meta property="og:site_name" content="krk.finance/colors" />
         <meta property="og:url" content="https://krk.finance/colors" />
-        <meta
-          property="og:description"
-          content="It ain't much, but it's honest work."
-        />
+        <meta property="og:description" content="We learn & buidl stuff." />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"

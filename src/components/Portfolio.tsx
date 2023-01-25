@@ -52,7 +52,7 @@ const Portfolio: FC = (props) => {
       imageUrl:
         "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
       github: "",
-      link: "https://fed-liq.vercel.app/",
+      link: "#",
     },
     {
       id: 4,

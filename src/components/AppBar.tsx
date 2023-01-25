@@ -75,7 +75,7 @@ export const AppBar: FC = (props) => {
               </button>
             </Link>
             <Link
-              href="https://usdkrk.gitbook.io/krk./krk./quest./"
+              href="https://usdkrk.gitbook.io/krk./krk./"
               target={"_blank"}
               rel="noreferrer"
             >

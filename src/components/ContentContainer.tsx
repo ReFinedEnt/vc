@@ -45,13 +45,13 @@ export const ContentContainer: FC = (props) => {
               </a>
             </Link>
           </li>
-          <li>
-            <Link href="https://v3.squads.so/vault/assets/J5fiU6YrKtSHf3Wq1Tjn3TB7mjJPW1UNTSxSUueHaXJv">
+          {/* <li>
+            <Link href="/vault">
               <a className="drawer-glitch" data-content="VAULT">
                 VAULT
               </a>
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href="https://usdkrk.gitbook.io/krk./krk./">
               <a className="drawer-glitch" data-content="WHITEPAPER">
@@ -66,6 +66,13 @@ export const ContentContainer: FC = (props) => {
             <Link href="/swap">
               <a className="drawer-glitch" data-content="Swap">
                 SWAP
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/colors">
+              <a className="drawer-glitch" data-content="COLORS">
+                COLORS
               </a>
             </Link>
           </li>

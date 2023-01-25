@@ -50,17 +50,17 @@ const Portfolio: FC = (props) => {
       ],
       imageUrl:
         "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/theorycraft.png",
-      github: "https://twitter.com/LoopxNFT/status/1612219767355572225",
       link: "https://krk.finance/colors",
+      twitter: "https://twitter.com/LoopxNFT/status/1612219767355572225",
     },
     {
       id: 4,
       title: "NFT DAO",
       status: "WIP",
       description: "Jpeg governance with solana labs governance program",
-      note: "organic community growth",
+      note: "Slow & organic community growth, supply of 1337 mfers.",
       blockchain: "Solana",
-      stack: ["Rust", "sugarCLI", "realms.today"],
+      stack: ["Rust", "Metaplex", "SugarCLI", "Realms"],
       imageUrl:
         "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
       github: "#",
@@ -88,7 +88,7 @@ const Portfolio: FC = (props) => {
       imageUrl:
         "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
       github: "",
-      link: "#",
+      link: "",
     },
 
     {
@@ -98,7 +98,7 @@ const Portfolio: FC = (props) => {
         "We're making a Blockchain Game while learning Solidity, Unity and C#",
       status: "paused",
       note: "Started on 'Moralis x Cronos' hackathon",
-      blockchain: "Ethereum Virtual Machine",
+      blockchain: "EVM",
       stack: [
         "Typescript",
         "Node.js",
@@ -119,8 +119,8 @@ const Portfolio: FC = (props) => {
       title: "NFT Marketplace",
       description: "On-chain NFT marketplace that pay his token holders.",
       status: "paused",
-      note: "Started on 'Moralis x Cronos' hackathon",
-      blockchain: "Ethereum Virtual Machine",
+      note: "Deployed, needs testing.",
+      blockchain: "Hedera EVM",
       stack: ["Typescript", "Node.js", "Jest", "Solidity", "Hardhat"],
       imageUrl:
         "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
@@ -133,8 +133,8 @@ const Portfolio: FC = (props) => {
       description:
         "A token that let his holders claim a share of revenue split equally.",
       status: "paused",
-      note: "Started on 'Moralis x Cronos' hackathon",
-      blockchain: "Ethereum Virtual Machine",
+      note: "Deployed, needs testing.",
+      blockchain: "Hedera EVM",
       stack: ["Typescript", "Node.js", "Jest", "Solidity", "Hardhat"],
       imageUrl:
         "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
@@ -146,7 +146,7 @@ const Portfolio: FC = (props) => {
       title: "Discord Bot : NFT verify",
       status: "paused",
       description: "Discord bot to grant roles based on user token holdings",
-      note: "after NFT DAO mint",
+      note: "Has to be free to setup and to use : whole point !",
       blockchain: "Solana",
       stack: ["Typescript", "Slappey", "NestJS", "PostgreSQL", "React"],
       imageUrl:
@@ -174,7 +174,7 @@ const Portfolio: FC = (props) => {
       status: "paused",
       description: "Analytics tooling for Hedera ecosystem",
       note: "expensive infra",
-      blockchain: "Hedera",
+      blockchain: "Hedera EVM",
       stack: [
         "JavaScript",
         "Node.js",

@@ -14,22 +14,6 @@ require("../styles/globals.scss");
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
-      <Head>
-        <title>krk.finance</title>
-        <meta
-          property="og:title"
-          content="🏗️ chain-agnostic crowdsourced dev guild 👷"
-        />
-        <meta property="og:site_name" content="krk.finance" />
-        <meta property="og:url" content="https://krk.finance/" />
-        <meta property="og:description" content="We learn & buidl stuff." />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/krk_embed_2.png"
-        />
-      </Head>
-
       <ContextProvider>
         <div className="flex flex-col h-screen">
           <main className="flex flex-col z-[963] bg-black min-h-screen">

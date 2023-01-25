@@ -87,8 +87,6 @@ const Portfolio: FC = (props) => {
       ],
       imageUrl:
         "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
-      github: "",
-      link: "",
     },
 
     {
@@ -111,8 +109,6 @@ const Portfolio: FC = (props) => {
       ],
       imageUrl:
         "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
-      github: "#",
-      link: "#",
     },
     {
       id: 7,
@@ -124,8 +120,6 @@ const Portfolio: FC = (props) => {
       stack: ["Typescript", "Node.js", "Jest", "Solidity", "Hardhat"],
       imageUrl:
         "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
-      github: "#",
-      link: "#",
     },
     {
       id: 8,
@@ -138,8 +132,6 @@ const Portfolio: FC = (props) => {
       stack: ["Typescript", "Node.js", "Jest", "Solidity", "Hardhat"],
       imageUrl:
         "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
-      github: "#",
-      link: "#",
     },
     {
       id: 9,
@@ -151,8 +143,6 @@ const Portfolio: FC = (props) => {
       stack: ["Typescript", "Slappey", "NestJS", "PostgreSQL", "React"],
       imageUrl:
         "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
-      github: "",
-      link: "#",
     },
     {
       id: 10,
@@ -165,8 +155,7 @@ const Portfolio: FC = (props) => {
       stack: ["Typescript", "Slappey", "NestJS", "PostgreSQL", "React"],
       imageUrl:
         "https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/disbot_light.png",
-      github: "https://github.com/EsyWin/discord-google-calendar",
-      link: "#",
+      github: "https://github.com/krk-finance/discordjs-google-calendar",
     },
     {
       id: 11,

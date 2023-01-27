@@ -37,11 +37,11 @@ const Colorful: NextPage = (props) => {
   const [hexaFour, setHexaFour] = useState(String);
   const [hslFour, setHslFour] = useState(String);
 
-  const [colorFive, seColorFive] = useState(0);
+  const [colorFive, setColorFive] = useState(0);
   const [hexaFive, setHexaFive] = useState(String);
   const [hslFive, setHslFive] = useState(String);
 
-  const [colorSix, setcolorSix] = useState(0);
+  const [colorSix, setColorSix] = useState(0);
   const [hexaSix, setHexaSix] = useState(String);
   const [hslSix, setHslSix] = useState(String);
 
@@ -100,7 +100,7 @@ const Colorful: NextPage = (props) => {
     setHexaFour(HSLToHex(hslFour));
     let colorFive: number = colorThree + 60;
     // FIVE
-    seColorFive(colorFive);
+    setColorFive(colorFive);
     let hslFive: HSL = {
       h: colorFive,
       s: saturation,
@@ -111,7 +111,7 @@ const Colorful: NextPage = (props) => {
     setHexaFive(HSLToHex(hslFive));
     // SIX
     let colorSix: number = colorFive + 180;
-    setcolorSix(colorSix);
+    setColorSix(colorSix);
     let hslSix: HSL = {
       h: colorSix,
       s: saturation,
@@ -190,6 +190,11 @@ const Colorful: NextPage = (props) => {
                     console.log(`input value : ${event.target.value}`);
                     const eventHsl = toHSL(event.target.value);
                     console.log(eventHsl);
+                    const { h, s, l } = eventHsl;
+                    setValue(h);
+                    setColorOne(h);
+                    setSaturation(s);
+                    setLight(l);
                     const eventHslSrt = hslStr(eventHsl);
                     console.log(eventHslSrt);
                     setHslOne(eventHslSrt);
@@ -238,7 +243,14 @@ const Colorful: NextPage = (props) => {
                     console.log(`input value : ${event.target.value}`);
                     const eventHsl = toHSL(event.target.value);
                     console.log(eventHsl);
+                    const { h, s, l } = eventHsl;
+                    const valueTwo = h - 180;
+                    setValue(valueTwo);
+                    setColorTwo(h);
+                    setSaturation(s);
+                    setLight(l);
                     const eventHslSrt = hslStr(eventHsl);
+                    console.log(eventHslSrt);
                     setHslTwo(eventHslSrt);
                   } catch (error) {
                     console.log(error);
@@ -280,6 +292,24 @@ const Colorful: NextPage = (props) => {
                 id="hexaThree"
                 defaultValue={hexaThree}
                 className="w-full text-center"
+                onChange={(event) => {
+                  try {
+                    console.log(`input value : ${event.target.value}`);
+                    const eventHsl = toHSL(event.target.value);
+                    console.log(eventHsl);
+                    const { h, s, l } = eventHsl;
+                    const valueThree = h - 60;
+                    setValue(valueThree);
+                    setColorThree(h);
+                    setSaturation(s);
+                    setLight(l);
+                    const eventHslSrt = hslStr(eventHsl);
+                    console.log(eventHslSrt);
+                    setHslThree(eventHslSrt);
+                  } catch (error) {
+                    console.log(error);
+                  }
+                }}
               />
             </div>
           </div>
@@ -316,6 +346,24 @@ const Colorful: NextPage = (props) => {
                 id="hexaFour"
                 defaultValue={hexaFour}
                 className="w-full text-center"
+                onChange={(event) => {
+                  try {
+                    console.log(`input value : ${event.target.value}`);
+                    const eventHsl = toHSL(event.target.value);
+                    console.log(eventHsl);
+                    const { h, s, l } = eventHsl;
+                    const valueFour = h - (180 + 60);
+                    setValue(valueFour);
+                    setColorFour(h);
+                    setSaturation(s);
+                    setLight(l);
+                    const eventHslSrt = hslStr(eventHsl);
+                    console.log(eventHslSrt);
+                    setHslFour(eventHslSrt);
+                  } catch (error) {
+                    console.log(error);
+                  }
+                }}
               />
             </div>
           </div>
@@ -352,6 +400,24 @@ const Colorful: NextPage = (props) => {
                 id="hexaFive"
                 defaultValue={hexaFive}
                 className="w-full text-center"
+                onChange={(event) => {
+                  try {
+                    console.log(`input value : ${event.target.value}`);
+                    const eventHsl = toHSL(event.target.value);
+                    console.log(eventHsl);
+                    const { h, s, l } = eventHsl;
+                    const valueFive = h - 120;
+                    setValue(valueFive);
+                    setColorFive(h);
+                    setSaturation(s);
+                    setLight(l);
+                    const eventHslSrt = hslStr(eventHsl);
+                    console.log(eventHslSrt);
+                    setHslFive(eventHslSrt);
+                  } catch (error) {
+                    console.log(error);
+                  }
+                }}
               />
             </div>
           </div>
@@ -388,6 +454,24 @@ const Colorful: NextPage = (props) => {
                 id="hexaSix"
                 defaultValue={hexaSix}
                 className="w-full text-center"
+                onChange={(event) => {
+                  try {
+                    console.log(`input value : ${event.target.value}`);
+                    const eventHsl = toHSL(event.target.value);
+                    console.log(eventHsl);
+                    const { h, s, l } = eventHsl;
+                    const valueSix = h - 300;
+                    setValue(valueSix);
+                    setColorSix(h);
+                    setSaturation(s);
+                    setLight(l);
+                    const eventHslSrt = hslStr(eventHsl);
+                    console.log(eventHslSrt);
+                    setHslSix(eventHslSrt);
+                  } catch (error) {
+                    console.log(error);
+                  }
+                }}
               />
             </div>
           </div>

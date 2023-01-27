@@ -33,7 +33,7 @@ export const ContentContainer: FC = (props) => {
           </h1>
           <li>
             <Link href="/">
-              <a className="drawer-glitch" data-content="ROADMAP">
+              <a className="drawer-glitch" data-content="HOME">
                 HOME
               </a>
             </Link>

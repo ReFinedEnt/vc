@@ -6,7 +6,7 @@ import { RoadMap } from "views/roadmap";
 
 const RoadMapPage: FC = ({}) => {
   return (
-    <div className="max-h-screen md:hero mx-auto">
+    <div className="mb-[111px] min-h-screen max-h-screen md:hero mx-auto">
       <div className=" md:hero-content flex flex-col mb-10">
         <h1 className="text-center text-3xl font-bold text-transparent bg-clip-text mb-3 tracking-tight bg-gradient-to-tr from-[#14F195] to-[#9945FF] rgbg">
           Roadmap

@@ -2,121 +2,135 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { BasicsView } from "../views";
+// Utils
+import { toHSL } from "utils/colors.utils";
+import { HSLToHex } from "utils/colors.utils";
+// Types
+import { HSL } from "utils/types.utils";
 
 const Colorful: NextPage = (props) => {
-  const randH = Math.floor(Math.random() * 360);
-  const randS = Math.floor(Math.random() * 100);
-  const randL = Math.floor(Math.random() * 100);
-
+  const randH: number = Math.floor(Math.random() * 360);
+  const randS: number = Math.floor(Math.random() * 100);
+  const randL: number = Math.floor(Math.random() * 100);
+  const randHSLObj: HSL = {
+    h: randH,
+    s: randS,
+    l: randL,
+  };
+  const randHSL = "hsl(" + randH + ", " + randS + "%, " + randL + "%)";
+  console.log(randHSL);
   const [value, setValue] = useState(0);
 
   const [colorOne, setColorOne] = useState(0);
   const [hexaOne, setHexaOne] = useState(String);
-  const [hslOne, setHslOne] = useState(Object);
+  const [hslOne, setHslOne] = useState(String);
 
   const [colorTwo, setColorTwo] = useState(0);
   const [hexaTwo, setHexaTwo] = useState(String);
-  const [hslTwo, setHslTwo] = useState(Object);
+  const [hslTwo, setHslTwo] = useState(String);
 
   const [colorThree, setColorThree] = useState(0);
   const [hexaThree, setHexaThree] = useState(String);
-  const [hslThree, setHslThree] = useState(Object);
+  const [hslThree, setHslThree] = useState(String);
 
   const [colorFour, setColorFour] = useState(0);
   const [hexaFour, setHexaFour] = useState(String);
-  const [hslFour, setHslFour] = useState(Object);
+  const [hslFour, setHslFour] = useState(String);
 
   const [colorFive, seColorFive] = useState(0);
   const [hexaFive, setHexaFive] = useState(String);
-  const [hslFive, setHslFive] = useState(Object);
+  const [hslFive, setHslFive] = useState(String);
 
   const [colorSix, setcolorSix] = useState(0);
   const [hexaSix, setHexaSix] = useState(String);
-  const [hslSix, setHslSix] = useState(Object);
+  const [hslSix, setHslSix] = useState(String);
 
   const [saturation, setSaturation] = useState(0);
   const [light, setLight] = useState(0);
+
+  const hslStr = ({ h, s, l }: HSL) => {
+    return "hsl(" + h + ", " + s + "%, " + l + "%)";
+  };
 
   useEffect(() => {
     // ONE
     let colorOne: number = value;
     setColorOne(colorOne);
-    let hslOne: { h: number; s: number; l: number } = {
+    let hslOne: HSL = {
       h: colorOne,
       s: saturation,
       l: light,
     };
-    setHslOne(hslOne);
+    const hslStrOne = hslStr(hslOne);
+    setHslOne(hslStrOne);
     setHexaOne(HSLToHex(hslOne));
     console.log(colorOne);
     // TWO
     let colorTwo: number = colorOne + 180;
     setColorTwo(colorTwo);
-    let hslTwo: { h: number; s: number; l: number } = {
+    let hslTwo: HSL = {
       h: colorTwo,
       s: saturation,
       l: light,
     };
-    setHslTwo(hslTwo);
+    const hslStrTwo = hslStr(hslTwo);
+    setHslTwo(hslStrTwo);
     setHexaTwo(HSLToHex(hslTwo));
     // Three
     let colorThree: number = colorOne + 60;
     setColorThree(colorThree);
-    let hslThree: { h: number; s: number; l: number } = {
+    let hslThree: HSL = {
       h: colorThree,
       s: saturation,
       l: light,
     };
-    setHslThree(hslThree);
+    const hslStrThree = hslStr(hslThree);
+    setHslThree(hslStrThree);
     setHexaThree(HSLToHex(hslThree));
     // Four
     let colorFour: number = colorThree + 180;
     setColorFour(colorFour);
-    let hslFour: { h: number; s: number; l: number } = {
+    let hslFour: HSL = {
       h: colorFour,
       s: saturation,
       l: light,
     };
-    setHslFour(hslFour);
+    const hslStrFour = hslStr(hslFour);
+    setHslFour(hslStrFour);
     setHexaFour(HSLToHex(hslFour));
     let colorFive: number = colorThree + 60;
     // FIVE
     seColorFive(colorFive);
-    let hslFive: { h: number; s: number; l: number } = {
+    let hslFive: HSL = {
       h: colorFive,
       s: saturation,
       l: light,
     };
-    setHslFive(hslFive);
+    const hslStrFive = hslStr(hslFive);
+    setHslFive(hslStrFive);
     setHexaFive(HSLToHex(hslFive));
     // SIX
     let colorSix: number = colorFive + 180;
     setcolorSix(colorSix);
-    let hslSix: { h: number; s: number; l: number } = {
+    let hslSix: HSL = {
       h: colorSix,
       s: saturation,
       l: light,
     };
-    setHslSix(hslSix);
+    const hslStrSix = hslStr(hslSix);
+    setHslSix(hslStrSix);
     setHexaSix(HSLToHex(hslSix));
-  }, [value, saturation, light]);
-
-  function HSLToHex(hsl: { h: number; s: number; l: number }): string {
-    const { h, s, l } = hsl;
-
-    const hDecimal = l / 100;
-    const a = (s * Math.min(hDecimal, 1 - hDecimal)) / 100;
-    const f = (n: number) => {
-      const k = (n + h / 30) % 12;
-      const color = hDecimal - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
-
-      // Convert to Hex and prefix with "0" if required
-      return Math.round(255 * color)
-        .toString(16)
-        .padStart(2, "0");
-    };
-    return `#${f(0)}${f(8)}${f(4)}`;
-  }
+  }, [
+    value,
+    saturation,
+    light,
+    hslOne,
+    hslTwo,
+    hslThree,
+    hslFour,
+    hslFive,
+    hslSix,
+  ]);
 
   return (
     <>
@@ -140,15 +154,15 @@ const Colorful: NextPage = (props) => {
         <div className="grid grid-rows-2 grid-flow-col gap-2">
           {/* COLOR #1 */}
           <div
-            className={`sm:w-[15vw] md:w-[22vw] border-2 border-white`}
+            className={`sm:w-[15vw] lg:w-[10vw] lg:h-[10vw] border-2 border-white`}
             style={{
-              backgroundColor: `hsl(${colorOne}, ${saturation}%,${light}%)`,
+              backgroundColor: `${hslOne}`,
             }}
           >
             <div
               className={`border-2 border-red-300 inline text-xl pozey font-bold`}
               style={{
-                color: `hsl(${colorTwo}, ${saturation}%,${light}%`,
+                color: `${hslTwo}`,
               }}
             >
               01
@@ -156,7 +170,7 @@ const Colorful: NextPage = (props) => {
             <div
               className="pozey"
               style={{
-                color: `hsl(${colorTwo}, ${saturation}%,${light}%`,
+                color: `${hslOne}`,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -167,20 +181,28 @@ const Colorful: NextPage = (props) => {
             >
               <input
                 type="text"
-                name="hexaOne"
-                id="hexaOne"
+                name="hexaFive"
+                id="hexaFive"
                 defaultValue={hexaOne}
                 className="w-full text-center"
                 onChange={(event) => {
-                  console.log(event.target.value);
-                  // setColorOne();
+                  try {
+                    console.log(`input value : ${event.target.value}`);
+                    const eventHsl = toHSL(event.target.value);
+                    console.log(eventHsl);
+                    const eventHslSrt = hslStr(eventHsl);
+                    console.log(eventHslSrt);
+                    setHslOne(eventHslSrt);
+                  } catch (error) {
+                    console.log(error);
+                  }
                 }}
               />
             </div>
           </div>
           {/* COLOR #2 */}
           <div
-            className="sm:w-[15vw] md:w-[22vw] border-2 border-white"
+            className="sm:w-[15vw] lg:w-[10vw] lg:h-[10vw] border-2 border-white"
             style={{
               backgroundColor: `hsl(${colorTwo}, ${saturation}%, ${light}%)`,
             }}
@@ -188,7 +210,7 @@ const Colorful: NextPage = (props) => {
             <div
               className="border-2 border-red-300 inline  text-xl pozey font-bold"
               style={{
-                color: `hsl(${colorOne}, ${saturation}%,${light}%`,
+                color: `${hslOne}`,
               }}
             >
               02
@@ -196,7 +218,7 @@ const Colorful: NextPage = (props) => {
             <div
               className="pozey"
               style={{
-                color: `hsl(${colorOne}, ${saturation}%,${light}%`,
+                color: `${hslTwo}`,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -211,20 +233,31 @@ const Colorful: NextPage = (props) => {
                 id="hexaTwo"
                 defaultValue={hexaTwo}
                 className="w-full text-center"
+                onChange={(event) => {
+                  try {
+                    console.log(`input value : ${event.target.value}`);
+                    const eventHsl = toHSL(event.target.value);
+                    console.log(eventHsl);
+                    const eventHslSrt = hslStr(eventHsl);
+                    setHslTwo(eventHslSrt);
+                  } catch (error) {
+                    console.log(error);
+                  }
+                }}
               />
             </div>
           </div>
           {/* COLOR #3 */}
           <div
-            className="sm:w-[15vw] md:w-[22vw] border-2 border-white"
+            className="sm:w-[15vw] lg:w-[10vw] lg:h-[10vw] border-2 border-white"
             style={{
-              backgroundColor: `hsl(${colorThree}, ${saturation}%, ${light}%)`,
+              backgroundColor: `${hslThree}`,
             }}
           >
             <div
               className="border-2 border-red-300 inline text-xl pozey font-bold"
               style={{
-                color: `hsl(${colorFour}, ${saturation}%,${light}%`,
+                color: `${hslFour}`,
               }}
             >
               03
@@ -232,7 +265,7 @@ const Colorful: NextPage = (props) => {
             <div
               className="pozey"
               style={{
-                color: `hsl(${colorFour}, ${saturation}%,${light}%`,
+                color: `${hslFour}`,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -252,7 +285,7 @@ const Colorful: NextPage = (props) => {
           </div>
           {/* COLOR #4 */}
           <div
-            className="sm:w-[15vw] md:w-[22vw] border-2 border-white"
+            className="sm:w-[15vw] lg:w-[10vw] lg:h-[10vw] border-2 border-white"
             style={{
               backgroundColor: `hsl(${colorFour}, ${saturation}%, ${light}%)`,
             }}
@@ -260,7 +293,7 @@ const Colorful: NextPage = (props) => {
             <div
               className="border-2 border-red-300 inline  text-xl pozey font-bold"
               style={{
-                color: `hsl(${colorThree}, ${saturation}%,${light}%`,
+                color: `${hslThree}`,
               }}
             >
               04
@@ -268,7 +301,7 @@ const Colorful: NextPage = (props) => {
             <div
               className="pozey"
               style={{
-                color: `hsl(${colorThree}, ${saturation}%,${light}%`,
+                color: `${hslThree}`,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -288,15 +321,15 @@ const Colorful: NextPage = (props) => {
           </div>
           {/* COLOR #5 */}
           <div
-            className="sm:w-[15vw] md:w-[22vw] border-2 border-white"
+            className="sm:w-[15vw] lg:w-[10vw] lg:h-[10vw] border-2 border-white"
             style={{
-              backgroundColor: `hsl(${colorFive}, ${saturation}%, ${light}%)`,
+              backgroundColor: `${hslFive}`,
             }}
           >
             <div
               className="border-2 border-red-300 inline  text-xl pozey font-bold"
               style={{
-                color: `hsl(${colorSix}, ${saturation}%,${light}%`,
+                color: `${hslSix}`,
               }}
             >
               05
@@ -304,7 +337,7 @@ const Colorful: NextPage = (props) => {
             <div
               className="pozey"
               style={{
-                color: `hsl(${colorSix}, ${saturation}%,${light}%`,
+                color: `${hslFive}`,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -324,15 +357,15 @@ const Colorful: NextPage = (props) => {
           </div>
           {/* COLOR #6 */}
           <div
-            className="sm:w-[15vw] md:w-[22vw] border-2 border-white"
+            className="sm:w-[15vw] lg:w-[10vw] lg:h-[10vw] border-2 border-white"
             style={{
-              backgroundColor: `hsl(${colorSix}, ${saturation}%, ${light}%)`,
+              backgroundColor: `${hslSix}`,
             }}
           >
             <div
               className="border-2 border-red-300 inline  text-xl pozey font-bold"
               style={{
-                color: `hsl(${colorFive}, ${saturation}%,${light}%`,
+                color: `${hslFive}`,
               }}
             >
               06
@@ -340,7 +373,7 @@ const Colorful: NextPage = (props) => {
             <div
               className="pozey"
               style={{
-                color: `hsl(${colorFive}, ${saturation}%,${light}%`,
+                color: `${hslFive}`,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -379,7 +412,7 @@ const Colorful: NextPage = (props) => {
             type="range"
             min="0"
             max="100"
-            defaultValue={value}
+            defaultValue={saturation}
             onChange={(event) => {
               console.log(event.target.value);
               setSaturation(parseInt(event.target.value));
@@ -392,7 +425,7 @@ const Colorful: NextPage = (props) => {
             type="range"
             min="0"
             max="100"
-            defaultValue={value}
+            defaultValue={light}
             onChange={(event) => {
               console.log(event.target.value);
               setLight(parseInt(event.target.value));

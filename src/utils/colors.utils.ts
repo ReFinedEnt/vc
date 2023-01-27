@@ -1,3 +1,5 @@
+import { HSL } from "./types.utils";
+
 export const toHSL = (hex) => {
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
 
@@ -35,7 +37,25 @@ export const toHSL = (hex) => {
   s = Math.round(s);
   l = l * 100;
   l = Math.round(l);
+  h = Math.round(360 * h);
 
   var colorInHSL = "hsl(" + h + ", " + s + "%, " + l + "%)";
-  return colorInHSL;
+  return { h, s, l };
 };
+
+export function HSLToHex(hsl: HSL): string {
+  const { h, s, l } = hsl;
+
+  const hDecimal = l / 100;
+  const a = (s * Math.min(hDecimal, 1 - hDecimal)) / 100;
+  const f = (n: number) => {
+    const k = (n + h / 30) % 12;
+    const color = hDecimal - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+
+    // Convert to Hex and prefix with "0" if required
+    return Math.round(255 * color)
+      .toString(16)
+      .padStart(2, "0");
+  };
+  return `#${f(0)}${f(8)}${f(4)}`;
+}

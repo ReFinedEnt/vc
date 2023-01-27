@@ -47,7 +47,7 @@ export const HomeView: FC = ({}) => {
 
   return (
     <div className="xs:max-w-[100vw] md:hero mx-auto bg-black">
-      <div className="w-full h-screen absolute top-0 bg-[rgba(0,0,0,0.1)] z-3"></div>
+      {/* <div className="w-full min-h-screen absolute top-0 bg-[rgba(0,0,0,0.1)] z-3"></div> */}
 
       <div className="md:hero-content hero-content flex flex-col">
         {loading ? (

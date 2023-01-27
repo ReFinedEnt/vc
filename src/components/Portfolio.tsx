@@ -193,7 +193,7 @@ const Portfolio: FC = (props) => {
     },
   ];
   return (
-    <div className="container">
+    <div className="container min-h-screen">
       <div className="bg-base-300 rounded-xl border-2 border-white flex flex-col justify-center items-center mb-2">
         <h1 className="pt-2 text-3xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF]">
           Stuff we do.
@@ -203,7 +203,7 @@ const Portfolio: FC = (props) => {
         </p>
       </div>
 
-      <div className="grid gap-4 grid-cols-1 grid-rows-1 md:gap-4 md:grid-cols-3 md:grid-rows-3">
+      <div className="mb-[111px] grid gap-4 grid-cols-1 grid-rows-1 md:gap-4 md:grid-cols-3 md:grid-rows-3">
         {projectsArr.map((project) => {
           // console.log(project);
           return <ProjectItem key={project.id} project={project} />;

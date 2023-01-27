@@ -140,7 +140,7 @@ const Colorful: NextPage = (props) => {
         <div className="grid grid-rows-2 grid-flow-col gap-2">
           {/* COLOR #1 */}
           <div
-            className={`w-[150px] h-[150px] border-2 border-white`}
+            className={`sm:w-[15vw] md:w-[22vw] border-2 border-white`}
             style={{
               backgroundColor: `hsl(${colorOne}, ${saturation}%,${light}%)`,
             }}
@@ -165,12 +165,22 @@ const Colorful: NextPage = (props) => {
                 width: "100%",
               }}
             >
-              {hexaOne}
+              <input
+                type="text"
+                name="hexaOne"
+                id="hexaOne"
+                defaultValue={hexaOne}
+                className="w-full text-center"
+                onChange={(event) => {
+                  console.log(event.target.value);
+                  // setColorOne();
+                }}
+              />
             </div>
           </div>
           {/* COLOR #2 */}
           <div
-            className="w-[150px] h-[150px] border-2 border-white"
+            className="sm:w-[15vw] md:w-[22vw] border-2 border-white"
             style={{
               backgroundColor: `hsl(${colorTwo}, ${saturation}%, ${light}%)`,
             }}
@@ -195,12 +205,18 @@ const Colorful: NextPage = (props) => {
                 width: "100%",
               }}
             >
-              {hexaTwo}
+              <input
+                type="text"
+                name="hexaTwo"
+                id="hexaTwo"
+                defaultValue={hexaTwo}
+                className="w-full text-center"
+              />
             </div>
           </div>
           {/* COLOR #3 */}
           <div
-            className="w-[150px] h-[150px] border-2 border-white"
+            className="sm:w-[15vw] md:w-[22vw] border-2 border-white"
             style={{
               backgroundColor: `hsl(${colorThree}, ${saturation}%, ${light}%)`,
             }}
@@ -225,12 +241,18 @@ const Colorful: NextPage = (props) => {
                 width: "100%",
               }}
             >
-              {hexaThree}
+              <input
+                type="text"
+                name="hexaThree"
+                id="hexaThree"
+                defaultValue={hexaThree}
+                className="w-full text-center"
+              />
             </div>
           </div>
           {/* COLOR #4 */}
           <div
-            className="w-[150px] h-[150px] border-2 border-white"
+            className="sm:w-[15vw] md:w-[22vw] border-2 border-white"
             style={{
               backgroundColor: `hsl(${colorFour}, ${saturation}%, ${light}%)`,
             }}
@@ -255,12 +277,18 @@ const Colorful: NextPage = (props) => {
                 width: "100%",
               }}
             >
-              {hexaFour}
+              <input
+                type="text"
+                name="hexaFour"
+                id="hexaFour"
+                defaultValue={hexaFour}
+                className="w-full text-center"
+              />
             </div>
           </div>
           {/* COLOR #5 */}
           <div
-            className="w-[150px] h-[150px] border-2 border-white"
+            className="sm:w-[15vw] md:w-[22vw] border-2 border-white"
             style={{
               backgroundColor: `hsl(${colorFive}, ${saturation}%, ${light}%)`,
             }}
@@ -285,12 +313,18 @@ const Colorful: NextPage = (props) => {
                 width: "100%",
               }}
             >
-              {hexaFive}
+              <input
+                type="text"
+                name="hexaFive"
+                id="hexaFive"
+                defaultValue={hexaFive}
+                className="w-full text-center"
+              />
             </div>
           </div>
           {/* COLOR #6 */}
           <div
-            className="w-[150px] h-[150px] border-2 border-white"
+            className="sm:w-[15vw] md:w-[22vw] border-2 border-white"
             style={{
               backgroundColor: `hsl(${colorSix}, ${saturation}%, ${light}%)`,
             }}
@@ -315,7 +349,13 @@ const Colorful: NextPage = (props) => {
                 width: "100%",
               }}
             >
-              {hexaSix}
+              <input
+                type="text"
+                name="hexaSix"
+                id="hexaSix"
+                defaultValue={hexaSix}
+                className="w-full text-center"
+              />
             </div>
           </div>
         </div>

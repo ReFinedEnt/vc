@@ -64,6 +64,9 @@ const Colorful: NextPage = (props) => {
     const hslStrOne = hslStr(hslOne);
     setHslOne(hslStrOne);
     setHexaOne(HSLToHex(hslOne));
+    setSaturation(hslOne.s);
+    setLight(hslOne.l);
+
     console.log(colorOne);
     // TWO
     let colorTwo: number = colorOne + 180;
@@ -76,6 +79,9 @@ const Colorful: NextPage = (props) => {
     const hslStrTwo = hslStr(hslTwo);
     setHslTwo(hslStrTwo);
     setHexaTwo(HSLToHex(hslTwo));
+    setSaturation(hslTwo.s);
+    setLight(hslTwo.l);
+
     // Three
     let colorThree: number = colorOne + 60;
     setColorThree(colorThree);
@@ -87,6 +93,8 @@ const Colorful: NextPage = (props) => {
     const hslStrThree = hslStr(hslThree);
     setHslThree(hslStrThree);
     setHexaThree(HSLToHex(hslThree));
+    setSaturation(hslThree.s);
+    setLight(hslThree.l);
     // Four
     let colorFour: number = colorThree + 180;
     setColorFour(colorFour);
@@ -98,6 +106,9 @@ const Colorful: NextPage = (props) => {
     const hslStrFour = hslStr(hslFour);
     setHslFour(hslStrFour);
     setHexaFour(HSLToHex(hslFour));
+    setSaturation(hslFour.s);
+    setLight(hslFour.l);
+
     let colorFive: number = colorThree + 60;
     // FIVE
     setColorFive(colorFive);
@@ -109,6 +120,8 @@ const Colorful: NextPage = (props) => {
     const hslStrFive = hslStr(hslFive);
     setHslFive(hslStrFive);
     setHexaFive(HSLToHex(hslFive));
+    setSaturation(hslFive.s);
+    setLight(hslFive.l);
     // SIX
     let colorSix: number = colorFive + 180;
     setColorSix(colorSix);
@@ -120,6 +133,8 @@ const Colorful: NextPage = (props) => {
     const hslStrSix = hslStr(hslSix);
     setHslSix(hslStrSix);
     setHexaSix(HSLToHex(hslSix));
+    setSaturation(hslSix.s);
+    setLight(hslSix.l);
   }, [
     value,
     saturation,
@@ -183,7 +198,7 @@ const Colorful: NextPage = (props) => {
                 type="text"
                 name="hexaFive"
                 id="hexaFive"
-                defaultValue={hexaOne}
+                value={hexaOne}
                 className="w-full text-center"
                 onChange={(event) => {
                   try {
@@ -198,6 +213,7 @@ const Colorful: NextPage = (props) => {
                     const eventHslSrt = hslStr(eventHsl);
                     console.log(eventHslSrt);
                     setHslOne(eventHslSrt);
+                    setHexaOne(HSLToHex(eventHsl));
                   } catch (error) {
                     console.log(error);
                   }
@@ -236,7 +252,7 @@ const Colorful: NextPage = (props) => {
                 type="text"
                 name="hexaTwo"
                 id="hexaTwo"
-                defaultValue={hexaTwo}
+                value={hexaTwo}
                 className="w-full text-center"
                 onChange={(event) => {
                   try {
@@ -290,7 +306,7 @@ const Colorful: NextPage = (props) => {
                 type="text"
                 name="hexaThree"
                 id="hexaThree"
-                defaultValue={hexaThree}
+                value={hexaThree}
                 className="w-full text-center"
                 onChange={(event) => {
                   try {
@@ -344,7 +360,7 @@ const Colorful: NextPage = (props) => {
                 type="text"
                 name="hexaFour"
                 id="hexaFour"
-                defaultValue={hexaFour}
+                value={hexaFour}
                 className="w-full text-center"
                 onChange={(event) => {
                   try {
@@ -398,7 +414,7 @@ const Colorful: NextPage = (props) => {
                 type="text"
                 name="hexaFive"
                 id="hexaFive"
-                defaultValue={hexaFive}
+                value={hexaFive}
                 className="w-full text-center"
                 onChange={(event) => {
                   try {
@@ -452,7 +468,7 @@ const Colorful: NextPage = (props) => {
                 type="text"
                 name="hexaSix"
                 id="hexaSix"
-                defaultValue={hexaSix}
+                value={hexaSix}
                 className="w-full text-center"
                 onChange={(event) => {
                   try {

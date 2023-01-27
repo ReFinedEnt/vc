@@ -8,7 +8,7 @@ export default function TypedTitle() {
       strings: [
         "hello anon.",
         "welcome to krk.finance",
-        "we buidl stuff",
+        "we learn & buidl stuff",
         "we participate hackathons",
         "git push",
         "cat /etc/passwd",
@@ -30,7 +30,7 @@ export default function TypedTitle() {
     };
   }, []);
   return (
-    <div className="max-w-md mx-auto mockup-code bg-black p-6 my-2 w-[420px] border-2 border-white z-50">
+    <div className="xs:w-[full] lg:w-[420px] mx-auto mockup-code bg-black my-2  border-2 border-white z-50">
       <pre data-prefix=">_">
         <code className="">
           {" "}

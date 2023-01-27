@@ -21,7 +21,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
             <AppBar />
 
             <ContentContainer>
-              <div className="max-w-[963px] mx-auto z-[963] bg-black">
+              <div className="xs:max-w-[100vw] lg:max-w-[963px] mx-auto z-[963] bg-black">
                 <div className="md:w-full mt-3 text-center text-slate-300 flex justify-center items-center align-center flex-col z-[999]">
                   <div className="w-full bg-base-300 rounded-xl border-2 border-white flex flex-col justify-center items-center mb-2 z-[999]">
                     <h1 className="p-2 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195] w-100 z-[999]">

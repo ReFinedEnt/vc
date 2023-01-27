@@ -45,13 +45,13 @@ export const ContentContainer: FC = (props) => {
               </a>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/projects">
               <a className="drawer-glitch" data-content="PROJECTS">
                 PROJECTS
               </a>
             </Link>
-          </li>
+          </li> */}
           {/* <li>
             <Link href="/vault">
               <a className="drawer-glitch" data-content="VAULT">

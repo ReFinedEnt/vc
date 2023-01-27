@@ -256,7 +256,7 @@ export const RoadMap: FC = () => {
   // );
 
   return (
-    <div className="w-full flex-col flex justify-center align-center">
+    <div className="my-2 max-h-[66vh] w-full flex-col flex justify-center align-center">
       <div className="w-full flex flex-col justify-center items-center">
         <ul className="steps steps-vertical">
           <li

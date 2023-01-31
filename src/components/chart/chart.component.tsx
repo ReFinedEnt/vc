@@ -36,7 +36,7 @@ const Chart = ({ twitterId }: { twitterId: string }) => {
       {loading ? (
         <Spinner />
       ) : (
-        <div className="w-full mx-auto">
+        <div className="w-full mx-auto mb-[111px]">
           <LineChart
             width={420}
             height={300}

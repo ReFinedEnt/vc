@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import Spinner from "../../components/spinner/spinner.component";
 import Chart from "../../components/chart/chart.component";
+import Discord from "../../components/discord/discord.component";
 
 import {
   TWITTER_ID_FOUNDER_ONE,
@@ -47,6 +48,16 @@ export const HomeView: FC = ({}) => {
               </h2>
               <div className="w-full flex justify-center items-center">
                 <Chart twitterId={TWITTER_ID_FOUNDER_TWO} />
+              </div>
+            </div>
+
+            {/* Discord */}
+            <div className="flex flex-col w-full mx-auto justify-center items-center item">
+              <h2 className="text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] w-100 z-[999]">
+                Discord
+              </h2>
+              <div className="w-full flex justify-center items-center">
+                <Discord />
               </div>
             </div>
           </div>

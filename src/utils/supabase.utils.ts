@@ -14,7 +14,7 @@ import {
   TWITTER_ID_FOUNDER_TWO,
 } from "../constants/constants";
 
-// fetch balance sheet
+// query supabase(twitterId)
 export const queryTwitter = async (
   // if no twitterId, use mock
   twitterId: string = "founder_mock"
@@ -38,5 +38,30 @@ export const queryTwitter = async (
   if (error) console.log(error);
   // log result
   //   console.log(res);
+  return res;
+};
+
+// query discord
+export const queryDiscord = async (
+  // if no twitterId, use mock
+  env: string = "dev"
+): Promise<any> => {
+  // instantiate founder string
+  let db: string = "";
+  // twitterId == founder_one
+  if (env == "dev") {
+    db = "discord_mock";
+    // twitterId == founder_two
+  } else if (env == "prod") {
+    db = "discord";
+    // if no twitterId, use mock
+  }
+  console.log(db);
+  // query supabase
+  let { data: res, error } = await supabase.from(db).select("*");
+  // log error if any
+  if (error) console.log(error);
+  // log result
+  console.log(res);
   return res;
 };

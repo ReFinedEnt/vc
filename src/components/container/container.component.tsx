@@ -32,14 +32,14 @@ export const ContentContainer: FC = (props) => {
             THE SQUAD
           </h1>
           <li>
-            <Link href="/">
+            <Link href="https://krk.finance/">
               <a className="drawer-glitch" data-content="HOME">
                 HOME
               </a>
             </Link>
           </li>
           <li>
-            <Link href="/roadmap">
+            <Link href="https://krk.finance/roadmap">
               <a className="drawer-glitch" data-content="ROADMAP">
                 ROADMAP
               </a>
@@ -70,7 +70,7 @@ export const ContentContainer: FC = (props) => {
             TOOLBOX
           </h1>
           <li>
-            <Link href="/colors">
+            <Link href="https://krk.finance/colors">
               <a className="drawer-glitch" data-content="COLOR THEORY">
                 COLOR THEORY
               </a>

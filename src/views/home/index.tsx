@@ -3,40 +3,16 @@ import { FC, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import Carousel from "components/Carousel";
-import Portfolio from "components/Portfolio";
-import Spinner from "components/Spinner";
+import Spinner from "../../components/spinner/spinner.component";
+import Chart from "../../components/chart/chart.component";
 
-// Wallet
-// import { useWallet, useConnection } from '@solana/wallet-adapter-react';
-
-// Components
-// import { RequestAirdrop } from '../../components/RequestAirdrop';
-// import pkg from '../../../package.json';
-
-// Store
-// import useUserSOLBalanceStore from '../../stores/useUserSOLBalanceStore';
-// import { RoadMap } from 'views/roadmap';
-
-import Typed from "components/Typed";
-// import { QuestView } from "./quest";
-// import { AlchemyView } from "./alchemy";
+import {
+  TWITTER_ID_FOUNDER_ONE,
+  TWITTER_ID_FOUNDER_TWO,
+} from "../../constants/constants";
 
 export const HomeView: FC = ({}) => {
-  // const wallet = useWallet();
-  // const { connection } = useConnection();
-
-  // const balance = useUserSOLBalanceStore((s) => s.balance);
-  // const { getUserSOLBalance } = useUserSOLBalanceStore();
-
-  // useEffect(() => {
-  //   if (wallet.publicKey) {
-  //     console.log(wallet.publicKey.toBase58());
-  //     getUserSOLBalance(wallet.publicKey, connection);
-  //   }
-  // }, [wallet.publicKey, connection, getUserSOLBalance]);
-
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
@@ -49,19 +25,32 @@ export const HomeView: FC = ({}) => {
     <div className="xs:max-w-[100vw] md:hero mx-auto bg-black">
       {/* <div className="w-full min-h-screen absolute top-0 bg-[rgba(0,0,0,0.1)] z-3"></div> */}
 
-      <div className="md:hero-content hero-content flex flex-col">
+      <div className="md:hero-content hero-content flex ">
         {loading ? (
           <Spinner />
         ) : (
-          <>
-            <Typed />
-            <Portfolio />
-            <Carousel />
-          </>
-        )}
+          <div className="grid grid-rows-1 grid-cols-1 md:grid-rows-2 md:grid-cols-2 gap-2 mx-auto">
+            {/* FOUNDER ONE */}
+            <div className="mx-auto">
+              <h2 className="text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] w-100 z-[999]">
+                €$¥
+              </h2>
+              <div className="w-full flex justify-center items-center">
+                <Chart twitterId={TWITTER_ID_FOUNDER_ONE} />
+              </div>
+            </div>
 
-        {/* <QuestView />
-        <AlchemyView /> */}
+            {/* FOUNDER TWO */}
+            <div className="mx-auto">
+              <h2 className="text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] w-100 z-[999]">
+                BHEET
+              </h2>
+              <div className="w-full flex justify-center items-center">
+                <Chart twitterId={TWITTER_ID_FOUNDER_TWO} />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

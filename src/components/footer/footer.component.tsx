@@ -8,7 +8,11 @@ export const Footer: FC = () => {
       <footer className="mx-auto  flex flex-row p-2 text-center justify-center items-center footer bg-black text-white">
         <div className="ml-5 text-white">$KRK &copy; {year}</div>
         <div className="max-w-md text-center flex align-center justify-center items-center mx-auto pr-10">
-          <a>
+          <a
+            href="https://github.com/krk-finance"
+            target="_blank"
+            rel="noreferrer"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="fill-current"
@@ -77,12 +81,12 @@ export const Footer: FC = () => {
             on{" "}
             <a
               rel="noreferrer"
-              href="https://solana.com"
+              href="https://solano.wtf"
               target="_blank"
               className="text-white text-base font-bold hover:text-primary-dark transition-all duration-200"
             >
               <span className="font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
-                Solana
+                Solano
               </span>
             </a>
           </div>

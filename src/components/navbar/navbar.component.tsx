@@ -53,7 +53,7 @@ export const NavBar: FC = (props) => {
 
         {/* Wallet & Settings */}
         <div className="navbar-end">
-          <Link href="https://krk.finance/wl">
+          {/* <Link href="https://krk.finance/wl">
             <button
               className="btn btn-sm btn-ghost rounded-btn text-glitch"
               data-content="Get WL."
@@ -65,7 +65,7 @@ export const NavBar: FC = (props) => {
             <button className="btn btn-sm btn-success mr-10 mx-5 px-5 z-[999]">
               Sign-In
             </button>
-          </Link>
+          </Link> */}
           {/* <WalletMultiButton className="btn mx-2 z-[999]" /> */}
         </div>
       </div>

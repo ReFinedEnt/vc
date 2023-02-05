@@ -22,7 +22,8 @@ const Discord = () => {
   }, []);
 
   const getSupabase = async () => {
-    const value = await queryDiscord().then((res) => {
+    const env = "prod";
+    const value = await queryDiscord(env).then((res) => {
       console.log(res);
       setDiscord(res);
     });
@@ -40,11 +41,19 @@ const Discord = () => {
             data={discord}
             margin={{ top: 5, right: 60, bottom: 5, left: 0 }}
           >
-            <Line type="monotone" dataKey="members" stroke="#8884d8" />
-            <CartesianGrid stroke="#ccc" strokeDasharray="3 3" />
+            <Line type="monotone" dataKey="members" stroke="#9945FF" />
+            <CartesianGrid stroke="#ccc" />
             <XAxis dataKey="date" />
             <YAxis dataKey="members" />
-            <Tooltip />
+            <Tooltip
+              itemStyle={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                color: "black",
+              }}
+              // labelStyle={{ color: "black" }}
+            />
           </LineChart>
         </div>
       )}

@@ -58,7 +58,6 @@ const Chart = () => {
             margin={{ top: 5, right: 60, bottom: 5, left: 0 }}
           >
             <Line type="monotone" dataKey="followers" stroke="#8884d8" />
-
             <CartesianGrid stroke="#ccc" strokeDasharray="3 3" />
             <XAxis dataKey="date" />
             <YAxis dataKey="followers" />

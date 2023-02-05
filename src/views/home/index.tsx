@@ -26,7 +26,7 @@ export const HomeView: FC = ({}) => {
     <div className="xs:max-w-[100vw] md:hero mx-auto bg-black">
       {/* <div className="w-full min-h-screen absolute top-0 bg-[rgba(0,0,0,0.1)] z-3"></div> */}
 
-      <div className="md:hero-content hero-content flex ">
+      <div className="md:hero-content hero-content flex">
         {loading ? (
           <Spinner />
         ) : (
@@ -34,7 +34,7 @@ export const HomeView: FC = ({}) => {
             {/* FOUNDER ONE */}
             <div className="mx-auto">
               <h2 className="text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] w-100 z-[999]">
-                €$¥
+                Founder : €$¥
               </h2>
               <div className="w-full flex justify-center items-center">
                 <Chart twitterId={TWITTER_ID_FOUNDER_ONE} />
@@ -44,15 +44,15 @@ export const HomeView: FC = ({}) => {
             {/* FOUNDER TWO */}
             <div className="mx-auto">
               <h2 className="text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] w-100 z-[999]">
-                BHEET
+                Co-Founder : BHEET
               </h2>
-              <div className="w-full flex justify-center items-center">
+              <div className="w-full flex flex-col justify-center items-center">
                 <Chart twitterId={TWITTER_ID_FOUNDER_TWO} />
               </div>
             </div>
 
             {/* Discord */}
-            <div className="flex flex-col w-full mx-auto justify-center items-center item">
+            <div className="mx-auto">
               <h2 className="text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] w-100 z-[999]">
                 Discord
               </h2>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useEffect, useState, useCallback, useMemo } from 'react';
 import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
 import { useWallet, useConnection } from '@solana/wallet-adapter-react';
@@ -7,6 +8,8 @@ import Spinner from '../../components/spinner/spinner.component';
 import TypedTitle from 'components/typed/typed.component';
 import { TREASURY, SOLANA_RPC_ENDPOINT } from 'constants/solana';
 import type { FC } from 'react';
+
+import yoursolanabro from '../../assets/img/yoursolanabro.png';
 
 const HomeView: FC = () => {
   // const { connection } = useConnection();
@@ -87,6 +90,9 @@ const HomeView: FC = () => {
                     {/* <span className="btn btn-md bg-gradient-to-tr from-[#14F195] to-[#9945FF]"> */}
                     Help your Solana Bro ?
                   </span>
+                </div>
+                <div className="absolute left-0">
+                  <Image src={yoursolanabro} />
                 </div>
               </div>
             </div>

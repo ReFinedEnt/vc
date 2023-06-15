@@ -24,7 +24,7 @@ export default function TypedTitle() {
     };
   }, []);
   return (
-    <div className="w-screen mx-auto mockup-code bg-black border-2 border-white overflow-hidden px-4">
+    <div className="w-[50vw] mx-auto mockup-code bg-black border-2 border-white overflow-hidden px-4">
       <code className="">
         {' '}
         <span

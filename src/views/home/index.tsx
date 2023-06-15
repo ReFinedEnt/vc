@@ -1,68 +1,50 @@
-// Next, React
-import { FC, useEffect, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import { useEffect, useState } from 'react';
+import { useWallet } from '@solana/wallet-adapter-react';
+import Spinner from '../../components/spinner/spinner.component';
+import type { FC } from 'react';
 
-import Spinner from "../../components/spinner/spinner.component";
-import Chart from "../../components/chart/chart.component";
-import Discord from "../../components/discord/discord.component";
-
-import {
-  TWITTER_ID_FOUNDER_ONE,
-  TWITTER_ID_FOUNDER_TWO,
-} from "../../constants/constants";
-
-export const HomeView: FC = ({}) => {
+const HomeView: FC = () => {
   const [loading, setLoading] = useState(true);
+  const [userWallet, setUserWallet] = useState(null);
+
+  const wallet = useWallet();
 
   useEffect(() => {
-    setLoading(true);
     setTimeout(() => {
       setLoading(false);
     }, 1337);
   }, []);
 
+  useEffect(() => {
+    if (wallet.publicKey) {
+      console.log(wallet.publicKey);
+      setUserWallet(wallet.publicKey);
+    } else {
+      setUserWallet(null);
+    }
+  }, [wallet.publicKey]);
+
   return (
-    <div className="xs:max-w-[100vw] md:hero mx-auto bg-black">
-      {/* <div className="w-full min-h-screen absolute top-0 bg-[rgba(0,0,0,0.1)] z-3"></div> */}
-
-      <div className="md:hero-content hero-content flex">
-        {loading ? (
-          <Spinner />
-        ) : (
-          <div className="grid grid-rows-1 grid-cols-1 md:grid-rows-2 md:grid-cols-2 gap-2 mx-auto">
-            {/* FOUNDER ONE */}
-            <div className="mx-auto">
-              <h2 className="text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] w-100 z-[999]">
-                Founder : €$¥
-              </h2>
-              <div className="w-full flex justify-center items-center">
-                <Chart twitterId={TWITTER_ID_FOUNDER_ONE} />
+    <>
+      <div className="max-w-[100vw] hero mx-auto bg-black min-h-screen flex justify-center items-center -mt-[67.5px]">
+        <div className="hero-content flex flex-col">
+          {loading ? (
+            <Spinner />
+          ) : (
+            <div className="hero flex flex-col justify-center items-center">
+              <div className="w-full hero-content flex flex-col items-center ">
+                {/* MAIN TITLE */}
+                <h1 className="leading-normal text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
+                  Solana Dapp Next
+                </h1>
+                <div className="text-lg text-white mb-3 leading-normal flex flex-col justify-center items-center"></div>
               </div>
             </div>
-
-            {/* FOUNDER TWO */}
-            <div className="mx-auto">
-              <h2 className="text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] w-100 z-[999]">
-                Co-Founder : BHEET
-              </h2>
-              <div className="w-full flex flex-col justify-center items-center">
-                <Chart twitterId={TWITTER_ID_FOUNDER_TWO} />
-              </div>
-            </div>
-
-            {/* Discord */}
-            <div className="mx-auto">
-              <h2 className="text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] w-100 z-[999]">
-                Discord
-              </h2>
-              <div className="w-full flex justify-center items-center">
-                <Discord />
-              </div>
-            </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
+
+export default HomeView;

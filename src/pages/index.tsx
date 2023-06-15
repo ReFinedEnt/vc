@@ -1,16 +1,24 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import { HomeView } from "../views";
+import Head from 'next/head';
+import Link from 'next/link';
 
-const Home: NextPage = () => {
+import { useState } from 'react';
+
+import { getAllPublished } from '../tools/md';
+import HomeView from '../views/home';
+
+import type { NextPage } from 'next';
+
+const Home = () => {
+  const [loading, setLoading] = useState(true);
+  // console.log(posts);
   return (
     <>
       <Head>
-        <title>info.krk.finance</title>
-        <meta property="og:title" content="🏗️ chain-agnostic dev guild 👷" />
-        <meta property="og:site_name" content="krk.finance" />
-        <meta property="og:url" content="https://krk.finance/" />
-        <meta property="og:description" content="We learn & buidl stuff." />
+        <title>Shadowy Blog</title>
+        <meta property="og:title" content="Shadowy Blog" />
+        <meta property="og:site_name" content="blog.krk.finance" />
+        <meta property="og:url" content="https://blog.krk.finance/" />
+        <meta property="og:description" content="Shadowy Blog" />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"

@@ -4,10 +4,10 @@ export const Footer: FC = () => {
   const date = new Date();
   const year = date.getFullYear();
   return (
-    <div className="border-t-2 border-white z-50">
+    <div className="border-t-2 border-white z-50  bottom-0 w-screen">
       <footer className="mx-auto  flex flex-row p-2 text-center justify-center items-center footer bg-black text-white">
         <div className="ml-5 text-white">$KRK &copy; {year}</div>
-        <div className="max-w-md text-center flex align-center justify-center items-center mx-auto pr-10">
+        <div className="max-w-md text-center flex align-center justify-center items-center mx-auto pr-10 space-x-2">
           <a
             href="https://github.com/krk-finance"
             target="_blank"

@@ -1,23 +1,16 @@
-import { FC, useState, useEffect } from "react";
-import {
-  LineChart,
-  Line,
-  CartesianGrid,
-  XAxis,
-  YAxis,
-  Tooltip,
-} from "recharts";
+import { FC, useState, useEffect } from 'react';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 
-import { queryTwitter } from "../../utils/supabase.utils";
+import { query } from '../../tools/supabase';
 
-import Spinner from "../spinner/spinner.component";
+import Spinner from '../spinner/spinner.component';
 
 import {
   TWITTER_ID_FOUNDER_ONE,
   TWITTER_ID_FOUNDER_TWO,
   TWITTER_HANDLE_FOUNDER_ONE,
   TWITTER_HANDLE_FOUNDER_TWO,
-} from "../../constants/constants";
+} from '../../constants/constants';
 
 type TwitterProps = {
   twitterId: string;
@@ -42,7 +35,7 @@ const Chart: FC<TwitterProps> = ({ twitterId }: { twitterId: string }) => {
   }, []);
 
   const getSupabase = async () => {
-    const value = await queryTwitter(twitterId).then((res) => {
+    const value = await query(twitterId).then((res) => {
       console.log(res);
       setSupabase(res);
     });
@@ -66,10 +59,10 @@ const Chart: FC<TwitterProps> = ({ twitterId }: { twitterId: string }) => {
             <YAxis dataKey="followers" />
             <Tooltip
               itemStyle={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                color: "black",
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                color: 'black',
               }}
               // labelStyle={{ color: "black" }}
             />

@@ -1,21 +1,11 @@
-import { FC, useState, useEffect } from "react";
-import {
-  LineChart,
-  Line,
-  CartesianGrid,
-  XAxis,
-  YAxis,
-  Tooltip,
-} from "recharts";
+import { FC, useState, useEffect } from 'react';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 
-import { queryTwitter } from "../../utils/supabase.utils";
+import { query } from '../../tools/supabase';
 
-import Spinner from "../spinner/spinner.component";
+import Spinner from '../../components/spinner/spinner.component';
 
-import {
-  TWITTER_ID_FOUNDER_ONE,
-  TWITTER_ID_FOUNDER_TWO,
-} from "constants/constants";
+import { TWITTER_ID_FOUNDER_ONE, TWITTER_ID_FOUNDER_TWO } from '../../constants/socials';
 
 const Chart = () => {
   const founders: string[] = [TWITTER_ID_FOUNDER_ONE, TWITTER_ID_FOUNDER_TWO];
@@ -32,7 +22,7 @@ const Chart = () => {
   const getSupabase = async () => {
     founders.forEach(async (twitterId) => {
       console.log(twitterId);
-      const value = await queryTwitter(twitterId).then((res) => {
+      const value = await query(twitterId).then((res) => {
         console.log(res);
         if (twitterId == TWITTER_ID_FOUNDER_ONE) {
           setFounderOne(res);

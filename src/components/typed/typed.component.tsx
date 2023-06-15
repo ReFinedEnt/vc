@@ -1,15 +1,19 @@
 import React, { useEffect, useRef } from 'react';
+import excuses from '../../components/excuses/excuses.component';
 import Typed from 'typed.js';
+
+const excusesNb = excuses.length;
 
 const arr = [
   "Here's the deal, my man.\nI found myself in a serious pickle, right?\nLong story short, I accidentally joined a hipster synchronized swimming team, and now they want me to buy an emergency supply of artisanal goggles.\nHelp a bro out before I drown in the irony, dude!",
 ];
 
 export default function TypedTitle() {
+  const choice = [excuses[Math.floor(Math.random() * (excusesNb - 0))]];
   const el = useRef(null);
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: arr,
+      strings: choice,
       startDelay: 500,
       typeSpeed: 42,
       backSpeed: 42,
@@ -24,7 +28,7 @@ export default function TypedTitle() {
     };
   }, []);
   return (
-    <div className="w-[50vw] mx-auto mockup-code bg-black border-2 border-white overflow-hidden px-4">
+    <div className="md:w-[50vw] w-screen mx-auto mockup-code bg-black border-2 border-white overflow-hidden px-4">
       <code className="">
         {' '}
         <span

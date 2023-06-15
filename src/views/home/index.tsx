@@ -84,7 +84,7 @@ const HomeView: FC = () => {
 
                 <div className="text-lg text-white mb-3 leading-normal flex flex-col justify-center items-center">
                   <span
-                    className="btn btn-md bg-gradient-to-tr from-[#9945FF] to-[#14F195]"
+                    className="btn btn-md bg-gradient-to-tr from-[#9945FF] to-[#14F195] "
                     onClick={onClick}
                   >
                     {/* <span className="btn btn-md bg-gradient-to-tr from-[#14F195] to-[#9945FF]"> */}

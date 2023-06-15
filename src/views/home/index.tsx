@@ -8,8 +8,8 @@ import { TREASURY, SOLANA_RPC_ENDPOINT } from 'constants/solana';
 import type { FC } from 'react';
 
 const HomeView: FC = () => {
-  // const { connection } = useConnection();
-  const connection = new Connection(SOLANA_RPC_ENDPOINT);
+  const { connection } = useConnection();
+  // const connection = new Connection(SOLANA_RPC_ENDPOINT);
 
   const [loading, setLoading] = useState(true);
   const [userWallet, setUserWallet] = useState(null);

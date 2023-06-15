@@ -91,7 +91,7 @@ const HomeView: FC = () => {
                     Help your Solana Bro ?
                   </span>
                 </div>
-                <div className="absolute left-0">
+                <div className="absolute left-0" id="yoursolanabro">
                   <Image src={yoursolanabro} />
                 </div>
               </div>

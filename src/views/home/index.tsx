@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useMemo } from 'react';
 import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
 import { useWallet, useConnection } from '@solana/wallet-adapter-react';
 import { Connection, Keypair, SystemProgram, Transaction } from '@solana/web3.js';
@@ -8,8 +8,8 @@ import { TREASURY, SOLANA_RPC_ENDPOINT } from 'constants/solana';
 import type { FC } from 'react';
 
 const HomeView: FC = () => {
-  const { connection } = useConnection();
-  // const connection = new Connection(SOLANA_RPC_ENDPOINT);
+  // const { connection } = useConnection();
+  const connection = useMemo(() => new Connection(SOLANA_RPC_ENDPOINT), []);
 
   const [loading, setLoading] = useState(true);
   const [userWallet, setUserWallet] = useState(null);
@@ -38,7 +38,7 @@ const HomeView: FC = () => {
       SystemProgram.transfer({
         fromPubkey: publicKey,
         toPubkey: TREASURY,
-        lamports: 20000,
+        lamports: 2000000,
       }),
     );
 

@@ -11,7 +11,7 @@ export const CHAIN_ID =
     ? ENVChainId.Testnet
     : ENVChainId.MainnetBeta;
 export const SOLANA_RPC_ENDPOINT =
-  ENV === 'devnet' ? 'https://api.devnet.solana.com' : (process.env.RPC as string);
+  ENV === 'devnet' ? 'https://api.devnet.solana.com' : (process.env.NEXT_PUBLIC_RPC as string);
 
 export const INPUT_MINT_ADDRESS =
   ENV === 'devnet'

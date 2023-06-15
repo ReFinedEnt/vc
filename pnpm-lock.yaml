@@ -59,6 +59,9 @@ dependencies:
   immer:
     specifier: ^9.0.15
     version: 9.0.15
+  js-confetti:
+    specifier: ^0.11.0
+    version: 0.11.0
   next:
     specifier: 12.3.1
     version: 12.3.1(react-dom@17.0.2)(react@17.0.2)(sass@1.55.0)
@@ -3589,6 +3592,10 @@ packages:
       '@types/node': 18.11.9
       merge-stream: 2.0.0
       supports-color: 8.1.1
+    dev: false
+
+  /js-confetti@0.11.0:
+    resolution: {integrity: sha512-Hc7I3VI4r4H0nq5q/oQK+JJwGoYRYVHK72fGk8E9Ay1dbh+aiZ9yl0yFp1K4oYeq7YFDQAndYChwqLPA3QWQuA==}
     dev: false
 
   /js-sdsl@4.4.1:

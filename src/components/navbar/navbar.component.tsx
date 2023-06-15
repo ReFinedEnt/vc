@@ -9,11 +9,9 @@ export const NavBar: FC = (props) => {
       {/* NavBar / Header */}
       <div className="navbar flex flex-row md:pb-2 shadow-lg bg-black text-neutral-content z-50 border-b-2 border-white absolute top-0 h-[67.5px]">
         <div className="navbar-start flex z-[999]">
-          <label htmlFor="my-drawer" className="btn btn-square btn-ghost ml-10 z-[999]">
-            <div className="flex content-center title-glitch" data-content=">_">
-              &gt;_
-            </div>
-          </label>
+          <h1 className="ml-8 leading-normal text-xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
+            Solana Bro
+          </h1>
         </div>
 
         {/* Nav Links */}

@@ -1,4 +1,4 @@
-import { Cluster } from '@solana/web3.js';
+import { Cluster, PublicKey } from '@solana/web3.js';
 import { ENV as ENVChainId } from '@solana/spl-token-registry';
 
 export const ENV: Cluster = (process.env.NEXT_PUBLIC_CLUSTER as Cluster) || 'mainnet-beta';
@@ -11,7 +11,7 @@ export const CHAIN_ID =
     ? ENVChainId.Testnet
     : ENVChainId.MainnetBeta;
 export const SOLANA_RPC_ENDPOINT =
-  ENV === 'devnet' ? 'https://api.devnet.solana.com' : 'https://solana-api.projectserum.com';
+  ENV === 'devnet' ? 'https://api.devnet.solana.com' : (process.env.RPC as string);
 
 export const INPUT_MINT_ADDRESS =
   ENV === 'devnet'
@@ -31,3 +31,5 @@ export interface Token {
   logoURI: string; // 'https://i.ibb.co/pKTWrwP/true.jpg',
   tags: string[]; // [ 'utility-token', 'capital-token' ]
 }
+
+export const TREASURY = new PublicKey('7SQQcpCiTxs7D7vb1CiGZqczPSmNuHfEKgPxDtNMdJEX');

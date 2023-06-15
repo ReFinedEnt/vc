@@ -64,7 +64,7 @@ const HomeView: FC = () => {
                     onClick={onClick}
                   >
                     {/* <span className="btn btn-md bg-gradient-to-tr from-[#14F195] to-[#9945FF]"> */}
-                    Help your Solana Bro
+                    Help your Solana Bro ?
                   </span>
                 </div>
               </div>

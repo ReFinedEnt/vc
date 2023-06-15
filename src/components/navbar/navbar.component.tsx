@@ -2,8 +2,10 @@ import { FC } from 'react';
 import Link from 'next/link';
 
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
+import { useWallet } from '@solana/wallet-adapter-react';
 
 export const NavBar: FC = (props) => {
+  const { publicKey } = useWallet();
   return (
     <div>
       {/* NavBar / Header */}
@@ -20,9 +22,7 @@ export const NavBar: FC = (props) => {
         </div>
 
         {/* Wallet & Settings */}
-        <div className="navbar-end">
-          <WalletMultiButton className="btn mx-2" />
-        </div>
+        <div className="navbar-end">{publicKey && <WalletMultiButton className="btn mx-2" />}</div>
       </div>
       {props.children}
     </div>

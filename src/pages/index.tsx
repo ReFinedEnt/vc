@@ -1,15 +1,16 @@
 import Head from 'next/head';
-import Link from 'next/link';
 
 import { useState } from 'react';
 
-import { getAllPublished } from '../tools/md';
 import HomeView from '../views/home';
 
 import type { NextPage } from 'next';
+import { useWallet } from '@solana/wallet-adapter-react';
+import Wallet from '../components/wallet/wallet.component';
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
+  const { publicKey } = useWallet();
   // console.log(posts);
   return (
     <>
@@ -25,7 +26,13 @@ const Home = () => {
           content="https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/krk_embed_2.png"
         /> */}
       </Head>
-      <HomeView />
+      {!publicKey ? (
+        <div className="max-w-[100vw] hero mx-auto bg-black min-h-screen flex justify-center items-center -mt-[67.5px]">
+          <Wallet />
+        </div>
+      ) : (
+        <HomeView />
+      )}
     </>
   );
 };

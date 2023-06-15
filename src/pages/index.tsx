@@ -1,17 +1,14 @@
 import Head from 'next/head';
 
-import { useState } from 'react';
-
 import HomeView from '../views/home';
 
-import type { NextPage } from 'next';
 import { useWallet } from '@solana/wallet-adapter-react';
 import Wallet from '../components/wallet/wallet.component';
 
-const Home = () => {
-  const [loading, setLoading] = useState(true);
+import type { NextPage } from 'next';
+
+const Home: NextPage = () => {
   const { publicKey } = useWallet();
-  // console.log(posts);
   return (
     <>
       <Head>

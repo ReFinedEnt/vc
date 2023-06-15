@@ -25,15 +25,13 @@ export default function TypedTitle() {
   }, []);
   return (
     <div className="w-screen mx-auto mockup-code bg-black border-2 border-white overflow-hidden px-4">
-      <pre data-prefix="$" className="">
-        <code className="">
-          {' '}
-          <span
-            ref={el}
-            className="text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] code-font"
-          />{' '}
-        </code>
-      </pre>
+      <code className="">
+        {' '}
+        <span
+          ref={el}
+          className="text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] code-font"
+        />{' '}
+      </code>
     </div>
   );
 }

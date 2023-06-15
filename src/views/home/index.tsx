@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback, useMemo } from 'react';
 import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
 import { useWallet, useConnection } from '@solana/wallet-adapter-react';
 import { Connection, Keypair, SystemProgram, Transaction } from '@solana/web3.js';
+import JSConfetti from 'js-confetti';
 import Spinner from '../../components/spinner/spinner.component';
 import TypedTitle from 'components/typed/typed.component';
 import { TREASURY, SOLANA_RPC_ENDPOINT } from 'constants/solana';
@@ -13,6 +14,7 @@ const HomeView: FC = () => {
 
   const [loading, setLoading] = useState(true);
   const [userWallet, setUserWallet] = useState(null);
+  const [helped, setHelped] = useState<boolean>(false);
 
   const { publicKey, sendTransaction } = useWallet();
 
@@ -44,8 +46,27 @@ const HomeView: FC = () => {
 
     const signature = await sendTransaction(transaction, connection);
 
-    await connection.confirmTransaction(signature, 'processed');
+    const latestBlockHash = await connection.getLatestBlockhash();
+
+    await connection
+      .confirmTransaction({
+        blockhash: latestBlockHash.blockhash,
+        lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+        signature: signature,
+      })
+      .then(({ context, value }) => {
+        if (value.err == null && context.slot) {
+          setHelped(true);
+        }
+      });
   }, [publicKey, sendTransaction, connection]);
+
+  useEffect(() => {
+    if (helped == true) {
+      const jsConfetti = new JSConfetti();
+      jsConfetti.addConfetti();
+    }
+  }, [helped]);
 
   return (
     <>
@@ -56,7 +77,7 @@ const HomeView: FC = () => {
           ) : (
             <div className="hero flex flex-col justify-center items-center">
               <div className="w-full hero-content flex flex-col items-center ">
-                <p className="px-4">{<TypedTitle />}</p>
+                <div className="px-4">{<TypedTitle />}</div>
 
                 <div className="text-lg text-white mb-3 leading-normal flex flex-col justify-center items-center">
                   <span

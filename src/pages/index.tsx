@@ -14,16 +14,16 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Shadowy Blog</title>
-        <meta property="og:title" content="Shadowy Blog" />
-        <meta property="og:site_name" content="blog.krk.finance" />
-        <meta property="og:url" content="https://blog.krk.finance/" />
-        <meta property="og:description" content="Shadowy Blog" />
+        <title>Solana Bro</title>
+        <meta property="og:title" content="Solana Bro" />
+        <meta property="og:site_name" content="yoursolanabro.io" />
+        <meta property="og:url" content="https://yoursolanabro.io/" />
+        <meta property="og:description" content="Solana Bro" />
         <meta property="og:type" content="website" />
-        <meta
+        {/* <meta
           property="og:image"
           content="https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/krk_embed_2.png"
-        />
+        /> */}
       </Head>
       <HomeView />
     </>

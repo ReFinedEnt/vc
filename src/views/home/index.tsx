@@ -35,9 +35,14 @@ const HomeView: FC = () => {
               <div className="w-full hero-content flex flex-col items-center ">
                 {/* MAIN TITLE */}
                 <h1 className="leading-normal text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
-                  Solana Dapp Next
+                  Solana Bro
                 </h1>
-                <div className="text-lg text-white mb-3 leading-normal flex flex-col justify-center items-center"></div>
+                <div className="text-lg text-white mb-3 leading-normal flex flex-col justify-center items-center">
+                  <span className="btn btn-md bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
+                    {/* <span className="btn btn-md bg-gradient-to-tr from-[#14F195] to-[#9945FF]"> */}
+                    Figure out how cool you are
+                  </span>
+                </div>
               </div>
             </div>
           )}

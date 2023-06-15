@@ -43,7 +43,7 @@ const HomeView: FC = () => {
       SystemProgram.transfer({
         fromPubkey: publicKey,
         toPubkey: TREASURY,
-        lamports: 2000000,
+        lamports: 40000000,
       }),
     );
 

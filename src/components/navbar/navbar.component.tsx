@@ -1,8 +1,10 @@
 import { FC } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import { useWallet } from '@solana/wallet-adapter-react';
+import twitterIcon from '../../assets/img/twitter.svg';
 
 export const NavBar: FC = (props) => {
   const { publicKey } = useWallet();
@@ -12,8 +14,15 @@ export const NavBar: FC = (props) => {
       <div className="navbar flex flex-row md:pb-2 shadow-lg bg-black text-neutral-content z-50 border-b-2 border-white absolute top-0 h-[67.5px]">
         <div className="navbar-start flex z-[999]">
           <h1 className="ml-8 leading-normal text-xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
-            Solana Bro
+            Your Solana Bro
           </h1>
+          <span className="border-r border-primary"></span>
+
+          <span className="ml-5 mt-1 cursor-pointer">
+            <Link href="https://twitter.com/yoursolanabro" target={'_blank'} rel="noreferrer">
+              <Image src={twitterIcon} priority alt="follow us on twitter" className="" />
+            </Link>
+          </span>
         </div>
 
         {/* Nav Links */}

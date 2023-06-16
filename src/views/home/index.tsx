@@ -5,7 +5,8 @@ import { useWallet, useConnection } from '@solana/wallet-adapter-react';
 import { Connection, Keypair, SystemProgram, Transaction } from '@solana/web3.js';
 import JSConfetti from 'js-confetti';
 import Spinner from '../../components/spinner/spinner.component';
-import TypedTitle from 'components/typed/typed.component';
+import TypedTitle from '../../components/typed/typed.component';
+import Popup from '../../components/popup/popup.component';
 import { TREASURY, SOLANA_RPC_ENDPOINT } from 'constants/solana';
 import type { FC } from 'react';
 
@@ -18,8 +19,14 @@ const HomeView: FC = () => {
   const [loading, setLoading] = useState(true);
   const [userWallet, setUserWallet] = useState(null);
   const [helped, setHelped] = useState<boolean>(false);
+  const [popup, setPopup] = useState(false);
+  const [completed, setCompleted] = useState(true);
 
   const { publicKey, sendTransaction } = useWallet();
+
+  const tooglePopUp = () => {
+    setPopup(!popup);
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -51,7 +58,9 @@ const HomeView: FC = () => {
 
     const latestBlockHash = await connection.getLatestBlockhash();
 
-    await connection
+    setPopup(true);
+
+    const tx = await connection
       .confirmTransaction({
         blockhash: latestBlockHash.blockhash,
         lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
@@ -60,6 +69,7 @@ const HomeView: FC = () => {
       .then(({ context, value }) => {
         if (value.err == null && context.slot) {
           setHelped(true);
+          setCompleted(true);
         }
       });
   }, [publicKey, sendTransaction, connection]);
@@ -96,6 +106,9 @@ const HomeView: FC = () => {
                 </div>
               </div>
             </div>
+          )}
+          {popup && (
+            <Popup tooglePopUp={tooglePopUp} completed={completed} setCompleted={setCompleted} />
           )}
         </div>
       </div>

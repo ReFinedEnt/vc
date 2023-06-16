@@ -15,15 +15,9 @@ const Popup: FC<Props> = ({ tooglePopUp, completed }) => {
   const [awesomeness, setAwesomeness] = useState<string>();
   const [emoji, setEmoji] = useState<string>();
 
-  const emojis = ['🤩', '🥳', '😍'];
-
   useEffect(() => {
-    if (popUploading) {
-      console.log('issou');
-    }
-  }, [popUploading]);
+    const emojis = ['🤩', '🥳', '😍'];
 
-  useEffect(() => {
     if (completed == true) {
       setPopUploading(false);
       const awesomenessNb = coolness.length;

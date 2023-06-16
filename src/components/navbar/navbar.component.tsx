@@ -16,7 +16,7 @@ export const NavBar: FC = (props) => {
           <h1 className="ml-8 leading-normal text-xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
             Your Solana Bro
           </h1>
-          <span className="border-r border-primary"></span>
+          {/* <span className="border-r border-primary"></span> */}
 
           <span className="ml-5 mt-1 cursor-pointer">
             <Link href="https://twitter.com/yoursolanabro" target={'_blank'} rel="noreferrer">

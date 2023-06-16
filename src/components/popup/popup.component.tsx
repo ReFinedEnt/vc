@@ -44,8 +44,7 @@ const Popup: FC<Props> = ({ tooglePopUp, completed }) => {
                 {awesomeness} {emoji}
               </p>
               <div className="italic bottom-0 text-sm px-8">
-                your solana bro give piece of paper that looks like a lottery ticket ─ probably
-                nothing 👀🎟️
+                * your solana bro gives you a piece of paper that looks like a ticket and leaves *
               </div>
             </>
           )}

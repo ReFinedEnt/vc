@@ -70,7 +70,7 @@ a {
 }
 
 #yoursolanabro {
-  animation: MoveUpDown 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  animation: MoveUpDown 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
   position: absolute;
   z-index: -1;
 }
@@ -81,6 +81,6 @@ a {
     bottom: 0;
   }
   50% {
-    bottom: 50px;
+    bottom: 20px;
   }
 }

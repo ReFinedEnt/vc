@@ -7,19 +7,22 @@ import Spinner from 'components/spinner/spinner.component';
 
 import { getTransactions } from 'tools/tx';
 import { TREASURY, SOLANA_RPC_ENDPOINT } from 'constants/solana';
+import ThreeDots from 'components/three-dots/three-dots.component';
 
 const Table: FC = () => {
   const connection = useMemo(() => new Connection(SOLANA_RPC_ENDPOINT), []);
-  let [isLoading, setLoading] = useState(false);
-  let [data, setData] = useState<User[]>([]);
+  let [isLoading, setLoading] = useState(true);
+  let [data, setData] = useState<User[]>();
 
   useEffect(() => {
     const txHandler = async () => {
       return await getTransactions(TREASURY, connection);
     };
-    txHandler().then((helps) => {
-      setData(helps);
-    });
+    txHandler()
+      .then((helps) => {
+        setData(helps);
+      })
+      .finally(() => setLoading(false));
   }, [connection]);
 
   let x = 0;
@@ -29,10 +32,10 @@ const Table: FC = () => {
   return (
     <>
       {isLoading ? (
-        <Spinner />
+        <ThreeDots />
       ) : (
         <div className="overflow-x-auto w-50 text-neutral">
-          <table className="table w-full max-w-screen" id="illuvium-stats">
+          <table className="table w-full max-w-screen border border-primary" id="illuvium-stats">
             {/* <!-- head --> */}
             <thead className="text-center bg-black">
               <tr className="font-bold text-white bg-black">

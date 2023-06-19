@@ -9,7 +9,6 @@ import type { NextPage } from 'next';
 import LeaderBoardView from 'views/leaderboard';
 
 const LeaderBoard: NextPage = () => {
-  const { publicKey } = useWallet();
   return (
     <>
       <Head>
@@ -24,15 +23,10 @@ const LeaderBoard: NextPage = () => {
           content="https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/krk_embed_2.png"
         /> */}
       </Head>
-      {!publicKey ? (
-        <div className="max-w-[100vw] hero mx-auto bg-black min-h-screen flex justify-center items-center -mt-[67.5px]">
-          <Wallet />
-        </div>
-      ) : (
-        <div className="max-w-[100vw] mx-auto bg-black min-h-screen flex justify-center items-center -mt-[67.5px]">
-          <LeaderBoardView />
-        </div>
-      )}
+
+      <div className="max-w-[100vw] mx-auto bg-black min-h-screen flex justify-center items-center -mt-[67.5px]">
+        <LeaderBoardView />
+      </div>
     </>
   );
 };

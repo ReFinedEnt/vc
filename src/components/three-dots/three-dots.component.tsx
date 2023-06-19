@@ -6,7 +6,7 @@ export default function ThreeDots() {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: ['...'],
-      startDelay: 500,
+      startDelay: 0,
       typeSpeed: 111,
       backSpeed: 111,
       backDelay: 111,

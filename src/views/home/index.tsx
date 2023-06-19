@@ -14,6 +14,7 @@ import { getTransactions } from 'tools/tx';
 import type { FC } from 'react';
 
 import yoursolanabro from '../../assets/img/yoursolanabro.png';
+import ThreeDots from 'components/three-dots/three-dots.component';
 
 const HomeView: FC = () => {
   // const { connection } = useConnection();
@@ -88,7 +89,7 @@ const HomeView: FC = () => {
     <div className="max-w-[100vw] hero mx-auto bg-black min-h-screen flex justify-center items-center -mt-[67.5px]">
       <div className="hero-content flex flex-col">
         {loading ? (
-          <Spinner />
+          <ThreeDots />
         ) : (
           <div className="hero flex flex-col justify-center items-center">
             <div className="w-full hero-content flex flex-col items-center ">

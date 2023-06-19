@@ -42,7 +42,7 @@ const Table: FC = () => {
                 <th className="bg-black">Rank</th>
                 <th className="bg-black">Address</th>
                 <th className="bg-black">Helps</th>
-                <th className="bg-black">Total</th>
+                {/* <th className="bg-black">Total</th> */}
               </tr>
             </thead>
             {/* <!-- table body --> */}
@@ -71,7 +71,7 @@ const Table: FC = () => {
                       </div>
                     </td>
                     <td className="text-xs bg-white">{entry.lamports / 40000000}</td>
-                    <td className="text-xs bg-white">{entry.lamports / LAMPORTS_PER_SOL}</td>
+                    {/* <td className="text-xs bg-white">{entry.lamports / LAMPORTS_PER_SOL}</td> */}
                   </tr>
                 );
               })}

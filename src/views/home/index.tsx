@@ -93,22 +93,21 @@ const HomeView: FC = () => {
           <div className="hero flex flex-col justify-center items-center">
             <div className="w-full hero-content flex flex-col items-center ">
               <div className="px-4">{<TypedTitle />}</div>
-
               <div className="text-lg text-white mb-3 leading-normal flex flex-col justify-center items-center">
                 <span
                   className="btn btn-md bg-gradient-to-tr from-[#9945FF] to-[#14F195] "
                   onClick={onClick}
                 >
-                  {/* <span className="btn btn-md bg-gradient-to-tr from-[#14F195] to-[#9945FF]"> */}
                   Help your Solana Bro ?
                 </span>
               </div>
-              <div className="absolute left-0 w-96 h-96" id="yoursolanabro">
+              <div className="absolute left-0 w-[320px] h-[320px]">
                 <Image
                   src={yoursolanabro}
                   layout="fill"
                   objectFit="contain"
                   alt="your solana bro"
+                  id="yoursolanabro"
                 />
               </div>
             </div>

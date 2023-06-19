@@ -58,11 +58,20 @@ a {
   background: #5b5f67;
 }
 
-#yoursolanabro {
-  animation: MoveUpDown 2s linear infinite;
+.bro-container {
   position: absolute;
   left: 0;
-  bottom: 0;
+  width: 420px;
+  height: 420px;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#yoursolanabro {
+  animation: MoveUpDown 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  position: absolute;
   z-index: -1;
 }
 
@@ -72,6 +81,6 @@ a {
     bottom: 0;
   }
   50% {
-    bottom: 25px;
+    bottom: 50px;
   }
 }

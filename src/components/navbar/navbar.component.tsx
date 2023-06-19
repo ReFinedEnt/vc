@@ -5,8 +5,13 @@ import Image from 'next/image';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import { useWallet } from '@solana/wallet-adapter-react';
 import twitterIcon from '../../assets/img/twitter.svg';
+import type { NextRouter } from 'next/router';
 
-export const NavBar: FC = (props) => {
+type Props = {
+  router: NextRouter;
+};
+
+export const NavBar: FC<Props> = ({ router }) => {
   const { publicKey } = useWallet();
   return (
     <div>
@@ -27,13 +32,32 @@ export const NavBar: FC = (props) => {
 
         {/* Nav Links */}
         <div className="hidden md:inline md:navbar-center z-[999]">
-          <div className="flex items-stretch z-[999]"></div>
+          <div className="flex items-stretch z-[999]">
+            {/* <Link href={`${router.pathname !== '/' ? '/' : ''}`}> */}
+            <Link href={`${router.pathname !== '/' ? '/' : ''}`}>
+              <button
+                className="btn btn-sm btn-ghost rounded-btn text-glitch lowercase"
+                data-content="HOME"
+              >
+                HOME
+              </button>
+            </Link>
+            {/* <Link href={`${router.pathname !== '/' ? '/leaderboard' : ''}`}> */}
+            <Link href={`/leaderboard`}>
+              <button
+                className="btn btn-sm btn-ghost rounded-btn text-glitch lowercase"
+                data-content="COLLECTION"
+              >
+                leaderboard
+              </button>
+            </Link>
+          </div>
         </div>
 
         {/* Wallet & Settings */}
         <div className="navbar-end">{publicKey && <WalletMultiButton className="btn mx-2" />}</div>
       </div>
-      {props.children}
+      {/* {props.children} */}
     </div>
   );
 };

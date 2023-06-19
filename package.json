@@ -1,5 +1,5 @@
 {
-  "name": "solana-dapp-next",
+  "name": "yoursolanabro",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
@@ -20,9 +20,9 @@
     "@solana/web3.js": "^1.63.1",
     "@supabase/supabase-js": "^2.1.1",
     "@tailwindcss/typography": "^0.5.2",
-    "add": "^2.0.6",
     "animate.css": "^4.1.1",
     "axios": "^1.2.0",
+    "bn.js": "^5.2.1",
     "daisyui": "2.31.0",
     "dotenv": "^16.0.1",
     "gray-matter": "^4.0.3",
@@ -41,10 +41,10 @@
     "tweetnacl": "^1.0.3",
     "typed.js": "^2.0.12",
     "uuid": "^9.0.0",
-    "yarn": "^1.22.19",
     "zustand": "^3.6.9"
   },
   "devDependencies": {
+    "@types/bn.js": "^5.1.1",
     "@types/node": "18.11.9",
     "@types/react": "17.0.38",
     "autoprefixer": "^10.4.12",

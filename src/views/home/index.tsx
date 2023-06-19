@@ -1,13 +1,16 @@
 import Image from 'next/image';
 import { useEffect, useState, useCallback, useMemo } from 'react';
 import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
-import { useWallet, useConnection } from '@solana/wallet-adapter-react';
-import { Connection, Keypair, SystemProgram, Transaction } from '@solana/web3.js';
+import { useWallet } from '@solana/wallet-adapter-react';
+import { Connection, SystemProgram, Transaction } from '@solana/web3.js';
 import JSConfetti from 'js-confetti';
 import Spinner from '../../components/spinner/spinner.component';
 import TypedTitle from '../../components/typed/typed.component';
 import Popup from '../../components/popup/popup.component';
-import { TREASURY, SOLANA_RPC_ENDPOINT } from 'constants/solana';
+import { TREASURY, SOLANA_RPC_ENDPOINT } from '../../constants/solana';
+
+import { getTransactions } from 'tools/tx';
+
 import type { FC } from 'react';
 
 import yoursolanabro from '../../assets/img/yoursolanabro.png';
@@ -82,37 +85,40 @@ const HomeView: FC = () => {
   }, [helped]);
 
   return (
-    <>
-      <div className="max-w-[100vw] hero mx-auto bg-black min-h-screen flex justify-center items-center -mt-[67.5px]">
-        <div className="hero-content flex flex-col">
-          {loading ? (
-            <Spinner />
-          ) : (
-            <div className="hero flex flex-col justify-center items-center">
-              <div className="w-full hero-content flex flex-col items-center ">
-                <div className="px-4">{<TypedTitle />}</div>
+    <div className="max-w-[100vw] hero mx-auto bg-black min-h-screen flex justify-center items-center -mt-[67.5px]">
+      <div className="hero-content flex flex-col">
+        {loading ? (
+          <Spinner />
+        ) : (
+          <div className="hero flex flex-col justify-center items-center">
+            <div className="w-full hero-content flex flex-col items-center ">
+              <div className="px-4">{<TypedTitle />}</div>
 
-                <div className="text-lg text-white mb-3 leading-normal flex flex-col justify-center items-center">
-                  <span
-                    className="btn btn-md bg-gradient-to-tr from-[#9945FF] to-[#14F195] "
-                    onClick={onClick}
-                  >
-                    {/* <span className="btn btn-md bg-gradient-to-tr from-[#14F195] to-[#9945FF]"> */}
-                    Help your Solana Bro ?
-                  </span>
-                </div>
-                <div className="absolute left-0" id="yoursolanabro">
-                  <Image src={yoursolanabro} />
-                </div>
+              <div className="text-lg text-white mb-3 leading-normal flex flex-col justify-center items-center">
+                <span
+                  className="btn btn-md bg-gradient-to-tr from-[#9945FF] to-[#14F195] "
+                  onClick={onClick}
+                >
+                  {/* <span className="btn btn-md bg-gradient-to-tr from-[#14F195] to-[#9945FF]"> */}
+                  Help your Solana Bro ?
+                </span>
+              </div>
+              <div className="absolute left-0 w-96 h-96" id="yoursolanabro">
+                <Image
+                  src={yoursolanabro}
+                  layout="fill"
+                  objectFit="contain"
+                  alt="your solana bro"
+                />
               </div>
             </div>
-          )}
-          {popup && (
-            <Popup tooglePopUp={tooglePopUp} completed={completed} setCompleted={setCompleted} />
-          )}
-        </div>
+          </div>
+        )}
+        {popup && (
+          <Popup tooglePopUp={tooglePopUp} completed={completed} setCompleted={setCompleted} />
+        )}
       </div>
-    </>
+    </div>
   );
 };
 

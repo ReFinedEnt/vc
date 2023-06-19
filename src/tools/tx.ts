@@ -1,23 +1,48 @@
-import { PublicKey, Connection } from '@solana/web3.js';
-export const getTransactions = async (address: string, numTx: number, connection: Connection) => {
-  const pubKey = new PublicKey(address);
-  let transactionList = await connection.getSignaturesForAddress(pubKey, { limit: numTx });
+import { PublicKey, Connection, LAMPORTS_PER_SOL } from '@solana/web3.js';
+
+export const getTransactions = async (address: PublicKey, connection: Connection) => {
+  let transactionList = await connection.getSignaturesForAddress(address);
 
   let signatureList = transactionList.map((transaction) => transaction.signature);
   let transactionDetails = await connection.getParsedTransactions(signatureList, {
     maxSupportedTransactionVersion: 0,
   });
 
-  transactionList.forEach((transaction, i) => {
-    const date = new Date(transaction.blockTime * 1000);
-    const transactionInstructions = transactionDetails[i].transaction.message.instructions;
-    console.log(`Transaction No: ${i + 1}`);
-    console.log(`Signature: ${transaction.signature}`);
-    console.log(`Time: ${date}`);
-    // console.log(`Status: ${transaction.confirmationStatus}`);
-    transactionInstructions.forEach((instruction, n) => {
-      console.log(`---Instructions ${n + 1}: ${instruction.programId.toString()}`);
-    });
-    console.log('-'.repeat(20));
+  const parsedTx = transactionDetails.filter(
+    (tx) =>
+      tx.transaction.message.instructions[0].programId.toBase58() ==
+      '11111111111111111111111111111111',
+  );
+
+  type User = {
+    address: string;
+    lamports: number;
+  };
+
+  const users: User[] = [];
+
+  parsedTx.forEach((tx) => {
+    const instruction = tx.transaction.message.instructions[0];
+    if ('parsed' in instruction) {
+      const userIndex = users.findIndex((user) => user.address === instruction.parsed.info.source);
+      if (userIndex === -1) {
+        users.push({
+          address: instruction.parsed.info.source,
+          lamports: instruction.parsed.info.lamports,
+        });
+      } else {
+        users[userIndex].lamports += instruction.parsed.info.lamports;
+      }
+    }
   });
+
+  users.sort((a, b) => b.lamports - a.lamports); // Sort users by lamports in descending order
+
+  const total = users.reduce((total, obj) => obj.lamports + total, 0);
+
+  console.log(`Total help received: ${total / LAMPORTS_PER_SOL}`);
+
+  console.log(users);
+
+  return users;
 };

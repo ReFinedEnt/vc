@@ -24,14 +24,18 @@ export const getTransactions = async (address: PublicKey, connection: Connection
   parsedTx.forEach((tx) => {
     const instruction = tx.transaction.message.instructions[0];
     if ('parsed' in instruction) {
-      const userIndex = users.findIndex((user) => user.address === instruction.parsed.info.source);
-      if (userIndex === -1) {
-        users.push({
-          address: instruction.parsed.info.source,
-          lamports: instruction.parsed.info.lamports,
-        });
-      } else {
-        users[userIndex].lamports += instruction.parsed.info.lamports;
+      if (instruction.parsed.info.lamports == 40000000) {
+        const userIndex = users.findIndex(
+          (user) => user.address === instruction.parsed.info.source,
+        );
+        if (userIndex === -1) {
+          users.push({
+            address: instruction.parsed.info.source,
+            lamports: instruction.parsed.info.lamports,
+          });
+        } else {
+          users[userIndex].lamports += instruction.parsed.info.lamports;
+        }
       }
     }
   });

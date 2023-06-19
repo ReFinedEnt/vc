@@ -35,7 +35,7 @@ const Table: FC = () => {
         <ThreeDots />
       ) : (
         <div className="overflow-x-auto w-50 text-neutral">
-          <table className="table w-full max-w-screen border border-primary" id="illuvium-stats">
+          <table className="table w-full max-w-screen border border-primary rounded-lg">
             {/* <!-- head --> */}
             <thead className="text-center bg-black">
               <tr className="font-bold text-white bg-black">
@@ -55,19 +55,7 @@ const Table: FC = () => {
                     <td className="text-xs bg-white">#{x}</td>
                     <td className="bg-white">
                       <div className="flex items-center justify-left">
-                        <div className="avatar">
-                          <div className="mask mask-hexagon w-12 h-12">
-                            {/* <img
-                              src={`${entry.illuvitar ? entry.illuvitar : '/placeholder.png'} `}
-                              alt={`${entry.nickname}'s Illuvitar`}
-                              width={48}
-                              height={48}
-                            /> */}
-                          </div>
-                        </div>
-                        <div>
-                          <div className="text-sm ml-3">{entry.address}</div>
-                        </div>
+                        <div className="text-sm ml-3">{entry.address}</div>
                       </div>
                     </td>
                     <td className="text-xs bg-white">{entry.lamports / 40000000}</td>
@@ -76,6 +64,13 @@ const Table: FC = () => {
                 );
               })}
             </tbody>
+            {/* <tfoot className="text-center bg-black border border-primary">
+              <tr className="font-bold text-white bg-black text-center">
+                <th className="bg-black">total help</th>
+                <th className="bg-black"></th>
+                <th className="bg-black">total help</th>
+              </tr>
+            </tfoot> */}
           </table>
         </div>
       )}

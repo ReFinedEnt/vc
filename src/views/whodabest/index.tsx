@@ -132,50 +132,48 @@ const WhoDaBestView: FC = () => {
   );
 
   return (
-    <div className="max-w-[100vw] mx-auto min-h-screen flex justify-center items-center bg-black">
-      <div className="flex flex-col justify-center items-center">
-        {loading ? (
-          <ThreeDots />
-        ) : (
-          <>
-            <div className="hero flex flex-col justify-center items-center">
-              <div className="grid grid-rows-2 grid-flow-col gap-4">
-                {data.map((item, index) => {
-                  return (
-                    <div className="card w-60 bg-base-100 shadow-xl image-full" key={index}>
-                      <figure>
-                        <img src={item.img} alt={item.name} />
-                      </figure>
-                      <div className="card-body">
-                        <h2 className="card-title w-full leading-normal text-xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF]">
-                          {item.name}
-                        </h2>
-                        <p></p>
-                        <div className="card-actions justify-end">
-                          <div className="flex justify-center items-center space-x-20">
-                            <span className="bg-primary p-4 rounded-lg border border-white">
-                              {item.votes}
-                            </span>
-                            <span
-                              className="btn btn-md bg-gradient-to-tr from-[#9945FF] to-[#14F195]"
-                              onClick={() => onClick(item.index)}
-                            >
-                              Vote
-                            </span>
-                          </div>
+    <div className="max-w-[100vw] mx-auto min-h-screen flex flex-col justify-center items-center bg-black pb-40">
+      {loading ? (
+        <ThreeDots />
+      ) : (
+        <>
+          <div className="hero flex flex-col justify-center items-center">
+            <div className="grid grid-cols-1 md:grid-rows-2 md:grid-flow-col grid-flow-row gap-4">
+              {data.map((item, index) => {
+                return (
+                  <div className="card w-60 bg-base-100 shadow-xl image-full" key={index}>
+                    <figure>
+                      <img src={item.img} alt={item.name} />
+                    </figure>
+                    <div className="card-body">
+                      <h2 className="card-title w-full leading-normal text-xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF]">
+                        {item.name}
+                      </h2>
+                      <p></p>
+                      <div className="card-actions justify-end">
+                        <div className="flex justify-center items-center space-x-20">
+                          <span className="bg-primary p-4 rounded-lg border border-white">
+                            {item.votes}
+                          </span>
+                          <span
+                            className="btn btn-md bg-gradient-to-tr from-[#9945FF] to-[#14F195]"
+                            onClick={() => onClick(item.index)}
+                          >
+                            Vote
+                          </span>
                         </div>
                       </div>
                     </div>
-                  );
-                })}
-              </div>
+                  </div>
+                );
+              })}
             </div>
-            {popup && (
-              <Popup tooglePopUp={tooglePopUp} completed={completed} setCompleted={setCompleted} />
-            )}
-          </>
-        )}
-      </div>
+          </div>
+          {popup && (
+            <Popup tooglePopUp={tooglePopUp} completed={completed} setCompleted={setCompleted} />
+          )}
+        </>
+      )}
     </div>
   );
 };

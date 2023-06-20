@@ -1,13 +1,11 @@
 import React, { FC, useState, useEffect, useMemo } from 'react';
 import { Connection, LAMPORTS_PER_SOL } from '@solana/web3.js';
-import type { User } from 'types';
-import Spinner from 'components/spinner/spinner.component';
 
-// import placeholder from '/placeholder.png';
-
-import { getTransactions } from 'tools/tx';
 import { TREASURY, SOLANA_RPC_ENDPOINT } from 'constants/solana';
 import ThreeDots from 'components/three-dots/three-dots.component';
+import { getTransactions } from 'tools/tx';
+import { ellipsis } from 'tools/ellipsis';
+import type { User } from 'types';
 
 const Table: FC = () => {
   const connection = useMemo(() => new Connection(SOLANA_RPC_ENDPOINT), []);
@@ -55,7 +53,7 @@ const Table: FC = () => {
                     <td className="text-xs bg-white">#{x}</td>
                     <td className="bg-white">
                       <div className="flex items-center justify-left">
-                        <div className="text-sm ml-3">{entry.address}</div>
+                        <div className="text-sm ml-3">{ellipsis(entry.address)}</div>
                       </div>
                     </td>
                     <td className="text-xs bg-white">{entry.lamports / 40000000}</td>

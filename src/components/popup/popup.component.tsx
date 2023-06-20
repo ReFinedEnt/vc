@@ -3,6 +3,10 @@ import { XMarkIcon } from '@heroicons/react/24/solid';
 import ThreeDots from '../../components/three-dots/three-dots.component';
 import coolness from '../../components/coolness/coolness.component';
 import type { FC } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+
+import twitter from '../../assets/img/twitter.svg';
 
 interface Props {
   tooglePopUp: () => void;
@@ -43,7 +47,12 @@ const Popup: FC<Props> = ({ tooglePopUp, completed }) => {
               <p className="text-md font-bold text-white px-8 text-center">
                 {awesomeness} {emoji}
               </p>
-              <div className="italic bottom-0 text-sm px-8">
+              <Link className="z-[999]" href="/">
+                <div className="inline-flex items-center p-3 px-5 bg-gray-800 rounded font-mono font-bold tracking-tight btn jusitfy-center capitalize">
+                  <Image src={twitter} alt="Twitter" /> <span className="ml-2">Share !</span>
+                </div>
+              </Link>
+              <div className="italic bottom-0 text-sm px-8 text-center">
                 * your solana bro gives you a piece of paper that looks like a ticket and leaves *
               </div>
             </>

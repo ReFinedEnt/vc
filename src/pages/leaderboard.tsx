@@ -1,12 +1,7 @@
 import Head from 'next/head';
-
-import HomeView from '../views/home';
-
-import { useWallet } from '@solana/wallet-adapter-react';
-import Wallet from '../components/wallet/wallet.component';
-
-import type { NextPage } from 'next';
 import LeaderBoardView from 'views/leaderboard';
+import type { NextPage } from 'next';
+import YourSolanaBro from 'components/yoursolanabro/yoursolanabro';
 
 const LeaderBoard: NextPage = () => {
   return (

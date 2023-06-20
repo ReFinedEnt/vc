@@ -4,17 +4,14 @@ import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { Connection, SystemProgram, Transaction } from '@solana/web3.js';
 import JSConfetti from 'js-confetti';
-import Spinner from '../../components/spinner/spinner.component';
 import TypedTitle from '../../components/typed/typed.component';
 import Popup from '../../components/popup/popup.component';
 import { TREASURY, SOLANA_RPC_ENDPOINT } from '../../constants/solana';
 
-import { getTransactions } from 'tools/tx';
-
 import type { FC } from 'react';
 
-import yoursolanabro from '../../assets/img/yoursolanabro.png';
 import ThreeDots from 'components/three-dots/three-dots.component';
+import YourSolanaBro from 'components/yoursolanabro/yoursolanabro';
 
 const HomeView: FC = () => {
   // const { connection } = useConnection();
@@ -96,20 +93,11 @@ const HomeView: FC = () => {
               <div className="px-4">{<TypedTitle />}</div>
               <div className="text-lg text-white mb-3 leading-normal flex flex-col justify-center items-center">
                 <span
-                  className="btn btn-md bg-gradient-to-tr from-[#9945FF] to-[#14F195] "
+                  className="btn btn-md bg-gradient-to-tr from-[#9945FF] to-[#14F195]"
                   onClick={onClick}
                 >
                   Help your Solana Bro ?
                 </span>
-              </div>
-              <div className="absolute left-0 w-[320px] h-[320px]">
-                <Image
-                  src={yoursolanabro}
-                  layout="fill"
-                  objectFit="contain"
-                  alt="your solana bro"
-                  id="yoursolanabro"
-                />
               </div>
             </div>
           </div>

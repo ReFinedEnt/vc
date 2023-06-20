@@ -5,7 +5,7 @@ import { TREASURY, SOLANA_RPC_ENDPOINT } from 'constants/solana';
 import ThreeDots from 'components/three-dots/three-dots.component';
 import { getTransactions } from 'tools/tx';
 import { ellipsis } from 'tools/ellipsis';
-import type { User } from 'types';
+import { TxType, User } from 'types';
 
 const Table: FC = () => {
   const connection = useMemo(() => new Connection(SOLANA_RPC_ENDPOINT), []);
@@ -14,7 +14,8 @@ const Table: FC = () => {
 
   useEffect(() => {
     const txHandler = async () => {
-      return await getTransactions(TREASURY, connection);
+      const type = TxType.User;
+      return await getTransactions(TREASURY, connection, 40000000);
     };
     txHandler()
       .then((helps) => {

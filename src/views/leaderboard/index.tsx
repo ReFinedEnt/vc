@@ -4,7 +4,6 @@ import Spinner from '../../components/spinner/spinner.component';
 
 import type { FC } from 'react';
 
-import yoursolanabro from '../../assets/img/yoursolanabro.png';
 import Table from 'components/table/table.component';
 
 const LeaderBoardView: FC = () => {
@@ -17,7 +16,7 @@ const LeaderBoardView: FC = () => {
   }, []);
 
   return (
-    <div className="max-w-[100vw] mx-auto min-h-screen flex justify-center items-center mt-[67.5px]">
+    <div className="max-w-[100vw] mx-auto flex justify-center items-center mt-[67.5px]">
       <div className="flex flex-col">
         {loading ? (
           <Spinner />

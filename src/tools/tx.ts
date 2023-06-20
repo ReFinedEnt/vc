@@ -1,6 +1,11 @@
 import { PublicKey, Connection, LAMPORTS_PER_SOL } from '@solana/web3.js';
+import { User } from 'types';
 
-export const getTransactions = async (address: PublicKey, connection: Connection) => {
+export const getTransactions = async (
+  address: PublicKey,
+  connection: Connection,
+  amount = 40000000,
+) => {
   let transactionList = await connection.getSignaturesForAddress(address);
 
   let signatureList = transactionList.map((transaction) => transaction.signature);
@@ -14,17 +19,14 @@ export const getTransactions = async (address: PublicKey, connection: Connection
       '11111111111111111111111111111111',
   );
 
-  type User = {
-    address: string;
-    lamports: number;
-  };
-
   const users: User[] = [];
+
+  console.log(parsedTx);
 
   parsedTx.forEach((tx) => {
     const instruction = tx.transaction.message.instructions[0];
     if ('parsed' in instruction) {
-      if (instruction.parsed.info.lamports == 40000000) {
+      if (instruction.parsed.info.lamports == amount) {
         const userIndex = users.findIndex(
           (user) => user.address === instruction.parsed.info.source,
         );

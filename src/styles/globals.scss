@@ -72,7 +72,9 @@ a {
 #yoursolanabro {
   animation: MoveUpDown 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
   position: absolute;
-  z-index: -1;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
 }
 
 @keyframes MoveUpDown {

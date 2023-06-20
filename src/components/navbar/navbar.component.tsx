@@ -13,6 +13,7 @@ type Props = {
 
 export const NavBar: FC<Props> = ({ router }) => {
   const { publicKey } = useWallet();
+
   return (
     <div>
       {/* NavBar / Header */}
@@ -35,20 +36,19 @@ export const NavBar: FC<Props> = ({ router }) => {
           <div className="flex items-stretch z-[999]">
             {/* <Link href={`${router.pathname !== '/' ? '/' : ''}`}> */}
             <Link href={`${router.pathname !== '/' ? '/' : ''}`}>
-              <button
-                className="btn btn-sm btn-ghost rounded-btn text-glitch lowercase"
-                data-content="HOME"
-              >
+              <button className="btn btn-sm btn-ghost rounded-btn text-glitch lowercase">
                 HOME
               </button>
             </Link>
             {/* <Link href={`${router.pathname !== '/' ? '/leaderboard' : ''}`}> */}
             <Link href={`/leaderboard`}>
-              <button
-                className="btn btn-sm btn-ghost rounded-btn text-glitch lowercase"
-                data-content="COLLECTION"
-              >
+              <button className="btn btn-sm btn-ghost rounded-btn text-glitch lowercase">
                 leaderboard
+              </button>
+            </Link>
+            <Link href={`/whodabest`}>
+              <button className="btn btn-sm btn-ghost rounded-btn text-glitch lowercase">
+                whodabest
               </button>
             </Link>
           </div>

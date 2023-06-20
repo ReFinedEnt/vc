@@ -148,7 +148,7 @@ const WhoDaBestView: FC = () => {
                       </figure>
                       <div className="card-body">
                         <h2 className="card-title w-full leading-normal text-xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF]">
-                          {item.name} #{item.index}
+                          {item.name}
                         </h2>
                         <p></p>
                         <div className="card-actions justify-end">

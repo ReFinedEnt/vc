@@ -47,7 +47,10 @@ const Popup: FC<Props> = ({ tooglePopUp, completed }) => {
               <p className="text-md font-bold text-white px-8 text-center">
                 {awesomeness} {emoji}
               </p>
-              <Link className="z-[999]" href="/">
+              <Link
+                className="z-[999]"
+                href="https://twitter.com/intent/tweet?text=I just help my solana bro  🫡%0A have you helped %40yoursolanabro ? 👀"
+              >
                 <div className="inline-flex items-center p-3 px-5 bg-gray-800 rounded font-mono font-bold tracking-tight btn jusitfy-center capitalize">
                   <Image src={twitter} alt="Twitter" /> <span className="ml-2">Share !</span>
                 </div>

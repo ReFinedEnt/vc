@@ -1,15 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import excuses from '../../components/excuses/excuses.component';
 import Typed from 'typed.js';
 
 export default function TypedTitle() {
-  const excusesNb = excuses.length;
   const el = useRef(null);
   useEffect(() => {
-    const choice = [excuses[Math.floor(Math.random() * (excusesNb - 0))]];
-
     const typed = new Typed(el.current, {
-      strings: choice,
+      strings: ['choice'],
       startDelay: 500,
       typeSpeed: 42,
       backSpeed: 42,
@@ -22,7 +18,7 @@ export default function TypedTitle() {
     return () => {
       typed.destroy();
     };
-  }, [excusesNb]);
+  }, []);
   return (
     <div className="md:w-[50vw] w-screen mx-auto mockup-code bg-black border-2 border-white overflow-hidden px-4">
       <code className="">

@@ -39,7 +39,7 @@ export const PROGRAM_ID = new PublicKey(
 
 export const COLLECTION_ADDRESS =
   (process.env.NEXT_PUBLIC_COLLECTION_ADDRESS as string) ||
-  '5FusHaKEKjfKsmQwXNrhFcFABGGxu7iYCdbvyVSRe3Ri';
+  '5W4F9DFeGfCDLTdaGRvVKdnBcL27aYWdGxJQVrpo2NrS';
 
 export const CANDY_MACHINE_ID =
   (process.env.NEXT_PUBLIC_COLLECTION_ADDRESS as string) ||

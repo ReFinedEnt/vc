@@ -1,12 +1,9 @@
 import { useEffect, useState } from 'react';
-
-import Spinner from '../../components/spinner/spinner.component';
-
+import ThreeDots from 'components/three-dots/three-dots.component';
+import { Presale } from 'components/presale';
 import type { FC } from 'react';
 
-import Table from 'components/table/table.component';
-
-const LeaderBoardView: FC = () => {
+const TokenView: FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -19,10 +16,10 @@ const LeaderBoardView: FC = () => {
     <div className="max-w-[100vw] mx-auto flex justify-center items-center mt-[67.5px]">
       <div className="flex flex-col">
         {loading ? (
-          <Spinner />
+          <ThreeDots />
         ) : (
           <div className="hero flex flex-col justify-center items-center">
-            <Table />
+            <Presale />
           </div>
         )}
       </div>
@@ -30,4 +27,4 @@ const LeaderBoardView: FC = () => {
   );
 };
 
-export default LeaderBoardView;
+export default TokenView;

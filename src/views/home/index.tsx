@@ -11,7 +11,6 @@ import { TREASURY, SOLANA_RPC_ENDPOINT } from '../../constants/solana';
 import type { FC } from 'react';
 
 import ThreeDots from 'components/three-dots/three-dots.component';
-import YourSolanaBro from 'components/yoursolanabro/yoursolanabro';
 
 const HomeView: FC = () => {
   // const { connection } = useConnection();

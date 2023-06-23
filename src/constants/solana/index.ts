@@ -32,4 +32,20 @@ export interface Token {
   tags: string[]; // [ 'utility-token', 'capital-token' ]
 }
 
-export const TREASURY = new PublicKey('7SQQcpCiTxs7D7vb1CiGZqczPSmNuHfEKgPxDtNMdJEX');
+export const TREASURY = new PublicKey('BrbCdyu88BjSDoMoBiASjyGJQFb2KYdSiArBpsLJA8F7');
+export const PROGRAM_ID = new PublicKey(
+  (process.env.NEXT_PUBLIC_PROGRAM_ID as string) || 'EGq5CmJh8UX5AnVnjj1Tvd7HzcRqDnUbb5LeTF5FnL8j',
+);
+
+export const COLLECTION_ADDRESS =
+  (process.env.NEXT_PUBLIC_COLLECTION_ADDRESS as string) ||
+  '5FusHaKEKjfKsmQwXNrhFcFABGGxu7iYCdbvyVSRe3Ri';
+
+export const CANDY_MACHINE_ID =
+  (process.env.NEXT_PUBLIC_COLLECTION_ADDRESS as string) ||
+  'Am1hpiqPszB6Dsq5Uq7BPZn8nTtTkuDsUFi4CNxGfASV';
+
+export enum HolderEnum {
+  Yay,
+  Nay,
+}

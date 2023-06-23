@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import { useWallet } from '@solana/wallet-adapter-react';
 import twitterIcon from '../../assets/img/twitter.svg';
+import vc from '../../assets/img/vc.jpeg';
 import type { NextRouter } from 'next/router';
 
 type Props = {
@@ -19,16 +20,21 @@ export const NavBar: FC<Props> = ({ router }) => {
       {/* NavBar / Header */}
       <div className="navbar flex flex-row md:pb-2 shadow-lg bg-black text-neutral-content z-50 border-b-2 border-white absolute top-0 h-[67.5px]">
         <div className="navbar-start flex z-[999]">
-          <h1 className="ml-8 leading-normal text-md font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
-            Your Solana Bro
-          </h1>
           {/* <span className="border-r border-primary"></span> */}
 
-          <span className="hidden md:block ml-5 mt-1 cursor-pointer">
-            <Link href="https://twitter.com/yoursolanabro" target={'_blank'} rel="noreferrer">
-              <Image src={twitterIcon} priority alt="follow us on twitter" className="" />
-            </Link>
-          </span>
+          <Link href="/">
+            <div className="flex items-center ml-4 cursor-pointer">
+              <Image
+                src={vc}
+                priority
+                alt="follow us on twitter"
+                className="rounded-full"
+                width={42}
+                height={42}
+              />
+              <h1 className="ml-8 leading-normal text-md font-bold">vulture city</h1>
+            </div>
+          </Link>
         </div>
 
         {/* Nav Links */}
@@ -36,26 +42,24 @@ export const NavBar: FC<Props> = ({ router }) => {
           <div className="flex items-stretch z-[999]">
             {/* <Link href={`${router.pathname !== '/' ? '/' : ''}`}> */}
             <Link href={`${router.pathname !== '/' ? '/' : ''}`}>
-              <button className="btn btn-sm btn-ghost rounded-btn text-glitch lowercase">
-                HOME
-              </button>
+              <span className="btn btn-sm btn-ghost rounded-btn text-glitch lowercase">HOME</span>
             </Link>
             {/* <Link href={`${router.pathname !== '/' ? '/leaderboard' : ''}`}> */}
-            <Link href={`/leaderboard`}>
-              <button className="btn btn-sm btn-ghost rounded-btn text-glitch lowercase">
-                leaderboard
-              </button>
+            <Link href={`/token`}>
+              <span className="btn btn-sm btn-ghost rounded-btn text-glitch lowercase">token</span>
             </Link>
-            <Link href={`/whodabest`}>
-              <button className="btn btn-sm btn-ghost rounded-btn text-glitch lowercase">
-                whodabest
-              </button>
+            <Link href={`/mint`}>
+              <span className="btn btn-sm btn-ghost rounded-btn text-glitch lowercase">mint</span>
+            </Link>
+            <Link href={`/about`}>
+              <span className="btn btn-sm btn-ghost rounded-btn text-glitch lowercase">about</span>
             </Link>
           </div>
         </div>
 
-        {/* Wallet & Settings */}
-        <div className="navbar-end">{publicKey && <WalletMultiButton className="btn mx-2" />}</div>
+        <div className="navbar-end">
+          <WalletMultiButton className="btn mx-2" />
+        </div>
       </div>
       {/* {props.children} */}
     </div>

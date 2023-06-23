@@ -1,6 +1,10 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import Link from 'next/link';
-export const ContentContainer: FC = (props) => {
+
+type Props = {
+  children: ReactNode;
+};
+export const ContentContainer: FC<Props> = (props) => {
   return (
     <div className="drawer w-full pt-[67.5px]">
       {/* <div className="h-screen drawer drawer-mobile w-full"> */}
@@ -15,11 +19,7 @@ export const ContentContainer: FC = (props) => {
             Dapp Next
           </h1>
           <li>
-            <Link href="https://krk.finance/">
-              <a className="drawer-glitch" data-content="HOME">
-                HOME
-              </a>
-            </Link>
+            <Link href="https://krk.finance/">HOME</Link>
           </li>
         </ul>
       </div>

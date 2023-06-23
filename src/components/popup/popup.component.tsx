@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 import ThreeDots from '../../components/three-dots/three-dots.component';
-import coolness from '../../components/coolness/coolness.component';
 import type { FC } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -22,13 +21,13 @@ const Popup: FC<Props> = ({ tooglePopUp, completed }) => {
   useEffect(() => {
     const emojis = ['🤩', '🥳', '😍'];
 
-    if (completed == true) {
-      setPopUploading(false);
-      const awesomenessNb = coolness.length;
-      const choice = coolness[Math.floor(Math.random() * (awesomenessNb - 0))];
-      setEmoji(emojis[Math.floor(Math.random() * (emojis.length - 0))]);
-      setAwesomeness(choice);
-    }
+    // if (completed == true) {
+    //   setPopUploading(false);
+    //   const awesomenessNb = coolness.length;
+    //   const choice = coolness[Math.floor(Math.random() * (awesomenessNb - 0))];
+    //   setEmoji(emojis[Math.floor(Math.random() * (emojis.length - 0))]);
+    //   setAwesomeness(choice);
+    // }
   }, [completed]);
   return (
     <div className="absolute flex w-[420px] h-[420px] items-center justify-center border border-primary z-[999] bg-black rounded-lg text-white">

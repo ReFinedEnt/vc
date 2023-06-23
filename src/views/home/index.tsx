@@ -4,7 +4,6 @@ import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { Connection, SystemProgram, Transaction } from '@solana/web3.js';
 import JSConfetti from 'js-confetti';
-import TypedTitle from '../../components/typed/typed.component';
 import Popup from '../../components/popup/popup.component';
 import { TREASURY, SOLANA_RPC_ENDPOINT } from '../../constants/solana';
 
@@ -88,17 +87,7 @@ const HomeView: FC = () => {
           <ThreeDots />
         ) : (
           <div className="hero flex flex-col justify-center items-center">
-            <div className="w-full hero-content flex flex-col items-center ">
-              <div className="px-4">{<TypedTitle />}</div>
-              <div className="text-lg text-white mb-3 leading-normal flex flex-col justify-center items-center">
-                <span
-                  className="btn btn-md bg-gradient-to-tr from-[#9945FF] to-[#14F195]"
-                  onClick={onClick}
-                >
-                  Help your Solana Bro ?
-                </span>
-              </div>
-            </div>
+            <div className="w-full hero-content flex flex-col items-center ">WIP</div>
           </div>
         )}
         {popup && (

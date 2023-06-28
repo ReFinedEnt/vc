@@ -92,9 +92,7 @@ const HomeView: FC = () => {
               <h1 className="text-8xl uppercase font-bold" id="main-title">
                 Vulture City
               </h1>
-              <span className="text-xl lowercase">
-                the 1st DAO-operated gold mine & reserve ⛏️✨
-              </span>
+              <span className="text-xl lowercase">DAO-operated gold mine & reserve ⛏️✨</span>
             </div>
             <Lore />
           </div>

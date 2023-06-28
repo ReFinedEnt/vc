@@ -82,7 +82,7 @@ const HomeView: FC = () => {
   }, [helped]);
 
   return (
-    <div className="w-[100vw] hero mx-auto bg-black min-h-screen flex justify-center items-center -mt-[67.5px] overflow-y-scroll">
+    <div className="w-[100vw] hero mx-auto bg-black h-screen justify-center items-center overflow-y-scroll">
       <div className="hero-content flex flex-col">
         {loading ? (
           <ThreeDots />
@@ -93,7 +93,7 @@ const HomeView: FC = () => {
                 Vulture City
               </h1>
               <span className="text-xl lowercase">
-                the 1st community-owned gold mine, and physical gold off-ramp
+                the 1st DAO-operated gold mine & reserve ⛏️✨
               </span>
             </div>
             <Lore />

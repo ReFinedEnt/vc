@@ -43,7 +43,7 @@ export const COLLECTION_ADDRESS =
 
 export const CANDY_MACHINE_ID =
   (process.env.NEXT_PUBLIC_COLLECTION_ADDRESS as string) ||
-  'Am1hpiqPszB6Dsq5Uq7BPZn8nTtTkuDsUFi4CNxGfASV';
+  'AppCuxpfDPMMGH1G42jZxAdFoWhVvCjjs1R7UZq23iqD';
 
 export enum HolderEnum {
   Yay,

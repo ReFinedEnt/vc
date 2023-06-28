@@ -87,7 +87,7 @@ const HomeView: FC = () => {
         {loading ? (
           <ThreeDots />
         ) : (
-          <div className="hero flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center">
             <div className="w-full hero-content flex flex-col items-center h-[100vh] max-w-[963px]">
               <h1 className="text-8xl uppercase font-bold" id="main-title">
                 Vulture City

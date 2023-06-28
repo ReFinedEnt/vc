@@ -14,15 +14,15 @@ const AboutView: FC = () => {
   }, []);
 
   return (
-    <div className="max-w-[100vw] mx-auto min-h-screen flex flex-col items-center bg-black pb-40">
+    <div className="max-w-[100vw] hero mx-auto min-h-screen flex flex-col items-center bg-black">
       {loading ? (
         <ThreeDots />
       ) : (
-        <div className="flex flex-col justify-center items-center max-w-[963px] mt-[67.5px]">
+        <div className="hero-content h-screen flex flex-col justify-center items-center max-w-[963px] -mt-[67.5px] text-center">
           <h1 className="text-3xl capitalize font-bold" id="main-title">
             <h1>About Us</h1>
           </h1>
-          <div className="max-w-[963px]">
+          <div className="max-w-[963px] space-y-4">
             <p>
               Refined Enterprises LLC is a precious mineral & aquisition company based in Central
               Arizona.

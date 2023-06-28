@@ -146,9 +146,7 @@ const MintV2: FC = () => {
                 </MintButton>
               ) : ( */}
               <MintButton onClick={onClick} disabled={mintState}>
-                <span className="text-white text-xl">
-                  {holder == HolderEnum.Yay ? 'OG' : 'PUBLIC'} MINT
-                </span>
+                <span className="text-white text-xl">MINT</span>
               </MintButton>
               {/* )} */}
               {nft && (

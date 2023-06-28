@@ -86,7 +86,7 @@ const MintV2: FC = () => {
             candyMachine: candyMachine.publicKey,
             candyGuard: candyGuard.publicKey,
             nftMint,
-            collectionMint: publicKey('9SAASbFyVkfYhMLCvKJVpbMj5Upkr6qvRCrqsXaNJQTf'),
+            collectionMint: publicKey('H63DB66TdhzQCZ34QAEPgzayqhPLMudqrF6aQtk4kG7s'),
             collectionUpdateAuthority: candyGuard.authority,
             // tokenStandard: candyMachine.tokenStandard,
             group: some('OGs'),
@@ -121,7 +121,7 @@ const MintV2: FC = () => {
             candyMachine: candyMachine.publicKey,
             candyGuard: candyGuard.publicKey,
             nftMint: nftMint.publicKey,
-            collectionMint: publicKey('9SAASbFyVkfYhMLCvKJVpbMj5Upkr6qvRCrqsXaNJQTf'),
+            collectionMint: publicKey('H63DB66TdhzQCZ34QAEPgzayqhPLMudqrF6aQtk4kG7s'),
             collectionUpdateAuthority: candyGuard.authority,
             group: some('Public'),
             mintArgs: {

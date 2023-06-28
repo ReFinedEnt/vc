@@ -32,17 +32,17 @@ export interface Token {
   tags: string[]; // [ 'utility-token', 'capital-token' ]
 }
 
-export const TREASURY = new PublicKey('BrbCdyu88BjSDoMoBiASjyGJQFb2KYdSiArBpsLJA8F7');
-export const PROGRAM_ID = new PublicKey(
-  (process.env.NEXT_PUBLIC_PROGRAM_ID as string) || 'EGq5CmJh8UX5AnVnjj1Tvd7HzcRqDnUbb5LeTF5FnL8j',
-);
+export const TREASURY = 'BrbCdyu88BjSDoMoBiASjyGJQFb2KYdSiArBpsLJA8F7';
+export const PROGRAM_ID =
+  (process.env.NEXT_PUBLIC_PROGRAM_ID as string) || 'EGq5CmJh8UX5AnVnjj1Tvd7HzcRqDnUbb5LeTF5FnL8j';
 
 export const COLLECTION_ADDRESS =
   (process.env.NEXT_PUBLIC_COLLECTION_ADDRESS as string) ||
   '5W4F9DFeGfCDLTdaGRvVKdnBcL27aYWdGxJQVrpo2NrS';
 
 export const CANDY_MACHINE_ID =
-  (process.env.CANDY_MACHINE_ID as string) || 'AppCuxpfDPMMGH1G42jZxAdFoWhVvCjjs1R7UZq23iqD';
+  (process.env.NEXT_PUBLIC_CANDY_MACHINE_ID as string) ||
+  'AppCuxpfDPMMGH1G42jZxAdFoWhVvCjjs1R7UZq23iqD';
 
 export enum HolderEnum {
   Yay,

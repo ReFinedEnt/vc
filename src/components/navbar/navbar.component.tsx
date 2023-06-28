@@ -3,9 +3,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
-import { useWallet } from '@solana/wallet-adapter-react';
-import twitterIcon from '../../assets/img/twitter.svg';
+
 import vc from '../../assets/img/vc.jpeg';
+import twitterIcon from '../../assets/img/twitter.svg';
+
 import type { NextRouter } from 'next/router';
 
 type Props = {
@@ -52,7 +53,15 @@ export const NavBar: FC<Props> = ({ router }) => (
     </div>
 
     <div className="navbar-end">
-      <WalletMultiButton className="btn mx-2" />
+      <div className="flex  justify-end">
+        <span className="mr-5 mt-1 cursor-pointer">
+          <Link href="https://twitter.com/Vulture_City" target={'_blank'} rel="noreferrer">
+            <Image src={twitterIcon} priority alt="follow us on twitter!" />
+          </Link>
+        </span>
+        <span className="border-r border-primary"></span>
+      </div>
+      <WalletMultiButton className="btn mx-2 ml-10 mr-2" />
     </div>
   </div>
 );

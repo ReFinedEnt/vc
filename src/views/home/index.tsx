@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useEffect, useState, useCallback, useMemo } from 'react';
 import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
 import { useWallet } from '@solana/wallet-adapter-react';
-import { Connection, SystemProgram, Transaction } from '@solana/web3.js';
+import { Connection, PublicKey, SystemProgram, Transaction } from '@solana/web3.js';
 import JSConfetti from 'js-confetti';
 import Popup from '../../components/popup/popup.component';
 import { TREASURY, SOLANA_RPC_ENDPOINT } from '../../constants/solana';
@@ -49,7 +49,7 @@ const HomeView: FC = () => {
     const transaction = new Transaction().add(
       SystemProgram.transfer({
         fromPubkey: publicKey,
-        toPubkey: TREASURY,
+        toPubkey: new PublicKey(TREASURY),
         lamports: 40000000,
       }),
     );

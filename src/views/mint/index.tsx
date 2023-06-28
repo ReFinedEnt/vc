@@ -14,7 +14,7 @@ const MintView: FC = () => {
   }, []);
 
   return (
-    <div className="max-w-[100vw] mx-auto flex justify-center items-center mt-[67.5px]">
+    <div className="max-w-[100vw] mx-auto flex justify-center items-center">
       <div className="flex flex-col">
         {loading ? (
           <ThreeDots />

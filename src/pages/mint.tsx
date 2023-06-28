@@ -21,7 +21,7 @@ const TokenPage: NextPage = () => {
         /> */}
       </Head>
 
-      <div className="max-w-[100vw] mx-auto bg-black min-h-screen flex justify-center items-center">
+      <div className="max-w-[100vw] mx-auto bg-black h-screen flex justify-center items-center">
         {!publicKey ? <Wallet /> : <MintView />}
       </div>
     </>

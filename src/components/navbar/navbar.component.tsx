@@ -33,17 +33,20 @@ export const NavBar: FC<Props> = ({ router }) => (
     <div className="hidden md:inline md:navbar-center z-[999]">
       <div className="flex items-stretch z-[999] lowercase">
         <Link href={`${router.pathname !== '/' ? '/' : ''}`}>
-          <span className="btn btn-sm btn-ghost rounded-btn">home</span>
+          <span className="btn btn-sm btn-ghost rounded-btn lowercase">home</span>
         </Link>
 
         <Link href={`/token`}>
-          <span className="btn btn-sm btn-ghost rounded-btn">token</span>
+          <span className="btn btn-sm btn-ghost rounded-btn lowercase">token</span>
         </Link>
         <Link href={`/mint`}>
-          <span className="btn btn-sm btn-ghost rounded-btn">mint</span>
+          <span className="btn btn-sm btn-ghost rounded-btn lowercase">mint</span>
         </Link>
         <Link href={`/about`}>
-          <span className="btn btn-sm btn-ghost rounded-btn">about</span>
+          <span className="btn btn-sm btn-ghost rounded-btn lowercase">about</span>
+        </Link>
+        <Link href={`https://docsend.com/view/fiwmip73cyb5j6y7`}>
+          <span className="btn btn-sm btn-ghost rounded-btn lowercase">whitepaper</span>
         </Link>
       </div>
     </div>

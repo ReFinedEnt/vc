@@ -78,7 +78,7 @@ const MintV2: FC = () => {
       const candyGuard = await fetchCandyGuard(umi, candyMachine.mintAuthority);
       const nftOwner = createSignerFromWalletAdapter(wallet).publicKey;
       const nftMint = generateSigner(umi);
-      await transactionBuilder()
+      const tx = await transactionBuilder()
         .add(setComputeUnitLimit(umi, { units: 800_000 }))
         .add(createMintWithAssociatedToken(umi, { mint: nftMint, owner: nftOwner }))
         .add(
@@ -175,19 +175,19 @@ const MintV2: FC = () => {
                 </div>
               </div>
 
-              {mintGroup == 'OGs' ? (
+              {/* {mintGroup == 'OGs' ? (
                 <MintButton onClick={onClickOG} disabled={mintState}>
                   <span className="text-white text-xl">
                     {holder == HolderEnum.Yay ? 'OG' : 'PUBLIC'} MINT
                   </span>
                 </MintButton>
-              ) : (
-                <MintButton onClick={onClickPublic} disabled={mintState}>
-                  <span className="text-white text-xl">
-                    {holder == HolderEnum.Yay ? 'OG' : 'PUBLIC'} MINT
-                  </span>
-                </MintButton>
-              )}
+              ) : ( */}
+              <MintButton onClick={onClickPublic} disabled={mintState}>
+                <span className="text-white text-xl">
+                  {holder == HolderEnum.Yay ? 'OG' : 'PUBLIC'} MINT
+                </span>
+              </MintButton>
+              {/* )} */}
               {nft && (
                 <div className="max-w-[100%]">
                   <h1>{nft.name}</h1>

@@ -13,12 +13,12 @@ const TokenPage: NextPage = () => {
         <meta property="og:title" content="Vulture City | Mint" />
         <meta property="og:site_name" content="vulture.city" />
         <meta property="og:url" content="https://vulture.city/mint" />
-        <meta property="og:description" content="Vulture City | Mint" />
+        <meta property="og:description" content="DAO-operated gold mine & reserve ⛏️✨" />
         <meta property="og:type" content="website" />
-        {/* <meta
+        <meta
           property="og:image"
-          content="https://raw.githubusercontent.com/EsyWin/cdn/main/krk.finance/assets/img/krk_embed_2.png"
-        /> */}
+          content="https://creator-hub-prod.s3.us-east-2.amazonaws.com/vcg_pfp_1679917136524.png"
+        />
       </Head>
 
       <div className="max-w-[100vw] mx-auto bg-black h-screen flex justify-center items-center">

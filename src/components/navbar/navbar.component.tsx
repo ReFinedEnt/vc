@@ -37,9 +37,9 @@ export const NavBar: FC<Props> = ({ router }) => (
           <span className="btn btn-sm btn-ghost rounded-btn lowercase">home</span>
         </Link>
 
-        <Link href={`/token`}>
+        {/* <Link href={`/token`}>
           <span className="btn btn-sm btn-ghost rounded-btn lowercase">token</span>
-        </Link>
+        </Link> */}
         <Link href={`/mint`}>
           <span className="btn btn-sm btn-ghost rounded-btn lowercase">mint</span>
         </Link>

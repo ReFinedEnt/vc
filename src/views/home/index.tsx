@@ -94,11 +94,8 @@ const HomeView: FC = () => {
               </h1>
               <span className="text-xl lowercase">DAO-operated gold mine & reserve ⛏️✨</span>
             </div>
-            <Lore />
+            {/* <Lore /> */}
           </div>
-        )}
-        {popup && (
-          <Popup tooglePopUp={tooglePopUp} completed={completed} setCompleted={setCompleted} />
         )}
       </div>
     </div>

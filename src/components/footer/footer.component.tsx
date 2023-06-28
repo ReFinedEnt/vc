@@ -4,7 +4,7 @@ export const Footer: FC = () => {
   return (
     <div className="absolute border-t-2 border-white z-50  bottom-0 w-screen">
       <footer className="mx-auto  flex flex-row p-2 text-center justify-center items-center footer bg-black text-white">
-        <div className="ml-5 text-white">
+        <div className="ml-5 text-white font-bold">
           Refined Entrprised LLC. &copy; 2021-{new Date().getFullYear()}
         </div>
         <div className="max-w-md text-center flex align-center justify-center items-center mx-auto pr-10 space-x-2"></div>

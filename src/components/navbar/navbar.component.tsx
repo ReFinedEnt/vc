@@ -46,7 +46,7 @@ export const NavBar: FC<Props> = ({ router }) => (
         <Link href={`/about`}>
           <span className="btn btn-sm btn-ghost rounded-btn lowercase">about</span>
         </Link>
-        <Link href={`https://docsend.com/view/fiwmip73cyb5j6y7`}>
+        <Link href={`https://docsend.com/view/fiwmip73cyb5j6y7`} target="_blank" rel="noreferrer">
           <span className="btn btn-sm btn-ghost rounded-btn lowercase">whitepaper</span>
         </Link>
       </div>

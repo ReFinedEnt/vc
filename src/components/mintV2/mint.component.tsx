@@ -165,7 +165,7 @@ const MintV2: FC = () => {
               <div className="z-[999] w-full h-full bg-base-100 rounded-xl flex flex-col justify-center items-center">
                 <div className="w-full flex flex-col justify-center items-center">
                   <h2 className="text-xl text-center font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-tr from-[#9945FF] to-[#14F195]">
-                    Collection Information
+                    Vulture City Founder Token
                   </h2>
                   {/* <ul>
                       <li>Supply : {candyMachine.itemsLoaded}</li>

@@ -24,15 +24,27 @@ const AboutView: FC = () => {
           </h1>
           <div className="max-w-[963px]">
             <p>
-              ReFined Entreprise LLC. is a company based in United States of America, registered in
-              the State of Arizona since May 31th 2021 under the file number{' '}
-              <span className="code">23242044</span>
+              Refined Enterprises LLC is a precious mineral & aquisition company based in Central
+              Arizona.
             </p>
-            <p>Entity Type: ARIZONA DOMESTIC LIMITED-LIABILITY COMPANY</p>
+            <p>
+              With our visionary approach to gold exploration utilizing blockchain technology, our
+              company is poised to revolutionize the industry.
+            </p>
+            <p>
+              By leveraging the benefits of the Solana Network, we can address critical challenges
+              in logisitics, reclaim abandoned sites, promote responsible mining practices, and
+              deliver value to our community.
+            </p>
+            <p>
+              We invite potential partners to join us on this transformative journey towards a more
+              sustainable and efficient future for gold mining.
+            </p>
+            {/* <p>Entity Type: ARIZONA DOMESTIC LIMITED-LIABILITY COMPANY</p>
             <p>File Number: 23242044</p>
             <p>Filing State: Arizona</p>
             <p>Filing Status: Active</p>
-            <p>Filing Date: May 31, 2021</p>
+            <p>Filing Date: May 31, 2021</p> */}
           </div>
         </div>
       )}

@@ -1,8 +1,11 @@
 import Head from 'next/head';
 import type { NextPage } from 'next';
 import MintView from 'views/mint';
+import { useWallet } from '@solana/wallet-adapter-react';
+import Wallet from 'components/wallet/wallet.component';
 
 const TokenPage: NextPage = () => {
+  const { publicKey } = useWallet();
   return (
     <>
       <Head>
@@ -19,7 +22,7 @@ const TokenPage: NextPage = () => {
       </Head>
 
       <div className="max-w-[100vw] mx-auto bg-black min-h-screen flex justify-center items-center -mt-[67.5px]">
-        <MintView />
+        {!publicKey ? <Wallet /> : <MintView />}
       </div>
     </>
   );

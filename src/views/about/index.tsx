@@ -1,86 +1,40 @@
-import { useEffect, useState, useCallback, useMemo } from 'react';
-import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
-import { useWallet } from '@solana/wallet-adapter-react';
-import { Connection, SystemProgram, Transaction } from '@solana/web3.js';
-import { TREASURY, SOLANA_RPC_ENDPOINT } from 'constants/solana';
+import { useState, useEffect } from 'react';
 
 import ThreeDots from 'components/three-dots/three-dots.component';
-import Popup from 'components/popup/popup.component';
 
 import type { FC } from 'react';
-import { Community, TxType } from 'types';
 
 const AboutView: FC = () => {
   const [loading, setLoading] = useState(true);
-  const connection = useMemo(() => new Connection(SOLANA_RPC_ENDPOINT), []);
-  const [popup, setPopup] = useState(false);
-  const [helped, setHelped] = useState<boolean>(false);
-  const [completed, setCompleted] = useState(true);
-
-  const [data, setData] = useState<Community[] | null>(null);
-
-  const { publicKey, sendTransaction } = useWallet();
 
   useEffect(() => {
-    if (data) {
+    setTimeout(() => {
       setLoading(false);
-    }
-  }, [data]);
-
-  const tooglePopUp = () => {
-    setPopup(!popup);
-  };
-
-  const onClick = useCallback(
-    async (index: number) => {
-      console.log(index);
-      if (!publicKey) throw new WalletNotConnectedError();
-
-      const lamports = 30000000 + index;
-
-      const transaction = new Transaction().add(
-        SystemProgram.transfer({
-          fromPubkey: publicKey,
-          toPubkey: TREASURY,
-          lamports: lamports,
-        }),
-      );
-
-      const signature = await sendTransaction(transaction, connection);
-
-      const latestBlockHash = await connection.getLatestBlockhash();
-
-      setPopup(true);
-
-      await connection
-        .confirmTransaction({
-          blockhash: latestBlockHash.blockhash,
-          lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
-          signature: signature,
-        })
-        .then(({ context, value }) => {
-          if (value.err == null && context.slot) {
-            setHelped(true);
-            setCompleted(true);
-          }
-        });
-    },
-    [publicKey, sendTransaction, connection],
-  );
+    }, 1337);
+  }, []);
 
   return (
-    <div className="max-w-[100vw] mx-auto min-h-screen flex flex-col justify-center items-center bg-black pb-40">
+    <div className="max-w-[100vw] mx-auto min-h-screen flex flex-col items-center bg-black pb-40">
       {loading ? (
         <ThreeDots />
       ) : (
-        <>
-          <div className="hero flex flex-col justify-center items-center">
-            <div className="grid grid-cols-1 md:grid-rows-2 md:grid-flow-col grid-flow-row gap-4"></div>
+        <div className="flex flex-col justify-center items-center max-w-[963px] mt-[67.5px]">
+          <h1 className="text-3xl capitalize font-bold" id="main-title">
+            <h1>About Us</h1>
+          </h1>
+          <div className="max-w-[963px]">
+            <p>
+              ReFined Entreprise LLC. is a company based in United States of America, registered in
+              the State of Arizona since May 31th 2021 under the file number{' '}
+              <span className="code">23242044</span>
+            </p>
+            <p>Entity Type: ARIZONA DOMESTIC LIMITED-LIABILITY COMPANY</p>
+            <p>File Number: 23242044</p>
+            <p>Filing State: Arizona</p>
+            <p>Filing Status: Active</p>
+            <p>Filing Date: May 31, 2021</p>
           </div>
-          {popup && (
-            <Popup tooglePopUp={tooglePopUp} completed={completed} setCompleted={setCompleted} />
-          )}
-        </>
+        </div>
       )}
     </div>
   );

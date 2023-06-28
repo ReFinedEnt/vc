@@ -10,6 +10,7 @@ import { TREASURY, SOLANA_RPC_ENDPOINT } from '../../constants/solana';
 import type { FC } from 'react';
 
 import ThreeDots from 'components/three-dots/three-dots.component';
+import Lore from 'components/lore/lore.component';
 
 const HomeView: FC = () => {
   // const { connection } = useConnection();
@@ -81,13 +82,21 @@ const HomeView: FC = () => {
   }, [helped]);
 
   return (
-    <div className="max-w-[100vw] hero mx-auto bg-black min-h-screen flex justify-center items-center -mt-[67.5px]">
+    <div className="w-[100vw] hero mx-auto bg-black min-h-screen flex justify-center items-center -mt-[67.5px] overflow-y-scroll">
       <div className="hero-content flex flex-col">
         {loading ? (
           <ThreeDots />
         ) : (
           <div className="hero flex flex-col justify-center items-center">
-            <div className="w-full hero-content flex flex-col items-center ">WIP</div>
+            <div className="w-full hero-content flex flex-col items-center h-[100vh] max-w-[963px]">
+              <h1 className="text-8xl uppercase font-bold" id="main-title">
+                Vulture City
+              </h1>
+              <span className="text-xl lowercase">
+                the 1st community-owned gold mine, and physical gold off-ramp
+              </span>
+            </div>
+            <Lore />
           </div>
         )}
         {popup && (

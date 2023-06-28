@@ -10,10 +10,12 @@ import type { ReactNode } from 'react';
 
 interface HolderContextType {
   holder: HolderEnum;
+  nfts: any[];
 }
 
 export const HolderContext = createContext<HolderContextType>({
   holder: HolderEnum.Nay,
+  nfts: [],
 });
 
 export const HolderProvider = ({ children }: { children: ReactNode }) => {
@@ -22,7 +24,9 @@ export const HolderProvider = ({ children }: { children: ReactNode }) => {
 
   const wallet = useWallet();
   const [holder, setHolder] = useState(HolderEnum.Nay);
-  const value = { holder, setHolder };
+  const [nfts, setNfts] = useState([]);
+
+  const value = { holder, setHolder, nfts };
 
   useEffect(() => {
     if (wallet.publicKey) {
@@ -36,12 +40,11 @@ export const HolderProvider = ({ children }: { children: ReactNode }) => {
             userNFT.forEach((nft) => {
               // console.log(nft.address.toString());
               if (nft.collection) {
-                console.log(nft && nft.collection);
-                console.log('collection address :', nft.collection.address.toString());
+                // console.log(nft && nft.collection);
+                // console.log('collection address :', nft.collection.address.toString());
                 if (nft.collection.address.toString() == COLLECTION_ADDRESS) {
+                  nfts.push(nft.address.toString());
                   setHolder(HolderEnum.Yay);
-                } else {
-                  setHolder(HolderEnum.Nay);
                 }
               }
               // console.log(nft.address.toString());
@@ -52,7 +55,7 @@ export const HolderProvider = ({ children }: { children: ReactNode }) => {
     } else {
       setHolder(HolderEnum.Nay);
     }
-  }, [wallet.publicKey, metaplex]);
+  }, [wallet.publicKey, metaplex, nfts]);
 
   return <HolderContext.Provider value={value}>{children}</HolderContext.Provider>;
 };

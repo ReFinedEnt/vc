@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import ThreeDots from 'components/three-dots/three-dots.component';
 import type { FC } from 'react';
 import Mint from 'components/mint/mint.component';
+import MintV2 from 'components/mintV2/mint.component';
 
 const MintView: FC = () => {
   const [loading, setLoading] = useState(true);
@@ -19,7 +20,8 @@ const MintView: FC = () => {
           <ThreeDots />
         ) : (
           <div className="hero flex flex-col justify-center items-center">
-            <Mint />
+            {/* <Mint /> */}
+            <MintV2 />
           </div>
         )}
       </div>

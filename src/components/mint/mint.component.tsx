@@ -18,9 +18,17 @@ import Button from '@mui/material/Button';
 // Components
 import ThreeDots from 'components/three-dots/three-dots.component';
 // Constants
-import { SOLANA_RPC_ENDPOINT, CANDY_MACHINE_ID, HolderEnum } from '../../constants/solana';
-import type { FC } from 'react';
+import {
+  SOLANA_RPC_ENDPOINT,
+  CANDY_MACHINE_ID,
+  HolderEnum,
+  COLLECTION_ADDRESS,
+} from '../../constants/solana';
 import { HolderContext } from 'contexts/holder.context';
+import { some, generateSigner, transactionBuilder } from '@metaplex-foundation/umi';
+import { create, mintV2 } from '@metaplex-foundation/mpl-candy-machine';
+import { setComputeUnitLimit } from '@metaplex-foundation/mpl-toolbox';
+import type { FC } from 'react';
 
 const MintButton = styled(Button)`
   width: 100%;
@@ -37,7 +45,11 @@ const MintButton = styled(Button)`
 const Mint: FC = () => {
   const wallet = useWallet();
 
-  const connection = useMemo(() => new Connection(SOLANA_RPC_ENDPOINT, 'confirmed'), []);
+  // const connection = useMemo(() => new Connection(SOLANA_RPC_ENDPOINT, 'confirmed'), []);
+  const connection = useMemo(() => new Connection(SOLANA_RPC_ENDPOINT), []);
+  const metaplex = useMemo(() => new Metaplex(connection), [connection]);
+
+  metaplex.use(walletAdapterIdentity(wallet));
 
   const [loading, setLoading] = useState(true);
 
@@ -57,8 +69,6 @@ const Mint: FC = () => {
       const candyMachineAddress = new PublicKey(CANDY_MACHINE_ID);
 
       if (isCandymachine == false) {
-        const metaplex = new Metaplex(connection);
-
         const candyMachine = await metaplex
           .candyMachines()
           .findByAddress({ address: candyMachineAddress })
@@ -68,29 +78,42 @@ const Mint: FC = () => {
               setIsCandymachine(true);
               return res;
             }
-          });
+          })
+          .finally(() => setLoading(false));
         console.log(candyMachine);
         return candyMachine;
       }
     };
-    getCandyMachine().then(() => setLoading(false));
-  }, [isCandymachine, connection]);
+    getCandyMachine();
+  }, [isCandymachine, metaplex, connection]);
 
-  const onClick = async (group: string) => {
-    const metaplex = new Metaplex(connection);
-    metaplex.use(walletAdapterIdentity(wallet));
-    const { nft } = await metaplex.candyMachines().mint({
-      candyMachine,
-      collectionUpdateAuthority: candyMachine.authorityAddress,
-      group,
-    });
-
-    setNft(nft);
+  const onClick = async () => {
+    if (mintGroup == 'OGs') {
+      const { nft } = await metaplex.candyMachines().mint({
+        candyMachine,
+        collectionUpdateAuthority: candyMachine.authorityAddress,
+        group: 'OGs',
+        guards: {
+          nftBurn: {
+            mint: new PublicKey(COLLECTION_ADDRESS),
+          },
+        },
+      });
+      setNft(nft);
+    } else {
+      const { nft } = await metaplex.candyMachines().mint({
+        candyMachine,
+        collectionUpdateAuthority: candyMachine.authorityAddress,
+        group: 'Public',
+      });
+      setNft(nft);
+    }
   };
 
   useEffect(() => {
     if (wallet.publicKey) {
       if (holder == HolderEnum.Yay) {
+        console.log('yay');
         setMintGroup('OGs');
       }
     }
@@ -126,7 +149,7 @@ const Mint: FC = () => {
                   </div>
                 </div>
               )}
-              <MintButton onClick={() => onClick(mintGroup)} disabled={mintState}>
+              <MintButton onClick={onClick} disabled={mintState}>
                 <span className="text-white text-xl">
                   {holder == HolderEnum.Yay ? 'OG' : 'PUBLIC'} MINT
                 </span>

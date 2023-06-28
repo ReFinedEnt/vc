@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import vc from '../../assets/img/vc.jpeg';
 
-import { useState, type FC, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Connection } from '@solana/web3.js';
 import { SOLANA_RPC_ENDPOINT } from 'constants/solana';
+import type { FC } from 'react';
 
 export const Presale: FC = () => {
   const [input, setInput] = useState<number | null>(null);
@@ -11,7 +12,7 @@ export const Presale: FC = () => {
 
   const [left, setLeft] = useState<number>();
 
-  const connection = new Connection(SOLANA_RPC_ENDPOINT);
+  const connection = useMemo(() => new Connection(SOLANA_RPC_ENDPOINT, 'confirmed'), []);
 
   const max = 79000000;
   const displayMax = max.toLocaleString(

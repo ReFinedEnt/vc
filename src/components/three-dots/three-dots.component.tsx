@@ -23,7 +23,8 @@ export default function ThreeDots() {
   return (
     <div
       ref={el}
-      className="text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] code-font absolute mt-8"
+      // className="text-transparent bg-clip-text bg-gradient-to-tr from-[#14F195] to-[#9945FF] code-font absolute mt-8"
+      className="text-warning code-font absolute mt-8"
     />
   );
 }

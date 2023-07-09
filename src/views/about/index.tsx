@@ -32,9 +32,9 @@ const AboutView: FC = () => {
               company is poised to revolutionize the industry.
             </p>
             <p>
-              By leveraging the benefits of the Solana Network, we can address critical challenges
-              in logisitics, reclaim abandoned sites, promote responsible mining practices, and
-              deliver value to our community.
+              By leveraging the benefits of the Blockchain, we can address critical challenges in
+              logisitics, reclaim abandoned sites, promote responsible mining practices, and deliver
+              value to our community.
             </p>
             <p>
               We invite potential partners to join us on this transformative journey towards a more

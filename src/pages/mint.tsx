@@ -9,7 +9,7 @@ const TokenPage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Vulture City | Mint</title>
+        <title>vulture.city | mint</title>
         <meta property="og:title" content="Vulture City | Mint" />
         <meta property="og:site_name" content="vulture.city" />
         <meta property="og:url" content="https://vulture.city/mint" />

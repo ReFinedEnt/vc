@@ -6,7 +6,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Vulture City | Home</title>
+        <title>vulture.city | home</title>
         <meta property="og:title" content="Vulture City | Home" />
         <meta property="og:site_name" content="vulture.city" />
         <meta property="og:url" content="https://vulture.city" />

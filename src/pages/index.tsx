@@ -7,7 +7,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>vulture.city | home</title>
-        <meta property="og:title" content="Vulture City | Home" />
+        <meta property="og:title" content="vulture.city | home" />
         <meta property="og:site_name" content="vulture.city" />
         <meta property="og:url" content="https://vulture.city" />
         <meta property="og:description" content="DAO-operated gold mine & reserve ⛏️✨" />

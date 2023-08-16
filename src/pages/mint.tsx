@@ -10,7 +10,7 @@ const TokenPage: NextPage = () => {
     <>
       <Head>
         <title>vulture.city | mint</title>
-        <meta property="og:title" content="Vulture City | Mint" />
+        <meta property="og:title" content="vulture.city | mint" />
         <meta property="og:site_name" content="vulture.city" />
         <meta property="og:url" content="https://vulture.city/mint" />
         <meta property="og:description" content="DAO-operated gold mine & reserve ⛏️✨" />

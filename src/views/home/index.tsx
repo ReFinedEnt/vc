@@ -92,7 +92,7 @@ const HomeView: FC = () => {
               <h1 className="text-8xl lowercase font-bold" id="main-title">
                 vulture.city ✨
               </h1>
-              <span className="text-xl lowercase">gold exploration & acquisition ⛏️✨</span>
+              <span className="text-xl lowercase">gold exploration & acquisition</span>
             </div>
             {/* <Lore /> */}
           </div>

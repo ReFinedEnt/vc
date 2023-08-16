@@ -26,7 +26,7 @@ export const NavBar: FC<Props> = ({ router }) => (
             width={42}
             height={42}
           />
-          <h1 className="ml-8 leading-normal text-md font-bold">vulture city</h1>
+          <h1 className="ml-8 leading-normal text-md font-bold">vulture.city ✨</h1>
         </div>
       </Link>
     </div>

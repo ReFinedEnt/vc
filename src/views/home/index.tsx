@@ -89,10 +89,10 @@ const HomeView: FC = () => {
         ) : (
           <div className="flex flex-col justify-center items-center">
             <div className="w-full hero-content flex flex-col items-center max-w-[963px]">
-              <h1 className="text-8xl uppercase font-bold" id="main-title">
+              <h1 className="text-8xl lowercase font-bold" id="main-title">
                 vulture.city ✨
               </h1>
-              <span className="text-xl lowercase">DAO-operated gold mine & reserve ⛏️✨</span>
+              <span className="text-xl lowercase">gold exploration & acquisition ⛏️✨</span>
             </div>
             {/* <Lore /> */}
           </div>
